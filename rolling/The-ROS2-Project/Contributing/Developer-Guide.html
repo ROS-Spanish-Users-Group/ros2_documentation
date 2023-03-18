@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ROS 2 developer guide &mdash; documentación de ROS 2 Documentation: Rolling - </title>
+  <title>Guía para desarrolladores de ROS 2 &mdash; documentación de ROS 2 Documentation: Rolling - </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -26,7 +26,7 @@
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="Estilo de código y versiones de lenguaje" href="Code-Style-Language-Versions.html" />
-    <link rel="prev" title="Contributing" href="../Contributing.html" /> 
+    <link rel="prev" title="Contribuir" href="../Contributing.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -106,11 +106,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Understanding nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Understanding topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Understanding parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Comprender los Parámetros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Understanding actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html">Using <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> to view logs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Launching nodes</a></li>
@@ -169,6 +169,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Testing-Main.html">Testing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/CLI.html">Running Tests in ROS 2 from the Command Line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Cpp.html">Writing Basic Tests with C++ with GTest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Python.html">Writing Basic Tests with Python</a></li>
 </ul>
 </li>
@@ -200,6 +201,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Security-on-Two.html">Ensuring security across machines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Examine-Traffic.html">Examining network traffic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Access-Controls.html">Setting access controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Deployment-Guidelines.html">Deployment Guidelines</a></li>
 </ul>
 </li>
 </ul>
@@ -260,6 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Disabling-ZeroCopy-loaned-messages.html">Disabling Zero Copy Loaned Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installing-on-Raspberry-Pi.html">ROS 2 on Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-callback-groups.html">Using Callback Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html">Setup ROS 2 with VSCode and Docker [community-contributed]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
@@ -292,12 +295,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Contact.html">Contacto</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../The-ROS2-Project.html">The ROS 2 Project</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../Contributing.html">Contributing</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">ROS 2 developer guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Contributing.html">Contribuir</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Guía para desarrolladores de ROS 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Code-Style-Language-Versions.html">Estilo de código y versiones de lenguaje</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Quality-Guide.html">Quality guide: ensuring code quality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Migration-Guide.html">Migration guide from ROS 1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Quality-Guide.html">Guía de calidad: garantizar la calidad del código</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Migration-Guide.html">Guía de migración desde ROS 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Migration-Guide-Python.html">Guía de Python sobre migración desde ROS1</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Build-Farms.html">ROS Build Farms</a></li>
@@ -318,6 +321,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Marketing.html">Marketing</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../API-Docs.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Related-Projects.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Intel-ROS2-Projects.html">Proyectos de Intel en ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">Proyectos de ROS 2 por NVIDIA</a></li>
@@ -342,8 +346,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../../The-ROS2-Project.html">The ROS 2 Project</a></li>
-          <li class="breadcrumb-item"><a href="../Contributing.html">Contributing</a></li>
-      <li class="breadcrumb-item active">ROS 2 developer guide</li>
+          <li class="breadcrumb-item"><a href="../Contributing.html">Contribuir</a></li>
+      <li class="breadcrumb-item active">Guía para desarrolladores de ROS 2</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Developer-Guide.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
@@ -357,146 +361,148 @@
 <p>
   <strong>
     
-    You're reading the documentation for a development version.
-    For the latest released version, please have a look at <a href="../../../humble/The-ROS2-Project/Contributing/Developer-Guide.html">Humble</a>.
+    Estás leyendo la documentación para una versión de desarrollo.
+    Para la última versión publicada, por favor revisa <a href="../../../humble/The-ROS2-Project/Contributing/Developer-Guide.html">Humble</a>.
     
   </strong>
 </p>
 
 
-  <div class="section" id="ros-2-developer-guide">
-<h1>ROS 2 developer guide<a class="headerlink" href="#ros-2-developer-guide" title="Enlazar permanentemente con este título"></a></h1>
-<div class="contents local topic" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
+  <div class="section" id="guia-para-desarrolladores-de-ros-2">
+<h1>Guía para desarrolladores de ROS 2<a class="headerlink" href="#guia-para-desarrolladores-de-ros-2" title="Enlazar permanentemente con este título"></a></h1>
+<div class="contents local topic" id="tabla-de-contenido">
+<p class="topic-title">Tabla de contenido</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#general-principles" id="id2">General Principles</a></p></li>
-<li><p><a class="reference internal" href="#quality-practices" id="id3">Quality Practices</a></p>
+<li><p><a class="reference internal" href="#principios-generales" id="id1">Principios generales</a></p></li>
+<li><p><a class="reference internal" href="#practicas-de-calidad" id="id2">Prácticas de Calidad</a></p>
 <ul>
-<li><p><a class="reference internal" href="#versioning" id="id4">Versioning</a></p></li>
-<li><p><a class="reference internal" href="#change-control-process" id="id5">Change control process</a></p></li>
-<li><p><a class="reference internal" href="#documentation" id="id6">Documentation</a></p></li>
-<li><p><a class="reference internal" href="#testing" id="id7">Testing</a></p></li>
+<li><p><a class="reference internal" href="#versionado" id="id3">Versionado</a></p></li>
+<li><p><a class="reference internal" href="#proceso-de-control-de-cambios" id="id4">Proceso de control de cambios</a></p></li>
+<li><p><a class="reference internal" href="#documentacion" id="id5">Documentación</a></p></li>
+<li><p><a class="reference internal" href="#pruebas" id="id6">Pruebas</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#general-practices" id="id8">General Practices</a></p>
+<li><p><a class="reference internal" href="#practicas-generales" id="id7">Prácticas Generales</a></p>
 <ul>
-<li><p><a class="reference internal" href="#issues" id="id9">Issues</a></p></li>
-<li><p><a class="reference internal" href="#branches" id="id10">Branches</a></p></li>
-<li><p><a class="reference internal" href="#pull-requests" id="id11">Pull requests</a></p></li>
-<li><p><a class="reference internal" href="#library-versioning" id="id12">Library versioning</a></p></li>
-<li><p><a class="reference internal" href="#development-process" id="id13">Development process</a></p></li>
-<li><p><a class="reference internal" href="#changes-to-rmw-api" id="id14">Changes to RMW API</a></p></li>
-<li><p><a class="reference internal" href="#tracking-tasks" id="id15">Tracking tasks</a></p></li>
-<li><p><a class="reference internal" href="#programming-conventions" id="id16">Programming conventions</a></p></li>
-<li><p><a class="reference internal" href="#filesystem-layout" id="id17">Filesystem layout</a></p></li>
+<li><p><a class="reference internal" href="#issues" id="id8">Issues</a></p></li>
+<li><p><a class="reference internal" href="#ramas" id="id9">Ramas</a></p></li>
+<li><p><a class="reference internal" href="#pull-requests" id="id10">Pull requests</a></p></li>
+<li><p><a class="reference internal" href="#versionado-de-biblioteca" id="id11">Versionado de biblioteca</a></p></li>
+<li><p><a class="reference internal" href="#proceso-de-desarrollo" id="id12">Proceso de desarrollo</a></p></li>
+<li><p><a class="reference internal" href="#cambios-en-la-api-de-rmw" id="id13">Cambios en la API de RMW</a></p></li>
+<li><p><a class="reference internal" href="#seguimiento-de-tareas" id="id14">Seguimiento de tareas</a></p></li>
+<li><p><a class="reference internal" href="#convenciones-de-programacion" id="id15">Convenciones de programación</a></p></li>
+<li><p><a class="reference internal" href="#diseno-del-sistema-de-archivos" id="id16">Diseño del sistema de archivos</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#developer-workflow" id="id18">Developer Workflow</a></p></li>
-<li><p><a class="reference internal" href="#architectural-development-practices" id="id19">Architectural Development Practices</a></p>
+<li><p><a class="reference internal" href="#flujo-de-trabajo-del-desarrollador" id="id17">Flujo de trabajo del desarrollador</a></p></li>
+<li><p><a class="reference internal" href="#practicas-de-desarrollo-arquitectonico" id="id18">Prácticas de desarrollo arquitectónico</a></p>
 <ul>
-<li><p><a class="reference internal" href="#software-development-lifecycle" id="id20">Software Development Lifecycle</a></p></li>
+<li><p><a class="reference internal" href="#ciclo-de-vida-de-desarrollo-de-software" id="id19">Ciclo de vida de desarrollo de software</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#build-farm-introduction" id="id21">Build Farm Introduction</a></p>
+<li><p><a class="reference internal" href="#introduccion-a-la-construccion-de-una-granja" id="id20">Introducción a la construcción de una granja</a></p>
 <ul>
-<li><p><a class="reference internal" href="#note-on-coverage-runs" id="id22">Note on Coverage runs</a></p></li>
-<li><p><a class="reference internal" href="#how-to-read-the-coverage-rate-from-the-buildfarm-report" id="id23">How to read the coverage rate from the buildfarm report</a></p></li>
-<li><p><a class="reference internal" href="#how-to-calculate-the-coverage-rate-from-the-buildfarm-report" id="id24">How to calculate the coverage rate from the buildfarm report</a></p></li>
-<li><p><a class="reference internal" href="#how-to-measure-coverage-locally-using-lcov-ubuntu" id="id25">How to measure coverage locally using lcov (Ubuntu)</a></p></li>
+<li><p><a class="reference internal" href="#nota-sobre-la-ejecucion-de-cobertura" id="id21">Nota sobre la ejecución de cobertura</a></p></li>
+<li><p><a class="reference internal" href="#como-leer-la-tasa-de-cobertura-del-informe-buildfarm" id="id22">Cómo leer la tasa de cobertura del informe buildfarm</a></p></li>
+<li><p><a class="reference internal" href="#como-calcular-la-tasa-de-cobertura-del-informe-buildfarm" id="id23">Cómo calcular la tasa de cobertura del informe buildfarm</a></p></li>
+<li><p><a class="reference internal" href="#como-medir-la-cobertura-localmente-usando-lcov-ubuntu" id="id24">Cómo medir la cobertura localmente usando lcov (Ubuntu)</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>This page defines the practices and policies we employ when developing ROS 2.</p>
-<div class="section" id="general-principles">
-<h2><a class="toc-backref" href="#id2">General Principles</a><a class="headerlink" href="#general-principles" title="Enlazar permanentemente con este título"></a></h2>
-<p>Some principles are common to all ROS 2 development:</p>
+<p>Esta página define las prácticas y políticas que empleamos al desarrollar ROS 2.</p>
+<div class="section" id="principios-generales">
+<h2><a class="toc-backref" href="#id1">Principios generales</a><a class="headerlink" href="#principios-generales" title="Enlazar permanentemente con este título"></a></h2>
+<p>Algunos principios son comunes a todo el desarrollo de ROS 2:</p>
 <ul class="simple">
-<li><p><strong>Shared ownership</strong>:
-Everybody working on ROS 2 should feel ownership over all parts of the system.
-The original author of a chunk of code does not have any special permission or obligation to control or maintain that chunk of code.
-Everyone is free to propose changes anywhere, to handle any type of ticket, and to review any pull request.</p></li>
-<li><p><strong>Be willing to work on anything</strong>:
-As a corollary to shared ownership, everybody should be willing to take on any available task and contribute to any aspect of the system.</p></li>
-<li><p><strong>Ask for help</strong>:
-If you run into trouble on something, ask your fellow developers for help, via tickets, comments, or email, as appropriate.</p></li>
+<li><p><strong>Propiedad compartida</strong>:
+Todos los que trabajan en ROS 2 deben sentirse dueños de todas las partes del sistema.
+El autor original de un fragmento de código no tiene ningún permiso u obligación especial para controlar o mantener ese fragmento de código.
+Todos son libres de proponer cambios en cualquier lugar, manejar cualquier tipo de ticket y revisar cualquier pull request.</p></li>
+<li><p><strong>Estar dispuesto a trabajar en cualquier cosa</strong>:
+Como corolario de la propiedad compartida, todos deben estar dispuestos a asumir cualquier tarea disponible y contribuir a cualquier aspecto del sistema.</p></li>
+<li><p><strong>Pedir ayuda</strong>:
+Si tienes problemas con algo, solicita ayuda a tus compañeros desarrolladores, a través de tickets, comentarios o correo electrónico, según corresponda.</p></li>
 </ul>
 </div>
-<div class="section" id="quality-practices">
-<h2><a class="toc-backref" href="#id3">Quality Practices</a><a class="headerlink" href="#quality-practices" title="Enlazar permanentemente con este título"></a></h2>
-<p>Packages can ascribe to different levels of quality based on the development practices they adhere to, as per the guidelines in <a class="reference external" href="https://www.ros.org/reps/rep-2004.html">REP 2004: Package Quality Categories</a>.
-The categories are differentiated by their policies on versioning, testing, documentation, and more.</p>
-<p>The following sections are the specific development rules we follow to ensure core packages are of the highest quality (“Level 1”).
-We recommend all ROS developers strive to adhere to the following policies to ensure quality across the ROS ecosystem.</p>
-<div class="section" id="versioning">
-<span id="semver"></span><h3><a class="toc-backref" href="#id4">Versioning</a><a class="headerlink" href="#versioning" title="Enlazar permanentemente con este título"></a></h3>
-<p>We will use the <a class="reference external" href="http://semver.org/">Semantic Versioning guidelines</a> (<code class="docutils literal notranslate"><span class="pre">semver</span></code>) for versioning.</p>
-<p>We will also adhere to some ROS-specific rules built on top of <code class="docutils literal notranslate"><span class="pre">semver's</span></code> full meaning:</p>
+<div class="section" id="practicas-de-calidad">
+<h2><a class="toc-backref" href="#id2">Prácticas de Calidad</a><a class="headerlink" href="#practicas-de-calidad" title="Enlazar permanentemente con este título"></a></h2>
+<p>Los paquetes pueden categorizarse en diferentes niveles de calidad basado en las prácticas de desarrollo a las que se adhieran, según las directrices de <a class="reference external" href="https://www.ros.org/reps/rep-2004.html">REP 2004: Package Quality Categories</a> .
+Las categorías se diferencian por sus políticas sobre versiones, pruebas, documentación y más.</p>
+<p>Las siguientes secciones son las reglas de desarrollo específicas que seguimos para garantizar que los paquetes principales sean de la más alta calidad (“Nivel 1”).
+Recomendamos a todos los desarrolladores de ROS que se esfuercen por cumplir con las siguientes políticas para garantizar la calidad en todo el ecosistema de ROS.</p>
+<div class="section" id="versionado">
+<span id="semver"></span><h3><a class="toc-backref" href="#id3">Versionado</a><a class="headerlink" href="#versionado" title="Enlazar permanentemente con este título"></a></h3>
+<p>Usaremos las <a class="reference external" href="https://semver.org/lang/es/">directrices de control de versiones semánticas</a> (<code class="docutils literal notranslate"><span class="pre">semver</span></code>) para el control de versiones.</p>
+<p>También nos adherimos a algunas reglas específicas de ROS adicionales encima de lo definido en <code class="docutils literal notranslate"><span class="pre">semver</span></code>:</p>
+<ul>
+<li><p>Los incrementos de versiones Mayores (es decir, cambios incompatibles) no deben realizarse dentro de una distribución de ROS publicada.</p>
 <ul class="simple">
-<li><p>Major version increments (i.e. breaking changes) should not be made within a released ROS distribution.</p>
-<ul>
-<li><p>Patch (interface-preserving) and minor (non-breaking) version increments do not break compatibility, so these sorts of changes <em>are</em> allowed within a release.</p></li>
-<li><p>Major ROS releases are the best time to release breaking changes.
-If a core package needs multiple breaking changes, they should be merged into their integration branch (e.g. rolling) to allow catching problems in CI quickly, but released together to reduce the number of major releases for ROS users.</p></li>
-<li><p>Though major increments require a new distribution, a new distribution does not necessarily require a major bump (if development and release can happen without breaking API).</p></li>
+<li><p>Los parches (con preservación de la interfaz) y los incrementos de versión Menores (sin interrupciones) no rompen la compatibilidad, por lo que este tipo de cambios <em>están</em> permitidos dentro de una versión.</p></li>
+<li><p>Los lanzamientos Mayores de ROS son el mejor momento para lanzar cambios incompatibles (breaking change).
+Si un paquete principal necesita varios cambios incompatibles, deben fusionarse en su rama de integración (por ejemplo, rolling) para permitir detectar problemas en CI rápidamente, pero deben publicarse juntos para reducir la cantidad de versiones Major para los usuarios de ROS.</p></li>
+<li><p>Aunque los incrementos importantes requieren una nueva distribución, una nueva distribución no necesariamente requiere un aumento importante (si el desarrollo y el lanzamiento pueden ocurrir sin interrumpir la API).</p></li>
 </ul>
 </li>
-<li><p>For compiled code, the ABI is considered part of the public interface.
-Any change that requires recompiling dependent code is considered major (breaking).</p>
-<ul>
-<li><p>ABI breaking changes <em>can</em> be made in a minor version bump <em>before</em> a distribution release (getting added to the rolling release).</p></li>
+<li><dl class="simple">
+<dt>Para el código compilado, la ABI (Interfaz binaria de aplicaciones) se considera parte de la interfaz pública.</dt><dd><p>Cualquier cambio que requiera volver a compilar el código dependiente se considera cambio incompatible.</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>Los cambios incompatibles de ABI <em>pueden</em> realizarse en una actualización de versión Menor <em>antes</em> de un lanzamiento de distribución  (agregándola a la distribución rolling).</p></li>
 </ul>
 </li>
-<li><p>We enforce API stability for core packages in Dashing and Eloquent even though their major version components are <code class="docutils literal notranslate"><span class="pre">0</span></code>, despite <a class="reference external" href="https://semver.org/#spec-item-4">SemVer’s specification</a> regarding initial development.</p>
-<ul>
-<li><p>Subsequently, packages should strive to reach a mature state and increase to version <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> so to match <code class="docutils literal notranslate"><span class="pre">semver's</span></code> specifications.</p></li>
+<li><p>Imponemos la estabilidad de la API para los paquetes principales en Dashing y Eloquent aunque sus componentes principales de la versión sean <code class="docutils literal notranslate"><span class="pre">0</span></code>, a pesar de la <a class="reference external" href="https://semver.org/lang/es/#spec-item-4">especificación de SemVer</a> con respecto al desarrollo inicial.</p>
+<ul class="simple">
+<li><p>Posteriormente, los paquetes deben esforzarse por alcanzar un estado maduro y aumentar a la versión <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code> para que coincidan con las especificaciones de <code class="docutils literal notranslate"><span class="pre">semver</span></code>.</p></li>
 </ul>
 </li>
 </ul>
-<div class="section" id="caveats">
-<h4>Caveats<a class="headerlink" href="#caveats" title="Enlazar permanentemente con este título"></a></h4>
-<p>These rules are <em>best-effort</em>.
-In unlikely, extreme cases, it may be necessary to break API within a major version/distribution.
-Whether an unplanned break increments the major or minor version will be assessed on a case-by-case basis.</p>
-<p>For example, consider a situation involving released X-turtle, corresponding to major version <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>, and released Y-turtle, corresponding to major version <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code>.</p>
-<p>If an API-breaking fix is identified to be absolutely necessary in X-turtle, bumping to <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code> is obviously not an option because <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code> already exists.</p>
-<p>The solutions for handling X-turtle’s version in such a case, both non-ideal, are:</p>
+<div class="section" id="advertencias">
+<h4>Advertencias<a class="headerlink" href="#advertencias" title="Enlazar permanentemente con este título"></a></h4>
+<p>Estas reglas son de <em>mejor esfuerzo</em>.
+En casos extremos e improbables, puede ser necesario romper la API dentro de una versión/distribución principal.
+Para un caso de cambio no planificado que rompa compatibilidad se evaluará si es considerado un incremento Mayor o Menor.</p>
+<p>Por ejemplo, considere una situación que involucre el lanzamiento de X-turtle, correspondiente a la versión Mayor <code class="docutils literal notranslate"><span class="pre">1.0.0</span></code>, y Y-turtle lanzado, correspondiente a la versión Mayor <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code>.</p>
+<p>Si se identifica que un arreglo con ruptura de la API es absolutamente necesaria en X-turtle, saltar a <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code> obviamente no es una opción porque <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code> ya existe.</p>
+<p>Las soluciones para manejar la versión de X-turtle en tal caso, ambas no ideales, son:</p>
 <ol class="arabic simple">
-<li><p>Bumping X-turtle’s minor version: non-ideal because it violates SemVer’s principle that breaking changes must bump the major version.</p></li>
-<li><p>Bumping X-turtle’s major version past Y-turtle (to <code class="docutils literal notranslate"><span class="pre">3.0.0</span></code>): non-ideal because the older distro’s version would become higher than the already-available version of a newer distro, which would invalidate/break version-specific conditional code.</p></li>
+<li><p>Actualizar X-turtle con una versión Menor: no es ideal porque viola el principio de SemVer de que los cambios incompatibles deben incrementar la versión Mayor.</p></li>
+<li><p>Actualizar la versión Mayor de X-turtle más allá de Y-turtle (a <code class="docutils literal notranslate"><span class="pre">3.0.0</span></code>): no es ideal porque la versión de la distribución anterior se volvería más alta que la versión ya disponible de una distribución más nueva, lo que invalidaría/rompería código condicional específico de la versión.</p></li>
 </ol>
-<p>The developer will have to decide which solution to use, or more importantly, which principle they are willing to break.
-We cannot suggest one or the other, but in either case we do require that explicit measures be taken to communicate the disruption and its explanation to users manually (beyond just the version increment).</p>
-<p>If there were no Y-turtle, even though the fix would technically just be a patch, X-turtle would have to bump to <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code>.
-This case adheres to SemVer, but breaks from our own rule that major increments should not be introduced in a released distribution.</p>
-<p>This is why we consider the versioning rules <em>best-effort</em>.
-As unlikely as the examples above are, it is important to accurately define our versioning system.</p>
+<p>El desarrollador tendrá que decidir qué solución usar o, lo que es más importante, qué principio está dispuesto a romper.
+No podemos sugerir uno u otro, pero en cualquier caso sí requerimos que se tomen medidas explícitas para comunicar la interrupción y su explicación a los usuarios de forma manual (más allá del incremento de versión).</p>
+<p>Si no hubiera Y-turtle, aunque técnicamente la solución sería solo un parche, X-turtle tendría que pasar a <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code>.
+Este caso se adhiere a SemVer, pero rompe con nuestra propia regla de que no se deben introducir incrementos importantes en una distribución publicada.</p>
+<p>Es por eso que consideramos las reglas de control de versiones <em>mejor esfuerzo</em>.
+Tan improbable como el ejemplo que se muestra arriba, es importante definir con precisión nuestro sistema de control de versiones.</p>
 </div>
-<div class="section" id="public-api-declaration">
-<h4>Public API declaration<a class="headerlink" href="#public-api-declaration" title="Enlazar permanentemente con este título"></a></h4>
-<p>According to <code class="docutils literal notranslate"><span class="pre">semver</span></code>, every package must clearly declare a public API.
-We will use the «Public API Declaration» section of the quality declaration of a package to declare what symbols are part of the public API.</p>
-<p>For most C and C++ packages the declaration is any header that it installs.
-However, it is acceptable to define a set of symbols which are considered private.
-Avoiding private symbols in headers can help with ABI stability, but is not required.</p>
-<p>For other languages like Python, a public API must be explicitly defined, so that it is clear what symbols can be relied on with respect to the versioning guidelines.
-The public API can also be extended to build artifacts like configuration variables, CMake config files, etc. as well as executables and command-line options and output.
-Any elements of the public API should be clearly stated in the package’s documentation.
-If something you are using is not explicitly listed as part of the public API in the package’s documentation, then you cannot depend on it not changing between minor or patch versions.</p>
+<div class="section" id="declaracion-de-api-publica">
+<h4>Declaración de API pública<a class="headerlink" href="#declaracion-de-api-publica" title="Enlazar permanentemente con este título"></a></h4>
+<p>Según <code class="docutils literal notranslate"><span class="pre">semver</span></code>, cada paquete debe declarar claramente una API pública.
+Usaremos la sección «Declaración de API pública» de la declaración de calidad de un paquete para declarar qué símbolos forman parte de la API pública.</p>
+<p>Para la mayoría de los paquetes C y C++, la declaración es cualquier encabezado que instale.
+Sin embargo, es aceptable definir un conjunto de símbolos que se consideran privados.
+Evitar los símbolos privados en los encabezados puede ayudar con la estabilidad de ABI, pero no es obligatorio.</p>
+<p>Para otros lenguajes como Python, se debe definir explícitamente una API pública, de modo que quede claro en qué símbolos se puede confiar con respecto a las pautas de control de versiones.
+La API pública también se puede ampliar para crear artefactos como variables de configuración, archivos de configuración de CMake, etc., así como ejecutables y opciones y resultados de la línea de comandos.
+Todos los elementos de la API pública deben indicarse claramente en la documentación del paquete.
+Si algo que estas utilizando no aparece explícitamente como parte de la API pública en la documentación del paquete, entonces no puedes asumir en que no cambie entre versiones Menores o parches.</p>
 </div>
-<div class="section" id="deprecation-strategy">
-<h4>Deprecation strategy<a class="headerlink" href="#deprecation-strategy" title="Enlazar permanentemente con este título"></a></h4>
-<p>Where possible, we will also use the tick-tock deprecation and migration strategy for major version increments.
-New deprecations will come in a new distribution release, accompanied by compiler warnings expressing that the functionality is being deprecated.
-In the next release, the functionality will be completely removed (no warnings).</p>
-<p>Example of function <code class="docutils literal notranslate"><span class="pre">foo</span></code> deprecated and replaced by function <code class="docutils literal notranslate"><span class="pre">bar</span></code>:</p>
+<div class="section" id="estrategia-de-obsolescencia">
+<h4>Estrategia de Obsolescencia<a class="headerlink" href="#estrategia-de-obsolescencia" title="Enlazar permanentemente con este título"></a></h4>
+<p>Siempre que sea posible, también utilizaremos la estrategia de migración y obsolescencia tick-tock para los incrementos de versiones Mayores.
+Las nuevas obsolescencias vendrán en una nueva versión de distribución, acompañadas de advertencias del compilador que expresan que la funcionalidad está obsoleta.
+En la próxima versión, la funcionalidad se eliminará por completo (sin advertencias).</p>
+<p>Ejemplo de la función <code class="docutils literal notranslate"><span class="pre">foo</span></code> obsoleta y reemplazada por la función <code class="docutils literal notranslate"><span class="pre">bar</span></code>:</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 86%" />
 </colgroup>
 <thead>
-<tr class="row-odd"><th class="head"><p>Version</p></th>
+<tr class="row-odd"><th class="head"><p>Versión</p></th>
 <th class="head"><p>API</p></th>
 </tr>
 </thead>
@@ -512,687 +518,792 @@ In the next release, the functionality will be completely removed (no warnings).
 </tr>
 </tbody>
 </table>
-<p>We must not add deprecations after a distribution is released.
-Deprecations do not necessarily require a major version bump, though.
-A deprecation can be introduced in a minor version bump if the bump happens before the distro is released (similar to ABI breaking changes).</p>
-<p>For example, if X-turtle begins development as <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code>, a deprecation can be added in <code class="docutils literal notranslate"><span class="pre">2.1.0</span></code> before X-turtle is released.</p>
-<p>We will attempt to maintain compatibility across distros as much as possible.
-However, like the caveats associated with SemVer, tick-tock or even deprecation in general may be impossible to completely adhere to in certain cases.</p>
+<p>No debemos agregar obsolescencias después de lanzar una distribución.
+Sin embargo, las obsolescencias no requieren necesariamente un cambio de versión Mayor.
+Se puede introducir una obsolescencia en un aumento de versión Menor si el aumento ocurre antes de que se lance la distribución (similar a los cambios incompatibles de ABI).</p>
+<p>Por ejemplo, si X-turtle comienza a desarrollarse como <code class="docutils literal notranslate"><span class="pre">2.0.0</span></code>, se puede agregar una obsolescencia en <code class="docutils literal notranslate"><span class="pre">2.1.0</span></code> antes de lanzar X-turtle.</p>
+<p>Intentaremos mantener la compatibilidad entre distribuciones tanto como sea posible.
+Sin embargo, al igual que las advertencias asociadas con SemVer, el tic-tac o incluso la obsolescencia en general puede ser imposible de cumplir por completo en ciertos casos.</p>
 </div>
 </div>
-<div class="section" id="change-control-process">
-<h3><a class="toc-backref" href="#id5">Change control process</a><a class="headerlink" href="#change-control-process" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="proceso-de-control-de-cambios">
+<h3><a class="toc-backref" href="#id4">Proceso de control de cambios</a><a class="headerlink" href="#proceso-de-control-de-cambios" title="Enlazar permanentemente con este título"></a></h3>
 <ul class="simple">
-<li><p>All changes must go through a pull request.</p></li>
-<li><p>We will enforce the <a class="reference external" href="https://developercertificate.org/">Developer Certificate of Origin (DCO)</a> on pull requests in ROSCore repositories.</p>
+<li><p>Todos los cambios deben pasar por un pull request.</p></li>
+<li><p>Haremos cumplir el <a class="reference external" href="https://developercertificate.org/">Certificado de origen del desarrollador (DCO)</a> en los pull request a los repositorios de ROSCore.</p>
 <ul>
-<li><p>It requires all commit messages to contain the <code class="docutils literal notranslate"><span class="pre">Signed-off-by</span></code> line with an email address that matches the commit author.</p></li>
-<li><p>You can pass <code class="docutils literal notranslate"><span class="pre">-s</span></code> / <code class="docutils literal notranslate"><span class="pre">--signoff</span></code> to the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> invocation or write the expected message manually (e.g. <code class="docutils literal notranslate"><span class="pre">Signed-off-by:</span> <span class="pre">Your</span> <span class="pre">Name</span> <span class="pre">Developer</span> <span class="pre">&lt;your.name&#64;example.com&gt;</span></code>).</p></li>
-<li><p>DCO is <em>not</em> required for pull requests that only address whitespace removal, typo correction, and other <a class="reference external" href="http://cr.openjdk.java.net/~jrose/draft/trivial-fixes.html">trivial changes</a>.</p></li>
+<li><p>Requiere que todos los mensajes de confirmación contengan la línea <code class="docutils literal notranslate"><span class="pre">Firmado</span> <span class="pre">por</span></code> con una dirección de correo electrónico que coincida con el autor de la confirmación.</p></li>
+<li><p>Puede pasar <code class="docutils literal notranslate"><span class="pre">-s</span></code> / <code class="docutils literal notranslate"><span class="pre">--signoff</span></code> a la invocación <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> o escribir el mensaje esperado manualmente (por ejemplo, <code class="docutils literal notranslate"><span class="pre">Firmado</span> <span class="pre">por:</span> <span class="pre">Su</span> <span class="pre">nombre</span> <span class="pre">Desarrollador</span> <span class="pre">&lt;su.nombre</span> <span class="pre">&#64;ejemplo.com&gt;</span></code>).</p></li>
+<li><p>DCO <em>no</em> se requiere para los pull request que solo abordan la eliminación de espacios en blanco, la corrección de errores tipográficos y otros <a class="reference external" href="http://cr.openjdk.java.net/~jrose/draft/trivial-fixes.html">cambios triviales</a> .</p></li>
 </ul>
 </li>
-<li><p>Always run CI jobs for all <a class="reference external" href="https://www.ros.org/reps/rep-2000.html#support-tiers">tier 1 platforms</a> for every pull request and include links to jobs in the pull request.
-(If you don’t have access to the Jenkins jobs someone will trigger the jobs for you.)</p></li>
-<li><p>A minimum of 1 approval from a fellow developer who did not author the pull request is required to consider it approved.
-Approval is required before merging.</p>
+<li><dl class="simple">
+<dt>Ejecute siempre trabajos de CI para todas las <a class="reference external" href="https://www.ros.org/reps/rep-2000.html#support-tiers">plataformas de nivel 1</a> para cada pull request e incluya enlaces a trabajos en el pull request.</dt><dd><p>(Si no tiene acceso a los trabajos de Jenkins, alguien activará los trabajos por usted).</p>
+</dd>
+</dl>
+</li>
+<li><p>Se requiere un mínimo de 1 aprobación de un compañero desarrollador que no haya creado el pull request para considerarlo aprobado.
+Se requiere aprobación antes de realizar la fusión.</p>
 <ul>
-<li><p>Packages may choose to increase this number.</p></li>
+<li><p>Los paquetes pueden optar por aumentar este número.</p></li>
 </ul>
 </li>
-<li><p>Any required changes to documentation (API documentation, feature documentation, release notes, etc.) must be proposed before merging related changes.</p></li>
+<li><p>Cualquier cambio requerido en la documentación (documentación de la API, documentación de funciones, notas de la versión, etc.) debe proponerse antes de fusionar los cambios relacionados.</p></li>
 </ul>
-<div class="section" id="guidelines-for-backporting-prs">
-<h4>Guidelines for backporting PRs<a class="headerlink" href="#guidelines-for-backporting-prs" title="Enlazar permanentemente con este título"></a></h4>
-<p>When changing an older version of ROS:</p>
+<div class="section" id="directrices-para-aplicar-los-pr-a-versiones-anteriores">
+<h4>Directrices para aplicar los PR a versiones anteriores<a class="headerlink" href="#directrices-para-aplicar-los-pr-a-versiones-anteriores" title="Enlazar permanentemente con este título"></a></h4>
+<p>Al cambiar una versión anterior (backporting) de ROS:</p>
 <ul class="simple">
-<li><p>Make sure the features or fixes are accepted and merged in the rolling branch before opening a PR to backport the changes to older versions.</p></li>
-<li><p>When backporting to older versions, also consider backporting to any other <a class="reference internal" href="../../Releases.html"><span class="doc">still supported versions</span></a>, even non-LTS versions.</p></li>
-<li><p>If you are backporting a single PR in its entirety, title the backport PR «[Distro] &lt;name of original PR&gt;».
-If backporting a subset of changes from one or multiple PRs, the title should be «[Distro] &lt;description of changes&gt;».</p></li>
-<li><p>Link to all PRs whose changes you’re backporting from the description of your backport PR.
-In a Dashing backport of a Foxy change, you do not need to link to the Eloquent backport of the same change.</p></li>
+<li><p>Asegúrate de que las funciones o las correcciones se acepten y fusionen en la rama rolling antes de abrir una PR para aplicar los cambios a versiones anteriores.</p></li>
+<li><p>Al realizar una adaptación a versiones anteriores, también considere la posibilidad de realizar una adaptación a cualquier otra <a class="reference internal" href="../../Releases.html"><span class="doc">versión aún compatible</span></a>, incluso versiones que no sean LTS.</p></li>
+<li><p>Si está realizando backport de un solo PR en su totalidad, titule el PR de retroceso «[Distro] &lt;nombre del PR original&gt;».
+Si se hace un backport un de subconjunto de cambios provenientes de uno o varios PR, el título debe ser «[Distro] &lt;descripción de los cambios&gt;».</p></li>
+<li><p>Vincula a todos los PR cuyos cambios estés realizando su backport desde la descripción del backport PR.
+En un backport de Foxy a Dashing no es necesario enlazar el backport a Eloquent en el mismo cambio.</p></li>
 </ul>
 </div>
 </div>
-<div class="section" id="documentation">
-<h3><a class="toc-backref" href="#id6">Documentation</a><a class="headerlink" href="#documentation" title="Enlazar permanentemente con este título"></a></h3>
-<p>All packages should have these documentation elements present in their README or linked to from their README:</p>
+<div class="section" id="documentacion">
+<h3><a class="toc-backref" href="#id5">Documentación</a><a class="headerlink" href="#documentacion" title="Enlazar permanentemente con este título"></a></h3>
+<p>Todos los paquetes deben tener estos elementos de documentación presentes en su README o vinculados desde su README:</p>
 <ul class="simple">
-<li><p>Description and purpose</p></li>
-<li><p>Definition and description of the public API</p></li>
-<li><p>Examples</p></li>
-<li><p>How to build and install (should reference external tools/workflows)</p></li>
-<li><p>How to build and run tests</p></li>
-<li><p>How to build documentation</p></li>
-<li><p>How to develop (useful for describing things like <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">develop</span></code>)</p></li>
-<li><p>License and copyright statements</p></li>
+<li><p>Descripción y propósito</p></li>
+<li><p>Definición y descripción de la API pública</p></li>
+<li><p>Ejemplos</p></li>
+<li><p>Cómo compilar e instalar (debe hacer referencia a herramientas/flujos de trabajo externos)</p></li>
+<li><p>Cómo construir y ejecutar pruebas</p></li>
+<li><p>Cómo construir la documentación</p></li>
+<li><p>Cómo desarrollar (útil para describir cosas como <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">Develop</span></code>)</p></li>
+<li><p>Declaraciones de licencia y derechos de autor</p></li>
 </ul>
-<p>Each source file must have a license and copyright statement, checked with an automated linter.</p>
-<p>Each package must have a LICENSE file, typically the Apache 2.0 license, unless the package has an existing permissive license (e.g. rviz uses three-clause BSD).</p>
-<p>Each package should describe itself and its purpose assuming, as much as possible, that the reader has stumbled onto it without previous knowledge of ROS or other related projects.</p>
-<p>Each package should define and describe its public API so that there is a reasonable expectation for users about what is covered by the semantic versioning policy.
-Even in C and C++, where the public API can be enforced by API and ABI checking, it is a good opportunity to describe the layout of the code and the function of each part of the code.</p>
-<p>It should be easy to take any package and from that package’s documentation understand how to build, run, build and run tests, and build the documentation.
-Obviously we should avoid repeating ourselves for common workflows, like building a package in a workspace, but the basic workflows should be either described or referenced.</p>
-<p>Finally, it should include any documentation for developers.
-This might include workflows for testing the code using something like <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">develop</span></code>, or it might mean describing how to make use of extension points provided by your package.</p>
-<p>Examples:</p>
-<ul class="simple">
-<li><p>capabilities: <a class="reference external" href="https://docs.ros.org/hydro/api/capabilities/html/">https://docs.ros.org/hydro/api/capabilities/html/</a></p>
+<p>Cada archivo fuente debe tener una licencia y una declaración de derechos de autor, verificada con un linter automático.</p>
+<p>Cada paquete debe tener un archivo de LICENCIA, generalmente la licencia de Apache 2.0, a menos que el paquete tenga una licencia permisiva existente (por ejemplo, rviz usa BSD de tres cláusulas).</p>
+<p>Cada paquete debe describirse a sí mismo y su propósito suponiendo, en la medida de lo posible, que el lector se ha topado con él sin conocimiento previo de ROS u otros proyectos relacionados.</p>
+<p>Cada paquete debe definir y describir su API pública para que haya una expectativa razonable para los usuarios sobre lo que cubre la política de versiones semánticas.
+Incluso en C y C++, donde la API pública se puede aplicar mediante la verificación de API y ABI, es una buena oportunidad para describir el diseño del código y la función de cada parte del código.</p>
+<p>Debe ser fácil tomar cualquier paquete y, a partir de la documentación de ese paquete, comprender cómo construir, ejecutar, construir y ejecutar pruebas, y como construir la documentación.
+Obviamente, debemos evitar repetirnos para flujos de trabajo comunes, como crear un paquete en un espacio de trabajo, pero los flujos de trabajo básicos deben describirse o referenciarse.</p>
+<p>Finalmente, debe incluir cualquier documentación para desarrolladores.
+Esto podría incluir flujos de trabajo para probar el código usando algo como <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">Develop</span></code>, o podría significar describir cómo hacer uso de los puntos de extensión proporcionados por su paquete.</p>
+<p>Ejemplos:</p>
 <ul>
-<li><p>This one gives an example of docs which describe the public API</p></li>
+<li><p>capacidades: <a class="reference external" href="https://docs.ros.org/hydro/api/capabilities/html/">https://docs.ros.org/hydro/api/capabilities/html/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este da un ejemplo de documentos que describen la API pública</p></li>
 </ul>
+</div></blockquote>
 </li>
 <li><p>catkin_tools: <a class="reference external" href="https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html">https://catkin-tools.readthedocs.org/en/latest/development/extending_the_catkin_command.html</a></p>
-<ul>
-<li><p>This is an example of describing an extension point for a package</p></li>
+<blockquote>
+<div><ul class="simple">
+<li><p>Este es un ejemplo de descripción de un punto de extensión para un paquete</p></li>
 </ul>
+</div></blockquote>
 </li>
 </ul>
-<p><em>(API docs are not yet being automatically generated)</em></p>
+<p><em>(Los documentos API aún no se generan automáticamente)</em></p>
 </div>
-<div class="section" id="testing">
-<h3><a class="toc-backref" href="#id7">Testing</a><a class="headerlink" href="#testing" title="Enlazar permanentemente con este título"></a></h3>
-<p>All packages should have some level of <a class="reference internal" href="../../Tutorials/Intermediate/Testing/Testing-Main.html#testingmain"><span class="std std-ref">system, integration, and/or unit tests.</span></a></p>
-<p><strong>Unit tests</strong> should always be in the package which is being tested and should make use of tools like <code class="docutils literal notranslate"><span class="pre">Mock</span></code> to try and test narrow parts of the code base in constructed scenarios.
-Unit tests should not bring in test dependencies that are not testing tools, e.g. gtest, nosetest, pytest, mock, etc…</p>
-<p><strong>Integration tests</strong> can test interactions between parts of the code or between parts of the code and the system.
-They often test software interfaces in ways that we expect the user to use them.
-Like Unit tests, Integration tests should be in the package which is being tested and should not bring in non-tool test dependencies unless absolutely necessary, i.e. all non-tool dependencies should only be allowed under extreme scrutiny so they should be avoided if possible.</p>
-<p><strong>System tests</strong> are designed to test end-to-end situations between packages and should be in their own packages to avoid bloating or coupling packages and to avoid circular dependencies.</p>
-<p>In general minimizing external or cross package test dependencies should be avoided to prevent circular dependencies and tightly coupled test packages.</p>
-<p>All packages should have some unit tests and possibly integration tests, but the degree to which they should have them is based on the package’s quality category.
-The following subsections apply to “Level 1” packages:</p>
-<div class="section" id="code-coverage">
-<h4>Code coverage<a class="headerlink" href="#code-coverage" title="Enlazar permanentemente con este título"></a></h4>
-<p>We will provide line coverage, and achieve line coverage above 95%.
-If a lower percentage target is justifiable, it must be prominently documented.
-We may provide branch coverage, or exclude code from coverage (test code, debug code, etc.).
-We require that coverage increase or stay the same before merging a change, but it may be acceptable to make a change that decreases code coverage with proper justification (e.g. deleting code that was previously covered can cause the percentage to drop).</p>
+<div class="section" id="pruebas">
+<h3><a class="toc-backref" href="#id6">Pruebas</a><a class="headerlink" href="#pruebas" title="Enlazar permanentemente con este título"></a></h3>
+<p>Todos los paquetes deben tener algún nivel de <a class="reference internal" href="../../Tutorials/Intermediate/Testing/Testing-Main.html#testingmain"><span class="std std-ref">sistema, integración y/o pruebas unitarias.</span></a></p>
+<p><strong>Las pruebas unitarias</strong> siempre deben estar en el paquete que se está probando y deben usar herramientas como <code class="docutils literal notranslate"><span class="pre">Mock</span></code> para probar y verificar partes especificas de la base de código en escenarios construidos.
+Las pruebas unitarias no deben incluir dependencias de prueba que no sean herramientas de prueba, p. gtest, nosetest, pytest, simulacro, etc…</p>
+<p><strong>Las pruebas de integración</strong> pueden probar interacciones entre partes del código o entre partes del código y el sistema.
+A menudo prueban las interfaces de software de la forma en que esperamos que el usuario las use.
+Al igual que las pruebas unitarias, las pruebas de integración deben estar en el paquete que se está probando y no deben incluir dependencias de prueba que no sean de herramientas a menos que sea absolutamente necesario, es decir, todas las dependencias que no sean de herramientas solo deben permitirse bajo un escrutinio extremo, por lo que deben evitarse si es posible.</p>
+<p><strong>Las pruebas del sistema</strong> están diseñadas para probar situaciones de un extremo a otro entre paquetes y deben estar en sus propios paquetes para evitar la sobrecarga o el acoplamiento de paquetes y para evitar dependencias circulares.</p>
+<p>En general, se debe evitar minimizar las dependencias de prueba de paquetes cruzados o externos para evitar dependencias circulares y paquetes de prueba estrechamente acoplados.</p>
+<p>Todos los paquetes deben tener algunas pruebas unitarias y posiblemente pruebas de integración, pero el grado en que deben tenerlas se basa en la categoría de calidad del paquete.
+Las siguientes subsecciones se aplican a los paquetes de “Nivel 1”:</p>
+<div class="section" id="cobertura-de-codigo">
+<h4>Cobertura de código<a class="headerlink" href="#cobertura-de-codigo" title="Enlazar permanentemente con este título"></a></h4>
+<p>Proporcionaremos cobertura de línea y lograremos una cobertura de línea superior al 95%.
+Si se justifica un objetivo de porcentaje más bajo, debe documentarse de forma explicita.
+Podemos proporcionar cobertura de rama o excluir código de la cobertura (código de prueba, código de depuración, etc.).
+Requerimos que la cobertura aumente o permanezca igual antes de fusionar un cambio, pero puede ser aceptable hacer un cambio que reduzca la cobertura del código con la justificación adecuada (p. ej., eliminar el código que se cubrió anteriormente puede hacer que el porcentaje baje).</p>
 </div>
-<div class="section" id="performance">
-<h4>Performance<a class="headerlink" href="#performance" title="Enlazar permanentemente con este título"></a></h4>
-<p>We strongly recommend performance tests, but recognize they don’t make sense for some packages.
-If there are performance tests, we will choose to either check each change or before each release or both.
-We will also require justification for merging a change or making a release that lowers performance.</p>
+<div class="section" id="rendimiento">
+<h4>Rendimiento<a class="headerlink" href="#rendimiento" title="Enlazar permanentemente con este título"></a></h4>
+<p>Recomendamos fuertemente las pruebas de rendimiento, pero reconocemos que no tienen sentido para algunos paquetes.
+Si hay pruebas de rendimiento, elegiremos verificar cada cambio o antes de cada lanzamiento o ambos.
+También necesitaremos una justificación para fusionar un cambio o hacer una versión que reduzca el rendimiento.</p>
 </div>
-<div class="section" id="linters-and-static-analysis">
-<h4>Linters and static analysis<a class="headerlink" href="#linters-and-static-analysis" title="Enlazar permanentemente con este título"></a></h4>
-<p>We will use <a class="reference internal" href="Code-Style-Language-Versions.html"><span class="doc">ROS code style</span></a> and enforce it with linters from <a class="reference external" href="https://github.com/ament/ament_lint/tree/rolling/ament_lint_common/doc/index.rst">ament_lint_common</a>.
-All linters/static analysis that are part of <code class="docutils literal notranslate"><span class="pre">ament_lint_common</span></code> must be used.</p>
-<p>The <a class="reference external" href="https://github.com/ament/ament_lint/blob/rolling/ament_lint_auto/doc/index.rst">ament_lint_auto</a> documentation provides information on running <code class="docutils literal notranslate"><span class="pre">ament_lint_common</span></code>.</p>
+<div class="section" id="linters-y-analisis-estatico">
+<h4>Linters y análisis estático<a class="headerlink" href="#linters-y-analisis-estatico" title="Enlazar permanentemente con este título"></a></h4>
+<p>Usaremos el <a class="reference internal" href="Code-Style-Language-Versions.html"><span class="doc">estilo de código ROS</span></a> y lo aplicaremos con linters de <a class="reference external" href="https://github.com/ament/ament_lint/tree/rolling/ament_lint_common/doc/index.rst">ament_lint_common</a>.
+Se deben usar todos los análisis estáticos/linters que forman parte de <code class="docutils literal notranslate"><span class="pre">ament_lint_common</span></code>.</p>
+<p>La documentación de <a class="reference external" href="https://github.com/ament/ament_lint/blob/rolling/ament_lint_auto/doc/index.rst">ament_lint_auto</a> proporciona información sobre cómo ejecutar <code class="docutils literal notranslate"><span class="pre">ament_lint_common</span></code>.</p>
 </div>
 </div>
 </div>
-<div class="section" id="general-practices">
-<h2><a class="toc-backref" href="#id8">General Practices</a><a class="headerlink" href="#general-practices" title="Enlazar permanentemente con este título"></a></h2>
-<p>Some practices are common to all ROS 2 development.</p>
-<p>These practices don’t affect package quality level as described in <a class="reference external" href="https://www.ros.org/reps/rep-2004.html">REP 2004</a>, but are still highly recommended for the development process.</p>
+<div class="section" id="practicas-generales">
+<h2><a class="toc-backref" href="#id7">Prácticas Generales</a><a class="headerlink" href="#practicas-generales" title="Enlazar permanentemente con este título"></a></h2>
+<p>Algunas prácticas son comunes a todo el desarrollo de ROS 2.</p>
+<p>Estas prácticas no afectan el nivel de calidad del paquete como se describe en <a class="reference external" href="https://www.ros.org/reps/rep-2004.html">REP 2004</a>, pero siguen siendo muy recomendables para el proceso de desarrollo.</p>
 <div class="section" id="issues">
-<h3><a class="toc-backref" href="#id9">Issues</a><a class="headerlink" href="#issues" title="Enlazar permanentemente con este título"></a></h3>
-<p>When filing an issue please make sure to:</p>
+<h3><a class="toc-backref" href="#id8">Issues</a><a class="headerlink" href="#issues" title="Enlazar permanentemente con este título"></a></h3>
+<p>Al presentar un issue, Asegúrate de:</p>
+<ul>
+<li><p>Incluir suficiente información para que otra persona entienda el problema.
+En ROS 2, los siguientes puntos pueden utilizarse para reducir el motivo de un problema.
+Realizar pruebas con tantas alternativas en cada categoría como sea posible será de especial ayuda.</p>
 <ul class="simple">
-<li><p>Include enough information for another person to understand the issue.
-In ROS 2, the following points are needed for narrowing down the cause of an issue.
-Testing with as many alternatives in each category as feasible will be especially helpful.</p>
-<ul>
-<li><p><strong>The operating system and version.</strong>
-Reasoning: ROS 2 supports multiple platforms, and some bugs are specific to particular versions of operating systems/compilers.</p></li>
-<li><p><strong>The installation method.</strong>
-Reasoning: Some issues only manifest if ROS 2 has been installed from «fat archives» or from Debians.
-This can help us determine if the issue is with the packaging process.</p></li>
-<li><p><strong>The specific version of ROS 2.</strong>
-Reasoning: Some bugs may be present in a particular ROS 2 release and later fixed.
-It is important to know if your installation includes these fixes.</p></li>
-<li><p><strong>The DDS/RMW implementation being used</strong> (see <a class="reference internal" href="../../Concepts/About-Different-Middleware-Vendors.html"><span class="doc">this page</span></a> for how to determine which one).
-Reasoning: Communication issues may be specific to the underlying ROS middleware being used.</p></li>
-<li><p><strong>The ROS 2 client library being used.</strong>
-Reasoning: This helps us narrow down the layer in the stack at which the issue might be.</p></li>
+<li><p><strong>El sistema operativo y la versión.</strong>
+Razonamiento: ROS 2 es compatible con múltiples plataformas y algunos errores son específicos de versiones particulares de sistemas operativos/compiladores.</p></li>
+<li><p><strong>El método de instalación.</strong>
+Razonamiento: algunos problemas solo se manifiestan si ROS 2 se ha instalado desde «archivos fat» o desde Debians.
+Esto puede ayudarnos a determinar si el problema está relacionado con el proceso de empaquetado.</p></li>
+<li><p><strong>La versión específica de ROS 2.</strong>
+Razonamiento: algunos errores pueden estar presentes en una versión particular de ROS 2 y luego se corrigieron.
+Es importante saber si su instalación incluye estas correcciones.</p></li>
+<li><p><strong>La implementación de DDS/RMW que se está utilizando</strong> (consulte <a class="reference internal" href="../../Concepts/About-Different-Middleware-Vendors.html"><span class="doc">esta página</span></a> para saber cómo determinar cuál).
+Razonamiento: los problemas de comunicación pueden ser específicos del middleware de ROS subyacente que se utiliza.</p></li>
+<li><p><strong>La biblioteca cliente ROS 2 en uso.</strong>
+Razonamiento: esto nos ayuda a reducir la capa en la pila en la que podría estar el problema.</p></li>
 </ul>
 </li>
-<li><p>Include a list of steps to reproduce the issue.</p></li>
-<li><p>In case of a bug consider to provide a <a class="reference external" href="http://sscce.org/">short, self contained, correct (compilable), example</a>.
-Issues are much more likely to be resolved if others can reproduce them easily.</p></li>
-<li><p>Mention troubleshooting steps that have been tried already, including:</p>
-<ul>
-<li><p>Upgrading to the latest version of the code, which may include bug fixes that have not been released yet.
-See <a class="reference internal" href="../../Installation.html#building-from-source"><span class="std std-ref">this section</span></a> and follow the instructions to get the «rolling» branches.</p></li>
-<li><p>Trying with a different RMW implementation.
-See <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">this page</span></a> for how to do that.</p></li>
+<li><p>Incluir una lista de pasos para reproducir el problema.</p></li>
+<li><dl class="simple">
+<dt>En caso de un error, considera proporcionar un <a class="reference external" href="http://sscce.org/">ejemplo breve, autónomo, correcto (compilable)</a>.</dt><dd><p>Es mucho más probable que los problemas se resuelvan si otros pueden reproducirlos fácilmente.</p>
+</dd>
+</dl>
+</li>
+<li><p>Menciona los pasos de solución de problemas que ya se han intentado, incluidos:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Actualización a la última versión del código, que puede incluir correcciones de errores que aún no se han publicado.
+Consulta <a class="reference internal" href="../../Installation.html#building-from-source"><span class="std std-ref">esta sección</span></a> y siga las instrucciones para obtener las ramas «rolling».</p></li>
+<li><p>Probar con una implementación diferente de RMW.
+Consulte <a class="reference internal" href="../../How-To-Guides/Working-with-multiple-RMW-implementations.html"><span class="doc">esta página</span></a> para saber cómo hacerlo.</p></li>
 </ul>
+</div></blockquote>
 </li>
 </ul>
 </div>
-<div class="section" id="branches">
-<h3><a class="toc-backref" href="#id10">Branches</a><a class="headerlink" href="#branches" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="ramas">
+<h3><a class="toc-backref" href="#id9">Ramas</a><a class="headerlink" href="#ramas" title="Enlazar permanentemente con este título"></a></h3>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>These are just guidelines.
-It is up to the package maintainer to choose branch names that match their own workflow.</p>
+<p>Estas son solo pautas.
+Depende del mantenedor del paquete elegir los nombres de las ramas que coincidan con su propio flujo de trabajo.</p>
 </div>
-<p>It is good practice to have <strong>separate branches</strong> in a package’s source repository for each ROS distribution it is targeting.
-These branches are typically named after the distribution they target.
-For example, a <code class="docutils literal notranslate"><span class="pre">humble</span></code> branch for development targeted specifically at the Humble distribution.</p>
-<p>Releases are also made from these branches, targeting the appropriate distribution.
-Development targeted at a specific ROS distribution can happen on the appropriate branch.
-For example: Development commits targeting <code class="docutils literal notranslate"><span class="pre">foxy</span></code> are made to the <code class="docutils literal notranslate"><span class="pre">foxy</span></code> branch, and package releases for <code class="docutils literal notranslate"><span class="pre">foxy</span></code> are made from that same branch.</p>
+<p>En el repositorio código fuente es una buena práctica tener <strong>ramas separadas</strong> para cada una de las distribuciones de ROS a la que se dirige el paquete.
+Estas ramas suelen tener el nombre de la distribución a la que se dirigen.
+Por ejemplo, una rama <code class="docutils literal notranslate"><span class="pre">humble</span></code> para el desarrollo dirigida específicamente a la distribución Humble.</p>
+<p>Desde estas ramas también se realizan lanzamiento, enfocándose en la distribución correspondiente.
+El desarrollo dirigido a una distribución de ROS específica puede ocurrir en la rama apropiada.
+Por ejemplo: las confirmaciones de desarrollo dirigidas a <code class="docutils literal notranslate"><span class="pre">foxy</span></code> se realizan en la rama <code class="docutils literal notranslate"><span class="pre">foxy</span></code>, y los lanzamientos de paquetes para <code class="docutils literal notranslate"><span class="pre">foxy</span></code> se realizan desde esa misma rama.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>This requires the package maintainers to perform backports or forwardports as appropriate to keep all branches up to date with features.
-The maintainers must also perform general maintenance (bug fixes, etc.) on all branches from which package releases are still made.</p>
-<p>For example, if a feature is merged into the Rolling-specific branch (e.g. <code class="docutils literal notranslate"><span class="pre">rolling</span></code> or <code class="docutils literal notranslate"><span class="pre">main</span></code>), and that feature is also appropriate
-to the Humble distribution (does not break API, etc.), then it is good practice to backport the feature to the Humble-specific branch.</p>
-<p>The maintainers may make releases for those older distributions if there are new features or bug fixes available.</p>
+<p>Esto requiere que los mantenedores del paquete realicen backports o forwardports según corresponda para mantener todas las ramas actualizadas con las características.
+Los mantenedores también deben realizar el mantenimiento general (corrección de errores, etc.) en todas las ramas desde las que aún se realizan lanzamientos de paquetes.</p>
+<p>Por ejemplo, si una función se fusiona con la rama específica de Rolling (por ejemplo, <code class="docutils literal notranslate"><span class="pre">rolling</span></code> o <code class="docutils literal notranslate"><span class="pre">main</span></code>), y esa función también es apropiada
+a la distribución de Humble (no rompe la API, etc.), entonces es una buena práctica transferir la función a la rama específica de Humble.</p>
+<p>Los mantenedores pueden hacer lanzamientos para esas distribuciones más antiguas si hay nuevas funciones o correcciones de errores disponibles.</p>
 </div>
-<p><strong>What about</strong> <code class="docutils literal notranslate"><span class="pre">main</span></code> <strong>and</strong> <code class="docutils literal notranslate"><span class="pre">rolling</span></code> <strong>?</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">main</span></code> typically targets <a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html"><span class="doc">Rolling</span></a> (and so, the next unreleased ROS distribution), though the maintainers may decide to develop and release from a <code class="docutils literal notranslate"><span class="pre">rolling</span></code> branch instead.</p>
+<p><strong>¿Qué pasa con</strong> <code class="docutils literal notranslate"><span class="pre">main</span></code> <strong>y</strong> <code class="docutils literal notranslate"><span class="pre">rolling</span></code> <strong>?</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">main</span></code> generalmente apunta a <a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html"><span class="doc">Rolling</span></a> (y por lo tanto, la próxima distribución de ROS inédita), aunque los mantenedores pueden decidir desarrollar y lanzar desde una rama <code class="docutils literal notranslate"><span class="pre">rolling</span></code> en su lugar.</p>
 </div>
 <div class="section" id="pull-requests">
-<h3><a class="toc-backref" href="#id11">Pull requests</a><a class="headerlink" href="#pull-requests" title="Enlazar permanentemente con este título"></a></h3>
-<ul class="simple">
-<li><p>A pull request should only focus on one change.
-Separate changes should go into separate pull requests.
-See <a class="reference external" href="https://github.com/blog/1943-how-to-write-the-perfect-pull-request">GitHub’s guide to writing the perfect pull request</a>.</p></li>
-<li><p>A patch should be minimal in size and avoid any kind of unnecessary changes.</p></li>
-<li><p>A pull request must contain minimum number of meaningful commits.</p>
+<h3><a class="toc-backref" href="#id10">Pull requests</a><a class="headerlink" href="#pull-requests" title="Enlazar permanentemente con este título"></a></h3>
 <ul>
-<li><p>You can create new commits while the pull request is under review.</p></li>
-</ul>
+<li><dl class="simple">
+<dt>Un pull request solo debe centrarse en un cambio.</dt><dd><p>Los cambios separados deben ir en pull request separados.
+Consulte <a class="reference external" href="https://github.com/blog/1943-how-to-write-the-perfect-pull-request">Guía de GitHub para escribir el pull request perfecta</a>.</p>
+</dd>
+</dl>
 </li>
-<li><p>Before merging a pull request all changes should be squashed into a small number of semantic commits to keep the history clear.</p>
-<ul>
-<li><p>But avoid squashing commits while a pull request is under review.
-Your reviewers might not notice that you made the change, thereby introducing potential for confusion.
-Plus, you’re going to squash before merging anyway; there’s no benefit to doing it early.</p></li>
+<li><p>Un parche debe tener un tamaño mínimo y evitar cualquier tipo de cambios innecesarios.</p></li>
+<li><p>Una pull request debe contener una cantidad mínima de commits significativos.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Puedes crear nuevos commits mientras se revisa el pull request.</p></li>
 </ul>
+</div></blockquote>
 </li>
-<li><p>Any developer is welcome to review and approve a pull request (see <a class="reference internal" href="#general-principles">General Principles</a>).</p></li>
-<li><p>When you start reviewing a pull request, comment on the pull request so that other developers know that you’re reviewing it.</p></li>
-<li><p>Pull-request review is not read-only, with the reviewer making comments and then waiting for the author to address them.
-As a reviewer, feel free to make minor improvements (typos, style issues, etc.) in-place.
-As the opener of a pull-request, if you are working in a fork, checking the box to <a class="reference external" href="https://github.com/blog/2247-improving-collaboration-with-forks">allow edits from upstream contributors</a> will assist with the aforementioned.
-As a reviewer, also feel free to make more substantial improvements, but consider putting them in a separate branch (either mention the new branch in a comment, or open another pull request from the new branch to the original branch).</p></li>
-<li><p>Any developer (the author, the reviewer, or somebody else) can merge any approved pull request.</p></li>
+<li><p>Antes de fusionar un pull request, todos los cambios deben agruparse (squash) en una pequeña cantidad de commits semánticos para mantener el historial claro.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pero evita realizar un commit squash mientras se revisa el pull request.
+Es posible que tus revisores no se den cuenta de que realizaste el cambio, lo que podría generar confusión.
+Además, de todos modos vas a agrupar antes de fusionar; no hay ningún beneficio en hacerlo antes.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Cualquier desarrollador puede revisar y aprobar una pull request (consulta <a class="reference internal" href="#principios-generales">Principios generales</a>).</p></li>
+<li><dl class="simple">
+<dt>Cuando estés trabajando en un cambio que no está listo para revisar o fusionar, use un borrador de pull request.</dt><dd><p>Cuando ese cambio esté listo para su revisión, mueve el pull request fuera del estado de borrador. Ten en cuenta
+que si desea comentarios tempranos de personas específicas sobre un borrador de solicitud de extracción, puede &#64;mencionarlos
+en la descripción del pull request o en un comentario sobre el pull request.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Si tu pull request depende de otro pull request, enlaza a cada solicitud de pull request dependiente agregando - Depende</dt><dd><p>de &lt;enlace&gt; en la parte superior de la descripción de tu pull request. Hacerlo ayuda a los revisores a comprender el
+contexto del pull request.</p>
+</dd>
+</dl>
+</li>
+<li><p>Cuando comiences a revisar un pull request, comenta el pull request para que otros desarrolladores sepan que lo estás revisando.</p></li>
+<li><dl class="simple">
+<dt>La revisión de pull request no es de solo lectura, ya que el revisor hace comentarios y luego espera a que el autor los aborde.</dt><dd><p>Como revisor, no dudes en realizar mejoras menores (errores tipográficos, problemas de estilo, etc.) en el lugar.
+Como autor de un pull request, si está trabajando en una fork, marque la casilla para <a class="reference external" href="https://github.com/blog/2247-improveing-collaboration-with-forks">permitir ediciones de colaboradores upstream</a> ayudará con lo antes mencionado.
+Como revisor, siéntete libre de realizar mejoras más sustanciales, pero considere colocarlas en una rama separada (mencione la nueva rama en un comentario o abra otra pull request de la nueva rama a la rama original).</p>
+</dd>
+</dl>
+</li>
+<li><p>Cualquier desarrollador (el autor, el revisor u otra persona) puede fusionar cualquier pull request aprobado.</p></li>
 </ul>
 </div>
-<div class="section" id="library-versioning">
-<h3><a class="toc-backref" href="#id12">Library versioning</a><a class="headerlink" href="#library-versioning" title="Enlazar permanentemente con este título"></a></h3>
-<p>We will version all libraries within a package together.
-This means that libraries inherit their version from the package.
-This keeps library and package versions from diverging and shares reasoning with the policy of releasing packages which share a repository together.
-If you need libraries to have different versions then consider splitting them into different packages.</p>
+<div class="section" id="versionado-de-biblioteca">
+<h3><a class="toc-backref" href="#id11">Versionado de biblioteca</a><a class="headerlink" href="#versionado-de-biblioteca" title="Enlazar permanentemente con este título"></a></h3>
+<p>Versionaremos todas las bibliotecas dentro de un paquete juntas.
+Esto significa que las bibliotecas heredan su versión del paquete.
+Esto evita que las versiones de la biblioteca y del paquete diverjan y comparte el razonamiento con la política de lanzar paquetes que comparten un repositorio juntos.
+Si necesita que las bibliotecas tengan diferentes versiones, considere dividirlas en diferentes paquetes.</p>
 </div>
-<div class="section" id="development-process">
-<h3><a class="toc-backref" href="#id13">Development process</a><a class="headerlink" href="#development-process" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="proceso-de-desarrollo">
+<h3><a class="toc-backref" href="#id12">Proceso de desarrollo</a><a class="headerlink" href="#proceso-de-desarrollo" title="Enlazar permanentemente con este título"></a></h3>
 <ul class="simple">
-<li><p>The default branch (in most cases the rolling branch) must always build, pass all tests and compile without warnings.
-If at any time there is a regression it is the top priority to restore at least the previous state.</p></li>
-<li><p>Always build with tests enabled.</p></li>
-<li><p>Always run tests locally after changes and before proposing them in a pull request.
-Besides using automated tests, also run the modified code path manually to ensure that the patch works as intended.</p></li>
-<li><p>Always run CI jobs for all platforms for every pull request and include links to the jobs in the pull request.</p></li>
+<li><dl class="simple">
+<dt>La rama predeterminada (en la mayoría de los casos, la rama rolling) siempre debe compilarse, pasar todas las pruebas y compilarse sin advertencias.</dt><dd><p>Si en algún momento hay una regresión, la máxima prioridad es restaurar al menos el estado anterior.</p>
+</dd>
+</dl>
+</li>
+<li><p>Compila siempre con las pruebas habilitadas.</p></li>
+<li><dl class="simple">
+<dt>Ejecuta siempre las pruebas localmente después de los cambios y antes de proponerlos en una pull request.</dt><dd><p>Además de usar pruebas automatizadas, también ejecuta la ruta del código modificado manualmente para asegurarse de que el parche funcione según lo previsto.</p>
+</dd>
+</dl>
+</li>
+<li><p>Siempre ejecuta trabajos de CI para todas las plataformas para cada pull request e incluye enlaces a los trabajos en el pull request.</p></li>
 </ul>
-<p>For more details on recommended software development workflow, see <a class="reference internal" href="#software-development-lifecycle">Software Development Lifecycle</a> section.</p>
+<p>Para obtener más detalles sobre el flujo de trabajo de desarrollo de software recomendado, consulta la sección <a class="reference internal" href="#ciclo-de-vida-de-desarrollo-de-software">Ciclo de vida de desarrollo de software</a>.</p>
 </div>
-<div class="section" id="changes-to-rmw-api">
-<h3><a class="toc-backref" href="#id14">Changes to RMW API</a><a class="headerlink" href="#changes-to-rmw-api" title="Enlazar permanentemente con este título"></a></h3>
-<p>When updating <a class="reference external" href="https://github.com/ros2/rmw">RMW API</a>, it is required that RMW implementations for the Tier 1 middleware libraries are updated as well.
-For example, a new function <code class="docutils literal notranslate"><span class="pre">rmw_foo()</span></code> introduced to the RMW API must be implemented in the following packages (as of ROS Galactic):</p>
+<div class="section" id="cambios-en-la-api-de-rmw">
+<h3><a class="toc-backref" href="#id13">Cambios en la API de RMW</a><a class="headerlink" href="#cambios-en-la-api-de-rmw" title="Enlazar permanentemente con este título"></a></h3>
+<p>Al actualizar <a class="reference external" href="https://github.com/ros2/rmw">RMW API</a>, es necesario que también se actualicen las implementaciones de RMW para las bibliotecas de middleware de nivel 1.
+Por ejemplo, una nueva función <code class="docutils literal notranslate"><span class="pre">rmw_foo()</span></code> introducida en la API de RMW debe implementarse en los siguientes paquetes (a partir de ROS Galactic):</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ros2/rmw_connextdds">rmw_connextdds</a></p></li>
 <li><p><a class="reference external" href="https://github.com/ros2/rmw_cyclonedds">rmw_cyclonedds</a></p></li>
 <li><p><a class="reference external" href="https://github.com/ros2/rmw_fastrtps">rmw_fastrtps</a></p></li>
 </ul>
-<p>Updates for non-Tier 1 middleware libraries should also be considered if feasible (e.g. depending on the size of the change).
-See <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP-2000</a> for the list of middleware libraries and their tiers.</p>
+<p>Las actualizaciones para bibliotecas de middleware que no sean de nivel 1 también deben considerarse si es factible (por ejemplo, dependiendo del tamaño del cambio).
+Consulte <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP-2000</a> para ver la lista de bibliotecas de middleware y sus niveles.</p>
 </div>
-<div class="section" id="tracking-tasks">
-<h3><a class="toc-backref" href="#id15">Tracking tasks</a><a class="headerlink" href="#tracking-tasks" title="Enlazar permanentemente con este título"></a></h3>
-<p>To help organize work on ROS 2, the core ROS 2 development team uses kanban-style <a class="reference external" href="https://github.com/orgs/ros2/projects">GitHub project boards</a>.</p>
-<p>Not all issues and pull requests are tracked on the project boards, however.
-A board usually represents an upcoming release or specific project.
-Tickets can be browsed on a per-repo basis by browsing the <a class="reference external" href="https://github.com/ros2">ROS 2 repositories”</a> individual issue pages.</p>
-<p>The names and purposes of columns in any given ROS 2 project board vary, but typically follow the same general structure:</p>
+<div class="section" id="seguimiento-de-tareas">
+<h3><a class="toc-backref" href="#id14">Seguimiento de tareas</a><a class="headerlink" href="#seguimiento-de-tareas" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para ayudar a organizar el trabajo en ROS 2, el equipo central de desarrollo de ROS 2 utiliza tableros de proyecto <a class="reference external" href="https://github.com/orgs/ros2/projects">GitHub de estilo kanban</a>.</p>
+<p>Sin embargo, no todas las propuestas y pull request se rastrean en los tableros de proyecto.
+Un tablero generalmente representa un lanzamiento próximo o un proyecto específico.
+Los tickets se pueden buscar por repositorio navegando en las páginas de issues individuales de los <a class="reference external" href="https://github.com/ros2">repositorios de ROS 2”</a>.</p>
+<p>Los nombres y propósitos de las columnas en cualquier tablero de proyecto de ROS 2 varían, pero normalmente siguen la misma estructura general:</p>
 <ul class="simple">
-<li><p><strong>To do</strong>:
-Issues that are relevant to the project, ready to be assigned</p></li>
-<li><p><strong>In progress</strong>:
-Active pull requests on which work is currently in progress</p></li>
-<li><p><strong>In review</strong>:
-Pull requests where work is complete and ready for review, and for those currently under active review</p></li>
-<li><p><strong>Done</strong>:
-Pull requests and related issues are merged/closed (for informational purposes)</p></li>
-</ul>
-<p>To request permission to make changes, simply comment on the tickets you’re interested in.
-Depending on the complexity, it might be useful to describe how you plan to address it.
-We will update the status (if you don’t have the permission) and you can start working on a pull request.
-If you contribute regularly we will likely just grant you permission to manage the labels etc. yourself.</p>
-</div>
-<div class="section" id="programming-conventions">
-<h3><a class="toc-backref" href="#id16">Programming conventions</a><a class="headerlink" href="#programming-conventions" title="Enlazar permanentemente con este título"></a></h3>
-<ul class="simple">
-<li><p>Defensive programming: ensure that assumptions are held as early as possible.
-E.g. check every return code and make sure to at least throw an exception until the case is handled more gracefully.</p></li>
-<li><p>All error messages must be directed to <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.</p></li>
-<li><p>Declare variables in the narrowest scope possible.</p></li>
-<li><p>Keep group of items (dependencies, imports, includes, etc.) ordered alphabetically.</p></li>
-</ul>
-<div class="section" id="c-specific">
-<h4>C++ specific<a class="headerlink" href="#c-specific" title="Enlazar permanentemente con este título"></a></h4>
-<ul class="simple">
-<li><p>Avoid using direct streaming (<code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>) to <code class="docutils literal notranslate"><span class="pre">stdout</span></code> / <code class="docutils literal notranslate"><span class="pre">stderr</span></code> to prevent interleaving between multiple threads.</p></li>
-<li><p>Avoid using references for <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> since that subverts the reference counting.
-If the original instance goes out of scope and the reference is being used it accesses freed memory.</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="filesystem-layout">
-<h3><a class="toc-backref" href="#id17">Filesystem layout</a><a class="headerlink" href="#filesystem-layout" title="Enlazar permanentemente con este título"></a></h3>
-<p>The filesystem layout of packages and repositories should follow the same conventions in order to provide a consistent experience for users browsing our source code.</p>
-<div class="section" id="package-layout">
-<h4>Package layout<a class="headerlink" href="#package-layout" title="Enlazar permanentemente con este título"></a></h4>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code>: contains all C and C++ code</p>
-<ul>
-<li><p>Also contains C/C++ headers which are not installed</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">include</span></code>: contains all C and C++ headers which are installed</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;package</span> <span class="pre">name&gt;</span></code>: for all C and C++ installed headers they should be folder namespaced by the package name</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;package_name&gt;</span></code>: contains all Python code</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code>: contains all automated tests and test data</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code>: contains configuration files, e.g. YAML parameters files and RViz config files</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">doc</span></code>: contains all the documentation</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">launch</span></code>: contains all launch files</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">package.xml</span></code>: as defined by <a class="reference external" href="https://www.ros.org/reps/rep-0140.html">REP-0140</a> (may be updated for prototyping)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>: only ROS packages which use CMake</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code>: only ROS packages which use Python code only</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">README</span></code>: can be rendered on GitHub as a landing page for the project</p>
-<ul>
-<li><p>This can be as short or detailed as is convenient, but it should at least link to project documentation</p></li>
-<li><p>Consider putting a CI or code coverage tag in this README</p></li>
-<li><p>It can also be <code class="docutils literal notranslate"><span class="pre">.rst</span></code> or anything else that GitHub supports</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code>: describes the contribution guidelines</p>
-<ul>
-<li><p>This might include license implication, e.g. when using the Apache 2 License.</p></li>
-</ul>
-</li>
-<li><p><code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>: a copy of the license or licenses for this package</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">CHANGELOG.rst</span></code>: <a class="reference external" href="https://www.ros.org/reps/rep-0132.html">REP-0132</a> compliant changelog</p></li>
-</ul>
-</div>
-<div class="section" id="repository-layout">
-<h4>Repository layout<a class="headerlink" href="#repository-layout" title="Enlazar permanentemente con este título"></a></h4>
-<p>Each package should be in a subfolder which has the same name as the package.
-If a repository contains only a single package it can optionally be in the root of the repository.</p>
-</div>
-</div>
-</div>
-<div class="section" id="developer-workflow">
-<h2><a class="toc-backref" href="#id18">Developer Workflow</a><a class="headerlink" href="#developer-workflow" title="Enlazar permanentemente con este título"></a></h2>
-<p>We track open tickets and active PRs related to upcoming releases and larger projects using <a class="reference external" href="https://github.com/orgs/ros2/projects">GitHub project boards</a>.</p>
-<p>The usual workflow is:</p>
-<ul>
-<li><p>Discuss design (GitHub ticket on the appropriate repository, and a design PR to <a class="reference external" href="https://github.com/ros2/design">https://github.com/ros2/design</a> if needed)</p></li>
-<li><p>Write implementation on a feature branch on a fork</p>
-<ul class="simple">
-<li><p>Please check out the <a class="reference internal" href="#"><span class="doc">developer guide</span></a> for guidelines and best practices</p></li>
-</ul>
-</li>
-<li><p>Write tests</p></li>
-<li><p>Enable and run linters</p></li>
-<li><p>Run tests locally using <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">test</span></code> (see the <a class="reference internal" href="../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html"><span class="doc">colcon tutorial</span></a>)</p></li>
-<li><p>Once everything builds locally without warnings and all tests are passing, run CI on your feature branch:</p>
-<ul class="simple">
-<li><p>Go to ci.ros2.org</p></li>
-<li><p>Log in (top right corner)</p></li>
-<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">ci_launcher</span></code> job</p></li>
-<li><p>Click «Build with Parameters» (left column)</p></li>
-<li><p>In the first box «CI_BRANCH_TO_TEST» enter your feature branch name</p></li>
-<li><p>Hit the <code class="docutils literal notranslate"><span class="pre">build</span></code> button</p></li>
-</ul>
-<p>(if you are not a ROS 2 committer, you don’t have access to the CI farm. In that case, ping the reviewer of your PR to run CI for you)</p>
-</li>
-<li><p>If your use case requires running code coverage:</p>
-<ul class="simple">
-<li><p>Go to ci.ros2.org</p></li>
-<li><p>Log in (top right corner)</p></li>
-<li><p>Click on the <code class="docutils literal notranslate"><span class="pre">ci_linux_coverage</span></code> job</p></li>
-<li><p>Click «Build with Parameters» (left column)</p></li>
-<li><p>Be sure of leaving «CI_BUILD_ARGS» and «CI_TEST_ARGS» with the default values</p></li>
-<li><p>Hit the <code class="docutils literal notranslate"><span class="pre">build</span></code> button</p></li>
-<li><p>At the end of the document there are instructions on how to <a class="reference internal" href="#read-coverage-report"><span class="std std-ref">interpret the result of the report</span></a> and <a class="reference internal" href="#calculate-coverage-rate"><span class="std std-ref">calculate the coverage rate</span></a></p></li>
-</ul>
-</li>
-<li><p>If the CI job built without warnings, errors and test failures, post the links of your jobs on your PR or high-level ticket aggregating all your PRs (see example <a class="reference external" href="https://github.com/ros2/rcl/pull/106#issuecomment-271119200">here</a>)</p>
-<ul class="simple">
-<li><p>Note that the markdown for these badges is in the console output of the <code class="docutils literal notranslate"><span class="pre">ci_launcher</span></code> job</p></li>
-</ul>
-</li>
-<li><p>When the PR has been approved:</p>
-<ul class="simple">
-<li><p>the person who submitted the PR merges it using «Squash and Merge» option so that we keep a clean history</p>
-<ul>
-<li><p>If the commits deserve to keep separated: squash all the nitpick/linters/typo ones together and merge the remaining set</p>
-<ul>
-<li><p>Note: each PR should target a specific feature so Squash and Merge should make sense 99% of the time</p></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Delete the branch once merged</p></li>
-</ul>
-</div>
-<div class="section" id="architectural-development-practices">
-<h2><a class="toc-backref" href="#id19">Architectural Development Practices</a><a class="headerlink" href="#architectural-development-practices" title="Enlazar permanentemente con este título"></a></h2>
-<p>This section describes the ideal lifecycle that should be employed when making large architectural changes to ROS 2.</p>
-<div class="section" id="software-development-lifecycle">
-<h3><a class="toc-backref" href="#id20">Software Development Lifecycle</a><a class="headerlink" href="#software-development-lifecycle" title="Enlazar permanentemente con este título"></a></h3>
-<p>This section describes step-by-step how to plan, design, and implement a new feature:</p>
-<ol class="arabic simple">
-<li><p>Task Creation</p></li>
-<li><p>Creating the Design Document</p></li>
-<li><p>Design Review</p></li>
-<li><p>Implementation</p></li>
-<li><p>Code Review</p></li>
-</ol>
-<div class="section" id="task-creation">
-<h4>Task creation<a class="headerlink" href="#task-creation" title="Enlazar permanentemente con este título"></a></h4>
-<p>Tasks requiring changes to critical parts of ROS 2 should have design reviews during early stages of the release cycle.
-If a design review is happening in the later stages, the changes will be part of a future release.</p>
-<ul class="simple">
-<li><p>An issue should be created in the appropriate <a class="reference external" href="https://github.com/ros2/">ros2 repository</a>, clearly describing the task being worked on.</p>
-<ul>
-<li><p>It should have a clear success criteria and highlight the concrete improvements expected from it.</p></li>
-<li><p>If the feature is targeting a ROS release, ensure this is tracked in the ROS release ticket (<a class="reference external" href="https://github.com/ros2/ros2/issues/607">example</a>).</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="writing-the-design-document">
-<h4>Writing the design document<a class="headerlink" href="#writing-the-design-document" title="Enlazar permanentemente con este título"></a></h4>
-<p>Design docs must never include confidential information.
-Whether or not a design document is required for your change depends on how big the task is.</p>
-<ol class="arabic simple">
-<li><p>You are making a small change or fixing a bug:</p></li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li><p>A design document is not required, but an issue should be opened in the appropriate repository to track the work and avoid duplication of efforts.</p></li>
-</ul>
-</div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>You are implementing a new feature or would like to contribute to OSRF-owned infrastructure (like Jenkins CI):</p></li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li><p>Design doc is required and should be contributed to <a class="reference external" href="https://github.com/ros2/design/">ros2/design</a> to be made accessible on <a class="reference external" href="https://design.ros2.org/">https://design.ros2.org/</a>.</p></li>
-<li><p>You should fork the repository and submit a pull request detailing the design.</p></li>
-</ul>
-<p>Mention the related ros2 issue (for example, <code class="docutils literal notranslate"><span class="pre">Design</span> <span class="pre">doc</span> <span class="pre">for</span> <span class="pre">task</span> <span class="pre">ros2/ros2#&lt;issue</span> <span class="pre">id&gt;</span></code>) in the pull request or the commit message.
-Detailed instructions are on the <a class="reference external" href="https://design.ros2.org/contribute.html">ROS 2 Contribute</a> page.
-Design comments will be made directly on the pull request.</p>
-</div></blockquote>
-<p>If the task is planned to be released with a specific version of ROS, this information should be included in the pull request.</p>
-</div>
-<div class="section" id="design-document-review">
-<h4>Design document review<a class="headerlink" href="#design-document-review" title="Enlazar permanentemente con este título"></a></h4>
-<p>Once the design is ready for review, a pull request should be opened and appropriate reviewers should be assigned.
-It is recommended to include project owner(s) -
-maintainers of all impacted packages (as defined by <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> maintainer field, see <a class="reference external" href="https://www.ros.org/reps/rep-0140.html#maintainer-multiple-but-at-least-one">REP-140</a>) - as reviewers.</p>
-<ul>
-<li><p>If the design doc is complex or reviewers have conflicting schedules, an optional design review meeting can be set up.
-In this case,</p>
-<p><strong>Before the meeting</strong></p>
-<ul class="simple">
-<li><p>Send a meeting invite at least one week in advance</p></li>
-<li><p>Meeting duration of one hour is recommended</p></li>
-<li><p>Meeting invite should list all decisions to be made during the review (decisions requiring package maintainer approval)</p></li>
 <li><dl class="simple">
-<dt>Meeting required attendees: design pull request reviewers</dt><dd><p>Meeting optional attendees: all OSRF engineers, if applicable</p>
+<dt><strong>Hacer</strong>:</dt><dd><p>Problemas que son relevantes para el proyecto, listos para ser asignados</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>En progreso</strong>:</dt><dd><p>pull request activos en los que se está trabajando actualmente</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>En revisión</strong>:</dt><dd><p>pull request donde el trabajo está completo y listo para revisión, y para aquellos que actualmente se encuentran en revisión activa</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Hecho</strong>:</dt><dd><p>Los pull request y los problemas relacionados se fusionan/cierran (con fines informativos)</p>
 </dd>
 </dl>
 </li>
 </ul>
-<p><strong>During the meeting</strong></p>
+<p>Para solicitar permiso para realizar cambios, simplemente comenta los issues que te interesan.
+Dependiendo de la complejidad, puede ser útil describir cómo piensas abordarlo.
+Actualizaremos el estado (si no tienes el permiso) y podrás comenzar a trabajar en un pull request.
+Si contribuyes regularmente, es probable que simplemente te concedamos permiso para que puedas administrar por ti mismo las etiquetas, etc. .</p>
+</div>
+<div class="section" id="convenciones-de-programacion">
+<h3><a class="toc-backref" href="#id15">Convenciones de programación</a><a class="headerlink" href="#convenciones-de-programacion" title="Enlazar permanentemente con este título"></a></h3>
 <ul class="simple">
-<li><p>The task owner drives the meeting, presents their ideas and manages discussions to ensure an agreement is reached on time</p></li>
+<li><dl class="simple">
+<dt>Programación defensiva: asegúrate de que los supuestos se lleven a cabo lo antes posible.</dt><dd><p>P.ej. verifica cada código de retorno y asegúrate de lanzar al menos una excepción hasta que el caso se maneje con más gracia.</p>
+</dd>
+</dl>
+</li>
+<li><p>Todos los mensajes de error deben dirigirse a <code class="docutils literal notranslate"><span class="pre">stderr</span></code>.</p></li>
+<li><p>Declarar variables en el ámbito más reducido posible.</p></li>
+<li><p>Mantener grupos de elementos (dependencias, importaciones, inclusiones, etc.) ordenados alfabéticamente.</p></li>
 </ul>
-<p><strong>After the meeting</strong></p>
+<div class="section" id="especifico-de-c">
+<h4>específico de C++<a class="headerlink" href="#especifico-de-c" title="Enlazar permanentemente con este título"></a></h4>
 <ul class="simple">
-<li><p>The task owner should send back meeting notes to all attendees</p></li>
-<li><p>If minor issues have been raised about the design:</p>
-<ul>
-<li><p>The task owner should update the design doc pull request based on the feedback</p></li>
-<li><p>Additional review is not required</p></li>
-</ul>
-</li>
-<li><p>If major issues have been raised about the design:</p>
-<ul>
-<li><p>It is acceptable to remove sections for which there is no clear agreement</p></li>
-<li><p>The debatable parts of the design can be resubmitted as a separate task in the future</p></li>
-<li><p>If removing the debatable parts is not an option, work directly with package owners to reach an agreement</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Once consensus is reached:</p>
-<ul class="simple">
-<li><p>Ensure the <a class="reference external" href="https://github.com/ros2/design/">ros2/design</a> pull request has been merged, if applicable</p></li>
-<li><p>Update and close the GitHub issue associated with this design task</p></li>
-</ul>
+<li><p>Evita el uso de transmisión directa (<code class="docutils literal notranslate"><span class="pre">&lt;&lt;</span></code>) a <code class="docutils literal notranslate"><span class="pre">stdout</span></code> / <code class="docutils literal notranslate"><span class="pre">stderr</span></code> para evitar la intercalación entre varios subprocesos.</p></li>
+<li><dl class="simple">
+<dt>Evita usar referencias para <code class="docutils literal notranslate"><span class="pre">std::shared_ptr</span></code> ya que eso subvierte el conteo de referencias.</dt><dd><p>Si la instancia original queda fuera del alcance y se está utilizando la referencia, accede a la memoria liberada.</p>
+</dd>
+</dl>
 </li>
 </ul>
 </div>
-<div class="section" id="implementation">
-<h4>Implementation<a class="headerlink" href="#implementation" title="Enlazar permanentemente con este título"></a></h4>
-<p>Before starting, go through the <a class="reference internal" href="#pull-requests">Pull requests</a> section for best practices.</p>
+</div>
+<div class="section" id="diseno-del-sistema-de-archivos">
+<h3><a class="toc-backref" href="#id16">Diseño del sistema de archivos</a><a class="headerlink" href="#diseno-del-sistema-de-archivos" title="Enlazar permanentemente con este título"></a></h3>
+<p>El diseño del sistema de archivos de los paquetes y repositorios debe seguir las mismas convenciones para proporcionar una experiencia consistente para los usuarios que navegan nuestro código fuente.</p>
+<div class="section" id="diseno-del-paquete">
+<h4>Diseño del paquete<a class="headerlink" href="#diseno-del-paquete" title="Enlazar permanentemente con este título"></a></h4>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">src</span></code>: contiene todo el código C y C++</p>
 <ul class="simple">
-<li><p>For each repo to be modified:</p>
+<li><p>También contiene encabezados C/C++ que no están instalados</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">include</span></code>: contiene todos los encabezados C y C++ que están instalados</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;nombre</span> <span class="pre">del</span> <span class="pre">paquete&gt;</span></code>: para todos los encabezados instalados de C y C++, deben tener un espacio de carpeta con el nombre del paquete</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;package_name&gt;</span></code>: contiene todo el código de Python</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">test</span></code>: contiene todas las pruebas automatizadas y datos de prueba</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">config</span></code>: contiene archivos de configuración, p. Archivos de parámetros YAML y archivos de configuración RViz</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doc</span></code>: contiene toda la documentación</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launch</span></code>: contiene todos los archivos de lanzamiento</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">package.xml</span></code>: como se define en <a class="reference external" href="https://www.ros.org/reps/rep-0140.html">REP-0140</a> (puede actualizarse para la creación de prototipos)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code>: solo paquetes ROS que usan CMake</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">setup.py</span></code>: solo paquetes ROS que usan solo código Python</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">README</span></code>: se puede representar en GitHub como una página de destino para el proyecto</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Esto puede ser tan breve o detallado como sea conveniente, pero al menos debe vincularse a la documentación del proyecto</p></li>
+<li><p>Considere colocar una etiqueta de cobertura de código o CI en este README</p></li>
+<li><p>También puede ser <code class="docutils literal notranslate"><span class="pre">.rst</span></code> o cualquier otra cosa compatible con GitHub</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code>: describe las pautas de contribución</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Esto podría incluir implicaciones de licencia, p. cuando se utiliza la licencia Apache 2.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>: una copia de la licencia o licencias para este paquete</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CHANGELOG.rst</span></code>: <a class="reference external" href="https://www.ros.org/reps/rep-0132.html">REP-0132</a> registro de cambios compatible</p></li>
+</ul>
+</div>
+<div class="section" id="diseno-del-repositorio">
+<h4>Diseño del repositorio<a class="headerlink" href="#diseno-del-repositorio" title="Enlazar permanentemente con este título"></a></h4>
+<p>Cada paquete debe estar en una subcarpeta que tenga el mismo nombre que el paquete.
+Si un repositorio contiene un solo paquete, opcionalmente puede estar en la raíz del repositorio.</p>
+</div>
+</div>
+</div>
+<div class="section" id="flujo-de-trabajo-del-desarrollador">
+<h2><a class="toc-backref" href="#id17">Flujo de trabajo del desarrollador</a><a class="headerlink" href="#flujo-de-trabajo-del-desarrollador" title="Enlazar permanentemente con este título"></a></h2>
+<p>Realizamos un seguimiento de los tickets abiertos y los pull request activos relacionados con los próximos lanzamientos y proyectos más grandes mediante <a class="reference external" href="https://github.com/orgs/ros2/projects">tableros de proyectos de GitHub</a>.</p>
+<p>El flujo de trabajo habitual es:</p>
 <ul>
-<li><p>Modify the code, go to the next step if finished or at regular intervals to backup your work.</p></li>
-<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">Self-review</a> your changes using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-i</span></code>.</p></li>
-<li><p>Create a new signed commit using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-s</span></code>.</p>
+<li><p>Discutir el diseño (ticket de GitHub en el repositorio apropiado y un diseño PR a <a class="reference external" href="https://github.com/ros2/design">https://github.com/ros2/design</a> si es necesario)</p></li>
+<li><p>Escribir la implementación en una rama feature en un fork</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Consulta la <a class="reference internal" href="#"><span class="doc">guía para desarrolladores</span></a> para conocer las pautas y las mejores prácticas</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Escribir pruebas</p></li>
+<li><p>Habilitar y ejecutar linters</p></li>
+<li><p>Ejecutar pruebas localmente usando <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">test</span></code> (consulta el <a class="reference internal" href="../../Tutorials/Beginner-Client-Libraries/Colcon-Tutorial.html"><span class="doc">tutorial de colcon</span></a>)</p></li>
+<li><p>Una vez que todo se compila localmente sin advertencias y todas las pruebas pasan, ejecute CI en su rama de características:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ir a ci.ros2.org</p></li>
+<li><p>Iniciar sesión (esquina superior derecha)</p></li>
+<li><p>Haga clic en el trabajo <code class="docutils literal notranslate"><span class="pre">ci_launcher</span></code></p></li>
+<li><p>Haga clic en «Construir con parámetros» (columna izquierda)</p></li>
+<li><p>En el primer cuadro «CI_BRANCH_TO_TEST» ingresa el nombre de su sucursal de características</p></li>
+<li><p>Presiona el botón <code class="docutils literal notranslate"><span class="pre">construir</span></code></p></li>
+</ul>
+<p>(si no es un confirmador de ROS 2, no tiene acceso a la granja de CI. En ese caso, haga ping al revisor de su PR para que ejecute el CI por ti)</p>
+</div></blockquote>
+</li>
+<li><p>Si tu caso de uso requiere una cobertura de código en ejecución:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ir a ci.ros2.org</p></li>
+<li><p>Iniciar sesión (esquina superior derecha)</p></li>
+<li><p>Haga clic en el trabajo <code class="docutils literal notranslate"><span class="pre">ci_linux_coverage</span></code></p></li>
+<li><p>Haga clic en «Construir con parámetros» (columna izquierda)</p></li>
+<li><p>Asegúrate de dejar «CI_BUILD_ARGS» y «CI_TEST_ARGS» con los valores predeterminados</p></li>
+<li><p>Presiona el botón <code class="docutils literal notranslate"><span class="pre">construir</span></code></p></li>
+<li><p>Al final del documento hay instrucciones sobre cómo <a class="reference internal" href="#read-coverage-report"><span class="std std-ref">interpretar el resultado del informe</span></a> y <a class="reference internal" href="#calculate-coverage-rate"><span class="std std-ref">calcular la tasa de cobertura</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Si el trabajo de CI se generó sin advertencias, errores y fallas de prueba, publica los enlaces de sus trabajos en tu PR o ticket de alto nivel agregando todos tus PR (consulte el ejemplo <a class="reference external" href="https://github.com/ros2/rcl/pull/106#issuecomment-271119200">aquí</a>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Tenga en cuenta que el markdown para estas insignias está en la salida de la consola del trabajo <code class="docutils literal notranslate"><span class="pre">ci_launcher</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Cuando el PR ha sido aprobado:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>la persona que envió el PR lo fusiona usando la opción «Squash and Merge» para que mantengamos un historial limpio</p>
 <ul>
-<li><p>A pull request should contain minimal semantically meaningful commits (for instance, a large number of 1-line commits is not acceptable).
-Create new fixup commits while iterating on feedback, or optionally, amend existing commits using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span></code> if you don’t want to create a new commit every time.</p></li>
-<li><p>Each commit must have a properly written, meaningful, commit message.
-More instructions <a class="reference external" href="https://chris.beams.io/posts/git-commit/">here</a>.</p></li>
-<li><p>Moving files must be done in a separate commit, otherwise git may fail to accurately track the file history.</p></li>
-<li><p>Either the pull request description or the commit message must contain a reference to the related ros2 issue, so it gets automatically closed when the pull request is merged.
-See this <a class="reference external" href="https://help.github.com/articles/closing-issues-using-keywords/">doc</a> for more details.</p></li>
-<li><p>Push the new commits.</p></li>
+<li><p>Si las confirmaciones merecen mantenerse separadas: aplaste todas las quisquillosas/linters/errores tipográficos y fusione el conjunto restante</p>
+<ul>
+<li><p>Nota: cada PR debe apuntar a una función específica, por lo que Squash y Merge deberían tener sentido el 99% del tiempo</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</div></blockquote>
+</li>
+<li><p>Eliminar la rama una vez fusionada</p></li>
+</ul>
 </div>
-<div class="section" id="code-review">
-<h4>Code review<a class="headerlink" href="#code-review" title="Enlazar permanentemente con este título"></a></h4>
-<p>Once the change is ready for code review:</p>
-<ul class="simple">
-<li><p>Open a pull request for each modified repository.</p>
+<div class="section" id="practicas-de-desarrollo-arquitectonico">
+<h2><a class="toc-backref" href="#id18">Prácticas de desarrollo arquitectónico</a><a class="headerlink" href="#practicas-de-desarrollo-arquitectonico" title="Enlazar permanentemente con este título"></a></h2>
+<p>Esta sección describe el ciclo de vida ideal que debe emplearse al realizar grandes cambios en la arquitectura de ROS 2.</p>
+<div class="section" id="ciclo-de-vida-de-desarrollo-de-software">
+<h3><a class="toc-backref" href="#id19">Ciclo de vida de desarrollo de software</a><a class="headerlink" href="#ciclo-de-vida-de-desarrollo-de-software" title="Enlazar permanentemente con este título"></a></h3>
+<p>Esta sección describe paso a paso cómo planificar, diseñar e implementar una nueva función:</p>
+<ol class="arabic simple">
+<li><p>Creación de tareas</p></li>
+<li><p>Creando el Documento de Diseño</p></li>
+<li><p>Revisión del diseño</p></li>
+<li><p>Implementación</p></li>
+<li><p>Revisión de código</p></li>
+</ol>
+<div class="section" id="creacion-de-tareas">
+<h4>Creación de tareas<a class="headerlink" href="#creacion-de-tareas" title="Enlazar permanentemente con este título"></a></h4>
+<p>Las tareas que requieren cambios en partes críticas de ROS 2 deben tener revisiones de diseño durante las primeras etapas del ciclo de lanzamiento.
+Si se está realizando una revisión del diseño en las etapas posteriores, los cambios serán parte de una versión futura.</p>
 <ul>
-<li><p>Remember to follow <a class="reference internal" href="#pull-requests">Pull requests</a> best practices.</p></li>
-<li><p><a class="reference external" href="https://hub.github.com/">GitHub</a> can be used to create pull requests from the command-line.</p></li>
-<li><p>If the task is planned to be released with a specific version of ROS, this information should be included in each pull request.</p></li>
+<li><p>Se debe crear un issue en el repositorio <a class="reference external" href="https://github.com/ros2/">ros2 apropiado</a>, que describa claramente la tarea en la que se está trabajando.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Debe tener un criterio de éxito claro y resaltar las mejoras concretas que se esperan de él.</p></li>
+<li><p>Si la característica tiene como objetivo una versión de ROS, asegúrate de que se realice un seguimiento en el ticket de la versión de ROS (<a class="reference external" href="https://github.com/ros2/ros2/issues/607">example</a>).</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="redaccion-del-documento-de-diseno">
+<h4>Redacción del documento de diseño.<a class="headerlink" href="#redaccion-del-documento-de-diseno" title="Enlazar permanentemente con este título"></a></h4>
+<p>Los documentos de diseño nunca deben incluir información confidencial.
+El hecho de que se requiera o no un documento de diseño para su cambio depende de qué tan grande sea la tarea.</p>
+<ol class="arabic">
+<li><p>Estás haciendo un pequeño cambio o corrigiendo un error:</p>
+<ul class="simple">
+<li><p>No se requiere un documento de diseño, pero se debe abrir un issue en el repositorio adecuado para realizar un seguimiento del trabajo y evitar la duplicación de esfuerzos.</p></li>
 </ul>
 </li>
-<li><p>Package owners who reviewed the design document should be mentioned in the pull request.</p></li>
-<li><p>Code review SLO: although reviewing pull requests is best-effort,
-it is helpful to have reviewers comment on pull requests within a week and
-code authors to reply back to comments within a week, so there is no loss of context.</p></li>
-<li><p>Iterate on feedback as usual, amend and update the development branch as needed.</p></li>
-<li><p>Once the PR is approved, package maintainers will merge the changes in.</p></li>
+<li><p>Estás implementando una nueva función o te gustaría contribuir a la infraestructura propiedad de OSRF (como Jenkins CI):</p>
+<ul class="simple">
+<li><p>El documento de diseño es obligatorio y debe contribuirse a <a class="reference external" href="https://github.com/ros2/design/">ros2/design</a> para que sea accesible en <a class="reference external" href="https://design.ros2.org/">https://design.ros2.org/</a>.</p></li>
+<li><p>Debes realizar un fork al repositorio y enviar una pull request que detalle el diseño.</p></li>
+</ul>
+<p>Menciona el problema de ros2 relacionado (por ejemplo, <code class="docutils literal notranslate"><span class="pre">Documento</span> <span class="pre">de</span> <span class="pre">diseño</span> <span class="pre">para</span> <span class="pre">la</span> <span class="pre">tarea</span> <span class="pre">ros2/ros2#&lt;Id.</span> <span class="pre">de</span> <span class="pre">problema&gt;</span></code>) en el pull request o en el mensaje de confirmación.
+Las instrucciones detalladas se encuentran en la página de <a class="reference external" href="https://design.ros2.org/contribute.html">ROS 2 Contribute</a>.
+Los comentarios de diseño se realizarán directamente en el pull request.</p>
+</li>
+</ol>
+<p>Si se planea lanzar la tarea con una versión específica de ROS, esta información debe incluirse en el pull request.</p>
+</div>
+<div class="section" id="revision-del-documento-de-diseno">
+<h4>Revisión del documento de diseño<a class="headerlink" href="#revision-del-documento-de-diseno" title="Enlazar permanentemente con este título"></a></h4>
+<p>Una vez que el diseño está listo para su revisión, se debe abrir una pull request y se deben asignar los revisores apropiados.
+Se recomienda incluir a los propietarios del proyecto:
+mantenedores de todos los paquetes afectados (como se define en el campo de mantenedor <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>, consulte <a class="reference external" href="https://www.ros.org/reps/rep-0140.html#maintainer-multiple-but-at-least-one">REP-140</a>) - como revisores.</p>
+<ul>
+<li><dl>
+<dt>Si el documento de diseño es complejo o los revisores tienen horarios conflictivos, se puede programar una reunión de revisión de diseño opcional.</dt><dd><p>En este caso,</p>
+<p><strong>Antes de la reunión</strong></p>
+<ul class="simple">
+<li><p>Envía una invitación a una reunión con al menos una semana de anticipación</p></li>
+<li><p>Se recomienda una duración de la reunión de una hora</p></li>
+<li><p>La invitación a la reunión debe enumerar todas las decisiones que se tomarán durante la revisión (decisiones que requieren la aprobación del mantenedor del paquete)</p></li>
+<li><dl class="simple">
+<dt>Asistentes requeridos en la reunión: revisores de pull request de diseño</dt><dd><p>Asistentes opcionales: todos los ingenieros de OSRF, si corresponde</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>Durante la reunión</strong></p>
+<ul class="simple">
+<li><p>El responsable de la tarea dirige la reunión, presenta tus ideas y gestiona los debates para garantizar que se llegue a un acuerdo a tiempo</p></li>
+</ul>
+<p><strong>Después de la reunión</strong></p>
+<ul class="simple">
+<li><p>El propietario de la tarea debe enviar las notas de la reunión a todos los asistentes</p></li>
+<li><p>Si se han planteado cuestiones menores sobre el diseño:</p>
+<ul>
+<li><p>El propietario de la tarea debe actualizar el pull request del documento de diseño en función de los comentarios.</p></li>
+<li><p>No se requiere revisión adicional</p></li>
+</ul>
+</li>
+<li><p>Si se han planteado cuestiones importantes sobre el diseño:</p>
+<ul>
+<li><p>Es aceptable eliminar secciones para las que no hay un acuerdo claro</p></li>
+<li><p>Las partes discutibles del diseño se pueden volver a enviar como una tarea separada en el futuro</p></li>
+<li><p>Si eliminar las partes discutibles no es una opción, trabaja directamente con los propietarios del paquete para llegar a un acuerdo</p></li>
+</ul>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Una vez alcanzado el consenso:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Asegúrate de que el pull request <a class="reference external" href="https://github.com/ros2/design/">ros2/design</a> se haya fusionado, si corresponde</p></li>
+<li><p>Actualiza y cierra el problema de GitHub asociado con esta tarea de diseño</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="implementacion">
+<h4>Implementación<a class="headerlink" href="#implementacion" title="Enlazar permanentemente con este título"></a></h4>
+<p>Antes de comenzar, revise la sección <a class="reference internal" href="#pull-requests">Pull requests</a> para conocer las mejores prácticas.</p>
+<ul>
+<li><p>Para cada repo a modificar:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Modifica el código, vaya al siguiente paso si terminaste o en intervalos regulares para hacer una copia de seguridad de su trabajo.</p></li>
+<li><p><a class="reference external" href="https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging">Auto-revise</a> tus cambios usando <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">-i</span></code>.</p></li>
+<li><p>Crea un nuevo commit firmada usando <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-s</span></code>.</p>
+<ul>
+<li><p>Una pull request debe contener confirmaciones mínimas semánticamente significativas (por ejemplo, no es aceptable una gran cantidad de commits de 1 línea).
+Crea nuevos commit de corrección mientras iteras según la retroalimentación u, opcionalmente, modifica los commits existentes usando <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span></code> si no desea crear un nuevo commit cada vez.</p></li>
+<li><p>Cada commit debe tener un mensaje de commit correctamente escrito y significativo.
+Más instrucciones <a class="reference external" href="https://chris.beams.io/posts/git-commit/">aquí</a>.</p></li>
+<li><p>El movimiento de archivos debe realizarse en una confirmación separada; de lo contrario, es posible que git no realice un seguimiento preciso del historial del archivo.</p></li>
+<li><p>La descripción del pull request o el mensaje de confirmación deben contener una referencia al problema de ros2 relacionado, por lo que se cierra automáticamente cuando se fusiona el pull request.
+Consulte este <a class="reference external" href="https://help.github.com/articles/closing-issues-using-keywords/">doc</a> para obtener más detalles.</p></li>
+<li><p>Haga push de  los nuevos commits.</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="revision-de-codigo">
+<h4>Revisión de código<a class="headerlink" href="#revision-de-codigo" title="Enlazar permanentemente con este título"></a></h4>
+<p>Una vez que el cambio esté listo para la revisión del código:</p>
+<ul>
+<li><p>Abre un pull request para cada repositorio modificado.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Recuerda seguir las mejores prácticas de <a class="reference internal" href="#pull-requests">Pull requests</a>.</p></li>
+<li><p>Se puede usar <a class="reference external" href="https://hub.github.com/">GitHub</a>  para crear pull request desde la línea de comandos.</p></li>
+<li><p>Si se planea lanzar la tarea con una versión específica de ROS, esta información debe incluirse en cada pull request.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Los propietarios del paquete que revisaron el documento de diseño deben mencionarse en el pull request.</p></li>
+<li><dl class="simple">
+<dt>SLO de revisión de código: aunque revisar las solicitudes de incorporación de cambios es el mejor esfuerzo,</dt><dd><p>es útil que los revisores comenten sobre los pull request dentro de una semana y que
+los autores respondan a los comentarios dentro de una semana, para que no haya pérdida de contexto.</p>
+</dd>
+</dl>
+</li>
+<li><p>Como siempre itera sobre los comentarios, modifica y actualiza la rama de desarrollo según sea necesario.</p></li>
+<li><p>Una vez que se apruebe el PR, los mantenedores del paquete fusionarán los cambios.</p></li>
 </ul>
 </div>
 </div>
 </div>
-<div class="section" id="build-farm-introduction">
-<h2><a class="toc-backref" href="#id21">Build Farm Introduction</a><a class="headerlink" href="#build-farm-introduction" title="Enlazar permanentemente con este título"></a></h2>
-<p>The build farm is located at <a class="reference external" href="https://ci.ros2.org/">ci.ros2.org</a>.</p>
-<p>Every night we run nightly jobs which build and run all the tests in various scenarios on various platforms.
-Additionally, we test all pull requests against these platforms before merging.</p>
-<p>This is the current set of target platforms and architectures, though it evolves overtime:</p>
-<ul class="simple">
+<div class="section" id="introduccion-a-la-construccion-de-una-granja">
+<h2><a class="toc-backref" href="#id20">Introducción a la construcción de una granja</a><a class="headerlink" href="#introduccion-a-la-construccion-de-una-granja" title="Enlazar permanentemente con este título"></a></h2>
+<p>La granja de compilación se encuentra en <a class="reference external" href="https://ci.ros2.org/">ci.ros2.org</a>.</p>
+<p>Todas las noches ejecutamos trabajos nocturnos que compilan y ejecutan todas las pruebas en varios escenarios en varias plataformas.
+Además, probamos todos los pull request en estas plataformas antes de fusionarlos.</p>
+<p>Este es el conjunto actual de plataformas y arquitecturas de destino, aunque evoluciona con el tiempo:</p>
+<ul>
 <li><p>Ubuntu 22.04 Jammy</p>
-<ul>
+<blockquote>
+<div><ul class="simple">
 <li><p>amd64</p></li>
 <li><p>aarch64</p></li>
 </ul>
+</div></blockquote>
 </li>
 <li><p>Windows 10</p>
-<ul>
+<blockquote>
+<div><ul class="simple">
 <li><p>amd64</p></li>
 </ul>
+</div></blockquote>
 </li>
 </ul>
-<p>There are several categories of jobs on the buildfarm:</p>
-<ul class="simple">
-<li><p>manual jobs (triggered manually by developers):</p>
+<p>Hay varias categorías de trabajos en buildfarm:</p>
 <ul>
-<li><p>ci_linux: build + test the code on Ubuntu Xenial</p></li>
-<li><p>ci_linux-aarch64: build + test the code on Ubuntu Xenial on an ARM 64-bit machine (aarch64)</p></li>
-<li><p>ci_linux_coverage: build + test + generation of test coverage</p></li>
-<li><p>ci_windows: build + test the code on Windows 10</p></li>
-<li><p>ci_launcher: trigger all the jobs listed above</p></li>
+<li><p>trabajos manuales (activados manualmente por los desarrolladores):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ci_linux: construir + probar el código en Ubuntu Xenial</p></li>
+<li><p>ci_linux-aarch64: compilar + probar el código en Ubuntu Xenial en una máquina ARM de 64 bits (aarch64)</p></li>
+<li><p>ci_linux_coverage: compilación + prueba + generación de cobertura de prueba</p></li>
+<li><p>ci_windows: construye + prueba el código en Windows 10</p></li>
+<li><p>ci_launcher: activa todos los trabajos enumerados anteriormente</p></li>
 </ul>
+</div></blockquote>
 </li>
-<li><p>nightly (run every night):</p>
-<ul>
-<li><p>Debug: build + test the code with CMAKE_BUILD_TYPE=Debug</p>
+<li><p>nocturno (ejecutar todas las noches):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Depurar: construir + probar el código con CMAKE_BUILD_TYPE=Depurar</p>
 <ul>
 <li><p>nightly_linux_debug</p></li>
 <li><p>nightly_linux-aarch64_debug</p></li>
 <li><p>nightly_win_deb</p></li>
 </ul>
 </li>
-<li><p>Release: build + test the code with CMAKE_BUILD_TYPE=Release</p>
+<li><p>Lanzamiento: construye + prueba el código con CMAKE_BUILD_TYPE=Release</p>
 <ul>
 <li><p>nightly_linux_release</p></li>
 <li><p>nightly_linux-aarch64_release</p></li>
 <li><p>nightly_win_rel</p></li>
 </ul>
 </li>
-<li><p>Repeated: build then run each test up to 20 times or until failed (aka flakiness hunter)</p>
+<li><p>Repetido: construye y luego ejecute cada prueba hasta 20 veces o hasta que falle (también conocido como cazador de fragilidad)</p>
 <ul>
 <li><p>nightly_linux_repeated</p></li>
 <li><p>nightly_linux-aarch64_repeated</p></li>
 <li><p>nightly_win_rep</p></li>
 </ul>
 </li>
-<li><p>Coverage:</p>
+<li><p>Cobertura:</p>
 <ul>
-<li><p>nightly_linux_coverage: build + test the code + analyses coverage for c/c++ and python</p>
+<li><p>nightly_linux_coverage: construye + prueba el código + analiza la cobertura para c/c++ y python</p>
 <ul>
-<li><p>results are exported as a cobertura report</p></li>
+<li><p>los resultados se exportan como informe de cobertura</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
+</div></blockquote>
 </li>
-<li><p>packaging (run every night; result is bundled into an archive):</p>
-<ul>
+<li><p>empaquetado (ejecutar todas las noches; el resultado se agrupa en un archivo):</p>
+<blockquote>
+<div><ul class="simple">
 <li><p>packaging_linux</p></li>
 <li><p>packaging_windows</p></li>
 </ul>
+</div></blockquote>
 </li>
 </ul>
-<p>Two additional build farms support the ROS / ROS 2 ecosystem by providing building of source and
-binary packages, continuous integration, testing, and analysis.</p>
-<p>For details, frequently asked questions, and troubleshooting see <a class="reference internal" href="Build-Farms.html"><span class="doc">build farms</span></a>.</p>
-<div class="section" id="note-on-coverage-runs">
-<h3><a class="toc-backref" href="#id22">Note on Coverage runs</a><a class="headerlink" href="#note-on-coverage-runs" title="Enlazar permanentemente con este título"></a></h3>
-<p>ROS 2 packages are organized in a way that the testing code for a given package is not only contained within the package, but could also be present in a different package.
-In other words: packages can exercise code belonging to other packages during the testing phase.</p>
-<p>To achieve the coverage rate reached by all code available in the ROS 2 core packages it is recommended to run builds using a fixed set of proposed repositories.
-That set is defined in the default parameters of coverage jobs in Jenkins.</p>
+<p>Dos granjas de compilación adicionales respaldan el ecosistema ROS / ROS 2 al proporcionar la creación de fuente y
+paquetes binarios, integración continua, pruebas y análisis.</p>
+<p>Para obtener detalles, preguntas frecuentes y resolución de problemas, consulta <a class="reference internal" href="Build-Farms.html"><span class="doc">build farms</span></a>.</p>
+<div class="section" id="nota-sobre-la-ejecucion-de-cobertura">
+<h3><a class="toc-backref" href="#id21">Nota sobre la ejecución de cobertura</a><a class="headerlink" href="#nota-sobre-la-ejecucion-de-cobertura" title="Enlazar permanentemente con este título"></a></h3>
+<p>Los paquetes de ROS 2 están organizados de manera que el código de prueba para un paquete dado no solo está contenido dentro del paquete, sino que también podría estar presente en un paquete diferente.
+En otras palabras: los paquetes pueden ejercer código perteneciente a otros paquetes durante la fase de prueba.</p>
+<p>Para lograr la tasa de cobertura alcanzada por todo el código disponible en los paquetes principales de ROS 2, se recomienda ejecutar compilaciones utilizando un conjunto fijo de repositorios propuestos.
+Ese conjunto se define en los parámetros predeterminados de trabajos de cobertura en Jenkins.</p>
 </div>
-<div class="section" id="how-to-read-the-coverage-rate-from-the-buildfarm-report">
-<span id="read-coverage-report"></span><h3><a class="toc-backref" href="#id23">How to read the coverage rate from the buildfarm report</a><a class="headerlink" href="#how-to-read-the-coverage-rate-from-the-buildfarm-report" title="Enlazar permanentemente con este título"></a></h3>
-<p>To see the coverage report for a given package:</p>
+<div class="section" id="como-leer-la-tasa-de-cobertura-del-informe-buildfarm">
+<span id="read-coverage-report"></span><h3><a class="toc-backref" href="#id22">Cómo leer la tasa de cobertura del informe buildfarm</a><a class="headerlink" href="#como-leer-la-tasa-de-cobertura-del-informe-buildfarm" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para ver el informe de cobertura de un paquete determinado:</p>
 <ul class="simple">
-<li><p>When the <code class="docutils literal notranslate"><span class="pre">ci_linux_coverage</span></code> build finishes, click on <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Report</span></code></p></li>
-<li><p>Scroll down to the <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Breakdown</span> <span class="pre">by</span> <span class="pre">Package</span></code> table</p></li>
-<li><p>In the table, look at the first column called «Name»</p></li>
+<li><p>Cuando finalice la compilación <code class="docutils literal notranslate"><span class="pre">ci_linux_coverage</span></code>, haga clic en <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Report</span></code></p></li>
+<li><p>Desplázate hacia abajo hasta la tabla <code class="docutils literal notranslate"><span class="pre">overage</span> <span class="pre">Breakdown</span> <span class="pre">by</span> <span class="pre">Package</span></code></p></li>
+<li><p>En la tabla, mira la primera columna llamada «Name»</p></li>
 </ul>
-<p>The coverage reports in the buildfarm include all the packages that were used in the ROS workspace.
-The coverage report includes different paths corresponding to the same package:</p>
+<p>Los informes de cobertura en buildfarm incluyen todos los paquetes que se usaron en el espacio de trabajo de ROS.
+El informe de cobertura incluye diferentes rutas correspondientes a un mismo paquete:</p>
 <ul class="simple">
-<li><p>Name entries with the form: <code class="docutils literal notranslate"><span class="pre">src.*.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code>
-These correspond to the unit test runs available in a package against its own source code</p></li>
-<li><p>Name entries with the form: <code class="docutils literal notranslate"><span class="pre">build.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code>
-These correspond to the unit test runs available in a package against its files generated at building or configuring time</p></li>
-<li><p>Name entries with the form: <code class="docutils literal notranslate"><span class="pre">install.&lt;package_name&gt;.*</span></code>
-These correspond to the system/integration tests coming from testing runs of other packages</p></li>
+<li><dl class="simple">
+<dt>Nombre entradas con la forma: <code class="docutils literal notranslate"><span class="pre">src.*.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code></dt><dd><p>Estos corresponden a las ejecuciones de pruebas unitarias disponibles en un paquete contra su propio código fuente</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Nombre entradas con la forma: <code class="docutils literal notranslate"><span class="pre">build.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code></dt><dd><p>Estos corresponden a las ejecuciones de prueba unitarias disponibles en un paquete contra sus archivos generados en el momento de la construcción o configuración.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Nombre entradas con la forma: <code class="docutils literal notranslate"><span class="pre">install.&lt;package_name&gt;.*</span></code></dt><dd><p>Estos corresponden a las pruebas de sistema/integración provenientes de las ejecuciones de prueba de otros paquetes.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
-<div class="section" id="how-to-calculate-the-coverage-rate-from-the-buildfarm-report">
-<span id="calculate-coverage-rate"></span><h3><a class="toc-backref" href="#id24">How to calculate the coverage rate from the buildfarm report</a><a class="headerlink" href="#how-to-calculate-the-coverage-rate-from-the-buildfarm-report" title="Enlazar permanentemente con este título"></a></h3>
-<p>Get the combined unit coverage rate using the automatic script:</p>
+<div class="section" id="como-calcular-la-tasa-de-cobertura-del-informe-buildfarm">
+<span id="calculate-coverage-rate"></span><h3><a class="toc-backref" href="#id23">Cómo calcular la tasa de cobertura del informe buildfarm</a><a class="headerlink" href="#como-calcular-la-tasa-de-cobertura-del-informe-buildfarm" title="Enlazar permanentemente con este título"></a></h3>
+<p>Obtén la tasa de cobertura de unidad combinada utilizando el script automático:</p>
 <blockquote>
 <div><ul class="simple">
-<li><p>From the ci_linux_coverage Jenkins build copy the URL of the build</p></li>
-<li><p>Download the <a class="reference external" href="https://raw.githubusercontent.com/ros2/ci/master/tools/get_coverage_ros2_pkg.py">get_coverage_ros2_pkg</a> script</p></li>
-<li><p>Execute the script: <code class="docutils literal notranslate"><span class="pre">./get_coverage_ros2_pkg.py</span> <span class="pre">&lt;jenkins_build_url&gt;</span> <span class="pre">&lt;ros2_package_name&gt;</span></code> (<a class="reference external" href="https://github.com/ros2/ci/blob/master/tools/README.md">README</a>)</p></li>
-<li><p>Grab the results from the «Combined unit testing» final line in the output of the script</p></li>
+<li><p>Desde la compilación ci_linux_coverage Jenkins, copia la URL de la compilación</p></li>
+<li><p>Descarga el script <a class="reference external" href="https://raw.githubusercontent.com/ros2/ci/master/tools/get_coverage_ros2_pkg.py">get_coverage_ros2_pkg</a></p></li>
+<li><p>Ejecuta el script: <code class="docutils literal notranslate"><span class="pre">./get_coverage_ros2_pkg.py</span> <span class="pre">&lt;jenkins_build_url&gt;</span> <span class="pre">&lt;ros2_package_name&gt;</span></code> (<a class="reference external" href="https://github.com/ros2/ci/blob/master/tools/README.md">README</a>)</p></li>
+<li><p>Toma los resultados de la línea final «Prueba de unidad combinada» en la salida del script</p></li>
 </ul>
 </div></blockquote>
-<p>Alternative: get the combined unit coverage rate from coverage report (require manual calculation):</p>
-<ul class="simple">
-<li><p>When the ci_linux_coverage build finishes, click on <code class="docutils literal notranslate"><span class="pre">Cobertura</span> <span class="pre">Coverage</span> <span class="pre">Report</span></code></p></li>
-<li><p>Scroll down to the <code class="docutils literal notranslate"><span class="pre">Coverage</span> <span class="pre">Breakdown</span> <span class="pre">by</span> <span class="pre">Package</span></code> table</p></li>
-<li><p>In the table, under the first column «Name», look for (where &lt;package_name&gt; is your package under testing):</p>
+<p>Alternativa: obten la tasa de cobertura unitaria combinada del informe de cobertura (requiere cálculo manual):</p>
 <ul>
-<li><p>all the directories under the pattern <code class="docutils literal notranslate"><span class="pre">src.*.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code> grab the two absolute values in the column «Lines».</p></li>
-<li><p>all the directories under the pattern <code class="docutils literal notranslate"><span class="pre">build/.&lt;repository_name&gt;.*</span></code> grab the two absolute values in the column «Lines».</p></li>
+<li><p>Cuando finalices la compilación de ci_linux_coverage, haz clic en <code class="docutils literal notranslate"><span class="pre">Informe</span> <span class="pre">de</span> <span class="pre">cobertura</span> <span class="pre">de</span> <span class="pre">Cobertura</span></code></p></li>
+<li><p>Desplázate hacia abajo hasta la tabla <code class="docutils literal notranslate"><span class="pre">Desglose</span> <span class="pre">de</span> <span class="pre">cobertura</span> <span class="pre">por</span> <span class="pre">paquete</span></code></p></li>
+<li><p>En la tabla, debajo de la primera columna «Name», busque (donde &lt;package_name&gt; es su paquete bajo prueba):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>todos los directorios bajo el patrón <code class="docutils literal notranslate"><span class="pre">src.*.&lt;repository_name&gt;.&lt;package_name&gt;.*</span></code> toma los dos valores absolutos en la columna «Lines».</p></li>
+<li><p>todos los directorios bajo el patrón <code class="docutils literal notranslate"><span class="pre">build/.&lt;repository_name&gt;.*</span></code> toma los dos valores absolutos en la columna «Lines».</p></li>
 </ul>
+</div></blockquote>
 </li>
-<li><p>With the previous selection: for each cell, the first value is the lines tested and the second is the total lines of code.
-Aggregate all rows for getting the total of the lines tested and the total of lines of code under test.
-Divide to get the coverage rate.</p></li>
+<li><dl class="simple">
+<dt>Con la selección anterior: para cada celda, el primer valor son las líneas probadas y el segundo el total de líneas de código.</dt><dd><p>Agrega todas las filas para obtener el total de líneas probadas y el total de líneas de código bajo prueba.
+Divide para obtener la tasa de cobertura.</p>
+</dd>
+</dl>
+</li>
 </ul>
 </div>
-<div class="section" id="how-to-measure-coverage-locally-using-lcov-ubuntu">
-<span id="measure-coverage-locally"></span><h3><a class="toc-backref" href="#id25">How to measure coverage locally using lcov (Ubuntu)</a><a class="headerlink" href="#how-to-measure-coverage-locally-using-lcov-ubuntu" title="Enlazar permanentemente con este título"></a></h3>
-<p>To measure coverage on your own machine, install <code class="docutils literal notranslate"><span class="pre">lcov</span></code>.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install -y lcov
+<div class="section" id="como-medir-la-cobertura-localmente-usando-lcov-ubuntu">
+<span id="medir-cobertura-localmente"></span><h3><a class="toc-backref" href="#id24">Cómo medir la cobertura localmente usando lcov (Ubuntu)</a><a class="headerlink" href="#como-medir-la-cobertura-localmente-usando-lcov-ubuntu" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para medir la cobertura en su propia máquina, instala <code class="docutils literal notranslate"><span class="pre">lcov</span></code>.</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install -y lcov
 </pre></div>
 </div>
-<p>The rest of this section assumes you are working from your colcon workspace.
-Compile in debug with coverage flags.
-Feel free to use colcon flags to target specific packages.</p>
+</div></blockquote>
+<p>El resto de esta sección asume que estás trabajando desde tu espacio de trabajo colcon.
+Compila en depuración con banderas de cobertura.
+Siéntete libre de usar banderas colcon para apuntar a paquetes específicos.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon build --cmake-args -DCMAKE_BUILD_TYPE<span class="o">=</span>Debug -DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CMAKE_CXX_FLAGS</span><span class="si">}</span><span class="s2"> --coverage&quot;</span> -DCMAKE_C_FLAGS<span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">CMAKE_C_FLAGS</span><span class="si">}</span><span class="s2"> --coverage&quot;</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">lcov</span></code> requires an initial baseline, which you can produce with the following command.
-Update the output file location for your needs.</p>
+<p><code class="docutils literal notranslate"><span class="pre">lcov</span></code> requiere una línea de base inicial, que puede producir con el siguiente comando.
+Actualiza la ubicación del archivo de salida según sus necesidades.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lcov --no-external --capture --initial --directory . --output-file ~/ros2_base.info
 </pre></div>
 </div>
-<p>Run tests for the packages that matter for your coverage measurements.
-For example, if measuring <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> also with <code class="docutils literal notranslate"><span class="pre">test_rclcpp</span></code></p>
+<p>Ejecuta pruebas para los paquetes que son importantes para sus medidas de cobertura.
+Por ejemplo, si se mide <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> también con <code class="docutils literal notranslate"><span class="pre">test_rclcpp</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>colcon <span class="nb">test</span> --packages-select rclcpp test_rclcpp
 </pre></div>
 </div>
-<p>Capture the lcov results with a similar command this time dropping the <code class="docutils literal notranslate"><span class="pre">--initial</span></code> flag.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lcov --no-external --capture --directory . --output-file ~/ros2.info
-</pre></div>
-</div>
-<p>Combine the trace .info files:</p>
+<p>Captura los resultados de lcov con un comando similar esta vez dejando caer el indicador <code class="docutils literal notranslate"><span class="pre">--initial</span></code>.</p>
+<p>Combina los archivos de rastreo .info:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>lcov --add-tracefile ~/ros2_base.info --add-tracefile ~/ros2.info --output-file ~/ros2_coverage.info
 </pre></div>
 </div>
-<p>Generate html for easy visualization and annotation of covered lines.</p>
+<p>Genera html para facilitar la visualización y la anotación de las líneas cubiertas.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir -p coverage
 genhtml ~/ros2_coverage.info --output-directory coverage
 </pre></div>
@@ -1206,7 +1317,7 @@ genhtml ~/ros2_coverage.info --output-directory coverage
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="../Contributing.html" class="btn btn-neutral float-left" title="Contributing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../Contributing.html" class="btn btn-neutral float-left" title="Contribuir" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="Code-Style-Language-Versions.html" class="btn btn-neutral float-right" title="Estilo de código y versiones de lenguaje" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

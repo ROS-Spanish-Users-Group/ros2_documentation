@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Understanding parameters &mdash; documentación de ROS 2 Documentation: Rolling - </title>
+  <title>Comprender los Parámetros &mdash; documentación de ROS 2 Documentation: Rolling - </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -106,11 +106,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../Tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Understanding nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Understanding topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Understanding parameters</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Comprender los Parámetros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Understanding actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Using-Rqt-Console/Using-Rqt-Console.html">Using <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> to view logs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Launching nodes</a></li>
@@ -169,6 +169,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Intermediate/Testing/Testing-Main.html">Testing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Intermediate/Testing/CLI.html">Running Tests in ROS 2 from the Command Line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Intermediate/Testing/Cpp.html">Writing Basic Tests with C++ with GTest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Intermediate/Testing/Python.html">Writing Basic Tests with Python</a></li>
 </ul>
 </li>
@@ -200,6 +201,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Security-on-Two.html">Ensuring security across machines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Examine-Traffic.html">Examining network traffic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Access-Controls.html">Setting access controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Deployment-Guidelines.html">Deployment Guidelines</a></li>
 </ul>
 </li>
 </ul>
@@ -260,6 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Disabling-ZeroCopy-loaned-messages.html">Disabling Zero Copy Loaned Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Installing-on-Raspberry-Pi.html">ROS 2 on Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Using-callback-groups.html">Using Callback Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html">Setup ROS 2 with VSCode and Docker [community-contributed]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
@@ -292,12 +295,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Contact.html">Contacto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../The-ROS2-Project.html">The ROS 2 Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../The-ROS2-Project/Contributing.html">Contributing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../The-ROS2-Project/Contributing.html">Contribuir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Developer-Guide.html">Guía para desarrolladores de ROS 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">Estilo de código y versiones de lenguaje</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Quality-Guide.html">Quality guide: ensuring code quality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide.html">Migration guide from ROS 1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Quality-Guide.html">Guía de calidad: garantizar la calidad del código</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide.html">Guía de migración desde ROS 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide-Python.html">Guía de Python sobre migración desde ROS1</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Build-Farms.html">ROS Build Farms</a></li>
@@ -318,6 +321,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../The-ROS2-Project/Marketing.html">Marketing</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../API-Docs.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Related-Projects.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../Related-Projects/Intel-ROS2-Projects.html">Proyectos de Intel en ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Related-Projects/Nvidia-ROS2-Projects.html">Proyectos de ROS 2 por NVIDIA</a></li>
@@ -343,7 +347,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../../../Tutorials.html">Tutorials</a></li>
           <li class="breadcrumb-item"><a href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a></li>
-      <li class="breadcrumb-item active">Understanding parameters</li>
+      <li class="breadcrumb-item active">Comprender los Parámetros</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
@@ -357,72 +361,72 @@
 <p>
   <strong>
     
-    You're reading the documentation for a development version.
-    For the latest released version, please have a look at <a href="../../../../humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Humble</a>.
+    Estás leyendo la documentación para una versión de desarrollo.
+    Para la última versión publicada, por favor revisa <a href="../../../../humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Humble</a>.
     
   </strong>
 </p>
 
 
-  <div class="section" id="understanding-parameters">
-<span id="ros2params"></span><h1>Understanding parameters<a class="headerlink" href="#understanding-parameters" title="Enlazar permanentemente con este título"></a></h1>
-<p><strong>Goal:</strong> Learn how to get, set, save and reload parameters in ROS 2.</p>
-<p><strong>Tutorial level:</strong> Beginner</p>
-<p><strong>Time:</strong> 5 minutes</p>
-<div class="contents local topic" id="contents">
-<p class="topic-title">Contents</p>
+  <div class="section" id="comprender-los-parametros">
+<span id="ros2params"></span><h1>Comprender los Parámetros<a class="headerlink" href="#comprender-los-parametros" title="Enlazar permanentemente con este título"></a></h1>
+<p><strong>Objetivo:</strong> Aprenda a obtener, configurar, guardar y recargar parámetros en ROS 2.</p>
+<p><strong>Nivel del Tutorial:</strong> Principiant</p>
+<p><strong>Tiempo:</strong> 5 minutos</p>
+<div class="contents local topic" id="contenido">
+<p class="topic-title">Contenido</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">Background</a></p></li>
-<li><p><a class="reference internal" href="#prerequisites" id="id2">Prerequisites</a></p></li>
-<li><p><a class="reference internal" href="#tasks" id="id3">Tasks</a></p>
+<li><p><a class="reference internal" href="#historial" id="id1">Historial</a></p></li>
+<li><p><a class="reference internal" href="#requisitos-previos" id="id2">Requisitos previos</a></p></li>
+<li><p><a class="reference internal" href="#tareas" id="id3">Tareas</a></p>
 <ul>
-<li><p><a class="reference internal" href="#setup" id="id4">1 Setup</a></p></li>
+<li><p><a class="reference internal" href="#configuracion" id="id4">1 Configuración</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-list" id="id5">2 ros2 param list</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-get" id="id6">3 ros2 param get</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-set" id="id7">4 ros2 param set</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-dump" id="id8">5 ros2 param dump</a></p></li>
 <li><p><a class="reference internal" href="#ros2-param-load" id="id9">6 ros2 param load</a></p></li>
-<li><p><a class="reference internal" href="#load-parameter-file-on-node-startup" id="id10">7 Load parameter file on node startup</a></p></li>
+<li><p><a class="reference internal" href="#cargar-archivo-de-parametros-al-iniciar-el-nodo" id="id10">7 Cargar archivo de parámetros al iniciar el nodo</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#summary" id="id11">Summary</a></p></li>
-<li><p><a class="reference internal" href="#next-steps" id="id12">Next steps</a></p></li>
+<li><p><a class="reference internal" href="#resumen" id="id11">Resumen</a></p></li>
+<li><p><a class="reference internal" href="#pasos-siguientes" id="id12">Pasos siguientes</a></p></li>
 </ul>
 </div>
-<div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Enlazar permanentemente con este título"></a></h2>
-<p>A parameter is a configuration value of a node.
-You can think of parameters as node settings.
-A node can store parameters as integers, floats, booleans, strings, and lists.
-In ROS 2, each node maintains its own parameters.
-For more background on parameters, please see <a class="reference internal" href="../../../Concepts/About-ROS-2-Parameters.html"><span class="doc">the concept document</span></a>.</p>
+<div class="section" id="historial">
+<h2><a class="toc-backref" href="#id1">Historial</a><a class="headerlink" href="#historial" title="Enlazar permanentemente con este título"></a></h2>
+<p>Un parámetro es un valor de configuración de un nodo.
+Puedes pensar en los parámetros como configuraciones de nodo.
+Un nodo puede almacenar parámetros como enteros, flotantes, booleanos, cadenas y listas.
+En ROS 2, cada nodo mantiene sus propios parámetros.
+Para obtener más información sobre los parámetros, puedes consultar <a class="reference internal" href="../../../Concepts/About-ROS-2-Parameters.html"><span class="doc">el documento de conceptos</span></a>.</p>
 </div>
-<div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id2">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Enlazar permanentemente con este título"></a></h2>
-<p>This tutorial uses the <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim package</span></a>.</p>
-<p>As always, don’t forget to source ROS 2 in <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a>.</p>
+<div class="section" id="requisitos-previos">
+<h2><a class="toc-backref" href="#id2">Requisitos previos</a><a class="headerlink" href="#requisitos-previos" title="Enlazar permanentemente con este título"></a></h2>
+<p>Este tutorial utiliza el paquete <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">turtlesim</span></a>.</p>
+<p>Como siempre, no olvides ejecutar <code class="xref any docutils literal notranslate"><span class="pre">source</span></code> con el archivo de setup <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">en cada nueva terminal que abra</span></a>.</p>
 </div>
-<div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id3">Tasks</a><a class="headerlink" href="#tasks" title="Enlazar permanentemente con este título"></a></h2>
-<div class="section" id="setup">
-<h3><a class="toc-backref" href="#id4">1 Setup</a><a class="headerlink" href="#setup" title="Enlazar permanentemente con este título"></a></h3>
-<p>Start up the two turtlesim nodes, <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code>.</p>
-<p>Open a new terminal and run:</p>
+<div class="section" id="tareas">
+<h2><a class="toc-backref" href="#id3">Tareas</a><a class="headerlink" href="#tareas" title="Enlazar permanentemente con este título"></a></h2>
+<div class="section" id="configuracion">
+<h3><a class="toc-backref" href="#id4">1 Configuración</a><a class="headerlink" href="#configuracion" title="Enlazar permanentemente con este título"></a></h3>
+<p>Inicia los dos nodos de turtlesim, <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code>.</p>
+<p>Abra una nueva terminal y ejecute:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>Open another terminal and run:</p>
+<p>Abre otra terminal y ejecuta:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="ros2-param-list">
 <h3><a class="toc-backref" href="#id5">2 ros2 param list</a><a class="headerlink" href="#ros2-param-list" title="Enlazar permanentemente con este título"></a></h3>
-<p>To see the parameters belonging to your nodes, open a new terminal and enter the command:</p>
+<p>Para ver los parámetros que pertenecen a sus nodos, abre una nueva terminal e introduce el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param list</span>
 </pre></div>
 </div>
-<p>You will see the node namespaces, <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> and <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>, followed by each node’s parameters:</p>
+<p>Verás los espacios de nombres de los nodos, <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> y <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>, seguidos de los parámetros de cada nodo:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/teleop_turtle:</span>
 <span class="go">  qos_overrides./parameter_events.publisher.depth</span>
 <span class="go">  qos_overrides./parameter_events.publisher.durability</span>
@@ -442,59 +446,60 @@ For more background on parameters, please see <a class="reference internal" href
 <span class="go">  use_sim_time</span>
 </pre></div>
 </div>
-<p>Every node has the parameter <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code>; it’s not unique to turtlesim.</p>
-<p>Based on their names, it looks like <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>’s parameters determine the background color of the turtlesim window using RGB color values.</p>
-<p>To determine a parameter’s type, you can use <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code>.</p>
+<p>Cada nodo tiene el parámetro <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code>; no es exclusivo de turtlesim.</p>
+<p>Según sus nombres, parece que los parámetros de <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> determinan el color de fondo de la ventana de turtlesim usando valores de color RGB.</p>
+<p>Para determinar el tipo de un parámetro, puede usar <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">get</span></code>.</p>
 </div>
 <div class="section" id="ros2-param-get">
 <h3><a class="toc-backref" href="#id6">3 ros2 param get</a><a class="headerlink" href="#ros2-param-get" title="Enlazar permanentemente con este título"></a></h3>
-<p>To display the type and current value of a parameter, use the command:</p>
+<p>Para mostrar el tipo y el valor actual de un parámetro, use el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get &lt;node_name&gt; &lt;parameter_name&gt;</span>
 </pre></div>
 </div>
-<p>Let’s find out the current value of <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>’s parameter <code class="docutils literal notranslate"><span class="pre">background_g</span></code>:</p>
+<p>Por ejemplo, para ver el valor actual del parámetro <code class="docutils literal notranslate"><span class="pre">background_g</span></code> de <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>, ejecuta:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param get /turtlesim background_g</span>
 </pre></div>
 </div>
-<p>Which will return the value:</p>
+<p>Lo que devolverá el valor:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Integer value is: 86</span>
 </pre></div>
 </div>
 <p>Now you know <code class="docutils literal notranslate"><span class="pre">background_g</span></code> holds an integer value.</p>
-<p>If you run the same command on <code class="docutils literal notranslate"><span class="pre">background_r</span></code> and <code class="docutils literal notranslate"><span class="pre">background_b</span></code>, you will get the values <code class="docutils literal notranslate"><span class="pre">69</span></code> and <code class="docutils literal notranslate"><span class="pre">255</span></code>, respectively.</p>
+<p>Ahora sabes que <code class="docutils literal notranslate"><span class="pre">background_g</span></code> tiene un valor entero.</p>
+<p>Si ejecutas el mismo comando en <code class="docutils literal notranslate"><span class="pre">background_r</span></code> y <code class="docutils literal notranslate"><span class="pre">background_b</span></code>, obtendrás los valores 69 y 255, respectivamente.</p>
 </div>
 <div class="section" id="ros2-param-set">
 <h3><a class="toc-backref" href="#id7">4 ros2 param set</a><a class="headerlink" href="#ros2-param-set" title="Enlazar permanentemente con este título"></a></h3>
-<p>To change a parameter’s value at runtime, use the command:</p>
+<p>Para cambiar el valor de un parámetro en tiempo de ejecución, usa el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param set &lt;node_name&gt; &lt;parameter_name&gt; &lt;value&gt;</span>
 </pre></div>
 </div>
-<p>Let’s change <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>’s background color:</p>
+<p>Cambiemos el color de fondo de <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param set /turtlesim background_r 150</span>
 </pre></div>
 </div>
-<p>Your terminal should return the message:</p>
+<p>La terminal debería devolver el mensaje:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set parameter successful</span>
 </pre></div>
 </div>
-<p>And the background of your turtlesim window should change colors:</p>
+<p>Y el fondo de la ventana de turtlesim debería cambiar de color:</p>
 <img alt="../../../_images/set.png" src="../../../_images/set.png" />
-<p>Setting parameters with the <code class="docutils literal notranslate"><span class="pre">set</span></code> command will only change them in your current session, not permanently.
-However, you can save your settings and reload them the next time you start a node.</p>
+<p>Establecer parámetros con el comando <code class="docutils literal notranslate"><span class="pre">set</span></code> solo los cambiará en su sesión actual, no de forma permanente.
+Sin embargo, puedes guardar tu configuración y volver a cargarla la próxima vez que inicie un nodo.</p>
 </div>
 <div class="section" id="ros2-param-dump">
 <h3><a class="toc-backref" href="#id8">5 ros2 param dump</a><a class="headerlink" href="#ros2-param-dump" title="Enlazar permanentemente con este título"></a></h3>
-<p>You can view all of a node’s current parameter values by using the command:</p>
+<p>Puedes ver todos los parámetros y sus valores actuales de un nodo usando el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param dump &lt;node_name&gt;</span>
 </pre></div>
 </div>
-<p>The command prints to the standard output (stdout) by default but you can also redirect the parameter values into a file to save them for later.
-To save your current configuration of <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>’s parameters into the file <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code>, enter the command:</p>
+<p>El comando se imprime en la salida estándar (stdout) de forma predeterminada, pero también puede redirigir los valores de los parámetros a un archivo para guardarlos más adelante.
+Para guardar la configuración actual de los parámetros de <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> en el archivo <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code>, introduce el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param dump /turtlesim &gt; turtlesim.yaml</span>
 </pre></div>
 </div>
-<p>You will find a new file in the working directory your shell is running in.
-If you open this file, you’ll see the following content:</p>
+<p>Encontrarás un nuevo archivo en el directorio de trabajo en el que se está ejecutando tu terminal.
+Si abres este archivo, verá el siguiente contenido:</p>
 <div class="highlight-YAML notranslate"><div class="highlight"><pre><span></span><span class="nt">/turtlesim</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">ros__parameters</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">background_b</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">255</span><span class="w"></span>
@@ -510,19 +515,19 @@ If you open this file, you’ll see the following content:</p>
 <span class="w">    </span><span class="nt">use_sim_time</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span><span class="w"></span>
 </pre></div>
 </div>
-<p>Dumping parameters comes in handy if you want to reload the node with the same parameters in the future.</p>
+<p>Guardar los parámetros resulta útil si deseas volver a cargar el nodo con los mismos parámetros en el futuro.</p>
 </div>
 <div class="section" id="ros2-param-load">
 <h3><a class="toc-backref" href="#id9">6 ros2 param load</a><a class="headerlink" href="#ros2-param-load" title="Enlazar permanentemente con este título"></a></h3>
-<p>You can load parameters from a file to a currently running node using the command:</p>
+<p>Puedes cargar parámetros desde un archivo a un nodo actualmente en ejecución usando el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param load &lt;node_name&gt; &lt;parameter_file&gt;</span>
 </pre></div>
 </div>
-<p>To load the <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code> file generated with <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> into <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> node’s parameters, enter the command:</p>
+<p>Para cargar el archivo <code class="docutils literal notranslate"><span class="pre">turtlesim.yaml</span></code> generado con <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">dump</span></code> en los parámetros del nodo <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>, introduce el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 param load /turtlesim turtlesim.yaml</span>
 </pre></div>
 </div>
-<p>Your terminal will return the message:</p>
+<p>La terminal devolverá el mensaje:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">Set parameter background_b successful</span>
 <span class="go">Set parameter background_g successful</span>
 <span class="go">Set parameter background_r successful</span>
@@ -535,36 +540,37 @@ If you open this file, you’ll see the following content:</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Read-only parameters can only be modified at startup and not afterwards, that is why there are some warnings for the «qos_overrides» parameters.</p>
+<p>Los parámetros de solo lectura solo se pueden modificar al inicio y no después, por eso hay algunas advertencias para los parámetros “qos_overrides”.</p>
 </div>
 </div>
-<div class="section" id="load-parameter-file-on-node-startup">
-<h3><a class="toc-backref" href="#id10">7 Load parameter file on node startup</a><a class="headerlink" href="#load-parameter-file-on-node-startup" title="Enlazar permanentemente con este título"></a></h3>
-<p>To start the same node using your saved parameter values, use:</p>
+<div class="section" id="cargar-archivo-de-parametros-al-iniciar-el-nodo">
+<h3><a class="toc-backref" href="#id10">7 Cargar archivo de parámetros al iniciar el nodo</a><a class="headerlink" href="#cargar-archivo-de-parametros-al-iniciar-el-nodo" title="Enlazar permanentemente con este título"></a></h3>
+<p>Para iniciar el mismo nodo usando los valores de parámetros guardados, ejecuta:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run &lt;package_name&gt; &lt;executable_name&gt; --ros-args --params-file &lt;file_name&gt;</span>
 </pre></div>
 </div>
-<p>This is the same command you always use to start turtlesim, with the added flags <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> and <code class="docutils literal notranslate"><span class="pre">--params-file</span></code>, followed by the file you want to load.</p>
-<p>Stop your running turtlesim node so you can try reloading it with your saved parameters, using:</p>
+<p>Stop your running turtlesim node so you can try reloading it with your saved parameters, using:
+Este es el mismo comando que utilizas para iniciar turtlesim, con las banderas añadidas <code class="docutils literal notranslate"><span class="pre">--ros-args</span></code> y <code class="docutils literal notranslate"><span class="pre">--params-file</span></code>, seguidas del archivo que desea cargar.</p>
+<p>Intentá detener el nodo turtlesim en ejecución, para volver a cargarlo con sus parámetros guardados usando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node --ros-args --params-file turtlesim.yaml</span>
 </pre></div>
 </div>
-<p>The turtlesim window should appear as usual, but with the purple background you set earlier.</p>
+<p>La ventana de turtlesim debería aparecer como de costumbre, pero con el fondo morado que configuraste anteriormente.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>In this case, parameters are being modified at startup so the specified read-only parameters will also take effect.</p>
+<p>En este caso, los parámetros se modifican al inicio, por lo que los parámetros de solo lectura especificados también tendrán efecto.</p>
 </div>
 </div>
 </div>
-<div class="section" id="summary">
-<h2><a class="toc-backref" href="#id11">Summary</a><a class="headerlink" href="#summary" title="Enlazar permanentemente con este título"></a></h2>
-<p>Nodes have parameters to define their default configuration values.
-You can <code class="docutils literal notranslate"><span class="pre">get</span></code> and <code class="docutils literal notranslate"><span class="pre">set</span></code> parameter values from the command line.
-You can also save the parameter settings to a file to reload them in a future session.</p>
+<div class="section" id="resumen">
+<h2><a class="toc-backref" href="#id11">Resumen</a><a class="headerlink" href="#resumen" title="Enlazar permanentemente con este título"></a></h2>
+<p>Los nodos tienen parámetros para definir sus valores de configuración predeterminados.
+Puedes obtener y establecer valores de parámetros desde la línea de comandos.
+También puedes guardar la configuración de los parámetros en un archivo para volver a cargarlos en una sesión futura.</p>
 </div>
-<div class="section" id="next-steps">
-<h2><a class="toc-backref" href="#id12">Next steps</a><a class="headerlink" href="#next-steps" title="Enlazar permanentemente con este título"></a></h2>
-<p>Jumping back to ROS 2 communication methods, in the next tutorial you’ll learn about <a class="reference internal" href="../Understanding-ROS2-Actions/Understanding-ROS2-Actions.html"><span class="doc">actions</span></a>.</p>
+<div class="section" id="pasos-siguientes">
+<h2><a class="toc-backref" href="#id12">Pasos siguientes</a><a class="headerlink" href="#pasos-siguientes" title="Enlazar permanentemente con este título"></a></h2>
+<p>Volviendo a los métodos de comunicación de ROS 2, en el próximo tutorial aprenderás sobre <a class="reference internal" href="../Understanding-ROS2-Actions/Understanding-ROS2-Actions.html"><span class="doc">acciones</span></a>.</p>
 </div>
 </div>
 

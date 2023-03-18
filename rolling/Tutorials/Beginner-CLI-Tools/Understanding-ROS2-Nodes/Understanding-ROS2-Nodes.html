@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Understanding nodes &mdash; documentación de ROS 2 Documentation: Rolling - </title>
+  <title>Comprender los Nodos &mdash; documentación de ROS 2 Documentation: Rolling - </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -25,8 +25,8 @@
     <script src="../../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../../search.html" />
-    <link rel="next" title="Understanding topics" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html" />
-    <link rel="prev" title="Using turtlesim and rqt" href="../Introducing-Turtlesim/Introducing-Turtlesim.html" /> 
+    <link rel="next" title="Comprender los Topics" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html" />
+    <link rel="prev" title="Utilizar turtlesim y rqt" href="../Introducing-Turtlesim/Introducing-Turtlesim.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -106,11 +106,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../Tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Understanding nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Understanding topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Comprender los Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Understanding parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Comprender los Parámetros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Understanding actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Using-Rqt-Console/Using-Rqt-Console.html">Using <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> to view logs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Launching nodes</a></li>
@@ -169,6 +169,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Intermediate/Testing/Testing-Main.html">Testing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Intermediate/Testing/CLI.html">Running Tests in ROS 2 from the Command Line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Intermediate/Testing/Cpp.html">Writing Basic Tests with C++ with GTest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Intermediate/Testing/Python.html">Writing Basic Tests with Python</a></li>
 </ul>
 </li>
@@ -200,6 +201,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Security-on-Two.html">Ensuring security across machines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Examine-Traffic.html">Examining network traffic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Access-Controls.html">Setting access controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Advanced/Security/Deployment-Guidelines.html">Deployment Guidelines</a></li>
 </ul>
 </li>
 </ul>
@@ -260,6 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Disabling-ZeroCopy-loaned-messages.html">Disabling Zero Copy Loaned Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Installing-on-Raspberry-Pi.html">ROS 2 on Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Using-callback-groups.html">Using Callback Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html">Setup ROS 2 with VSCode and Docker [community-contributed]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
@@ -292,12 +295,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Contact.html">Contacto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../The-ROS2-Project.html">The ROS 2 Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../The-ROS2-Project/Contributing.html">Contributing</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../The-ROS2-Project/Contributing.html">Contribuir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Developer-Guide.html">Guía para desarrolladores de ROS 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">Estilo de código y versiones de lenguaje</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Quality-Guide.html">Quality guide: ensuring code quality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide.html">Migration guide from ROS 1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Quality-Guide.html">Guía de calidad: garantizar la calidad del código</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide.html">Guía de migración desde ROS 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Migration-Guide-Python.html">Guía de Python sobre migración desde ROS1</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../The-ROS2-Project/Contributing/Build-Farms.html">ROS Build Farms</a></li>
@@ -318,6 +321,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../The-ROS2-Project/Marketing.html">Marketing</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../API-Docs.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../Related-Projects.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../Related-Projects/Intel-ROS2-Projects.html">Proyectos de Intel en ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Related-Projects/Nvidia-ROS2-Projects.html">Proyectos de ROS 2 por NVIDIA</a></li>
@@ -343,7 +347,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../../../Tutorials.html">Tutorials</a></li>
           <li class="breadcrumb-item"><a href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a></li>
-      <li class="breadcrumb-item active">Understanding nodes</li>
+      <li class="breadcrumb-item active">Comprender los Nodos</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
@@ -357,113 +361,113 @@
 <p>
   <strong>
     
-    You're reading the documentation for a development version.
-    For the latest released version, please have a look at <a href="../../../../humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Humble</a>.
+    Estás leyendo la documentación para una versión de desarrollo.
+    Para la última versión publicada, por favor revisa <a href="../../../../humble/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Humble</a>.
     
   </strong>
 </p>
 
 
-  <div class="section" id="understanding-nodes">
-<span id="ros2nodes"></span><h1>Understanding nodes<a class="headerlink" href="#understanding-nodes" title="Enlazar permanentemente con este título"></a></h1>
-<p><strong>Goal:</strong> Learn about the function of nodes in ROS 2, and the tools to interact with them.</p>
-<p><strong>Tutorial level:</strong> Beginner</p>
-<p><strong>Time:</strong> 10 minutes</p>
-<div class="contents local topic" id="contents">
-<p class="topic-title">Contents</p>
+  <div class="section" id="comprender-los-nodos">
+<span id="ros2nodes"></span><h1>Comprender los Nodos<a class="headerlink" href="#comprender-los-nodos" title="Enlazar permanentemente con este título"></a></h1>
+<p><strong>Objetivo:</strong> Aprender sobre la función de los nodos en ROS 2 y las herramientas para interactuar con ellos.</p>
+<p><strong>Nivel del Tutorial:</strong> Principiante</p>
+<p><strong>Tiempo:</strong> 10 minutos</p>
+<div class="contents local topic" id="contenido">
+<p class="topic-title">Contenido</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#background" id="id1">Background</a></p>
+<li><p><a class="reference internal" href="#historial" id="id1">Historial</a></p>
 <ul>
-<li><p><a class="reference internal" href="#the-ros-2-graph" id="id2">1 The ROS 2 graph</a></p></li>
-<li><p><a class="reference internal" href="#nodes-in-ros-2" id="id3">2 Nodes in ROS 2</a></p></li>
+<li><p><a class="reference internal" href="#el-grafo-ros-2" id="id2">1 El grafo ROS 2</a></p></li>
+<li><p><a class="reference internal" href="#nodos-in-ros-2" id="id3">2 Nodos in ROS 2</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#prerequisites" id="id4">Prerequisites</a></p></li>
-<li><p><a class="reference internal" href="#tasks" id="id5">Tasks</a></p>
+<li><p><a class="reference internal" href="#requisitos-previos" id="id4">Requisitos previos</a></p></li>
+<li><p><a class="reference internal" href="#tareas" id="id5">Tareas</a></p>
 <ul>
 <li><p><a class="reference internal" href="#ros2-run" id="id6">1 ros2 run</a></p></li>
 <li><p><a class="reference internal" href="#ros2-node-list" id="id7">2 ros2 node list</a></p></li>
 <li><p><a class="reference internal" href="#ros2-node-info" id="id8">3 ros2 node info</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#summary" id="id9">Summary</a></p></li>
-<li><p><a class="reference internal" href="#next-steps" id="id10">Next steps</a></p></li>
-<li><p><a class="reference internal" href="#related-content" id="id11">Related content</a></p></li>
+<li><p><a class="reference internal" href="#resumen" id="id9">Resumen</a></p></li>
+<li><p><a class="reference internal" href="#pasos-siguientes" id="id10">Pasos siguientes</a></p></li>
+<li><p><a class="reference internal" href="#contenido-relacionado" id="id11">Contenido Relacionado</a></p></li>
 </ul>
 </div>
-<div class="section" id="background">
-<h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Enlazar permanentemente con este título"></a></h2>
-<div class="section" id="the-ros-2-graph">
-<h3><a class="toc-backref" href="#id2">1 The ROS 2 graph</a><a class="headerlink" href="#the-ros-2-graph" title="Enlazar permanentemente con este título"></a></h3>
-<p>Over the next few tutorials, you will learn about a series of core ROS 2 concepts that make up what is referred to as the “ROS (2) graph”.</p>
-<p>The ROS graph is a network of ROS 2 elements processing data together at one time.
-It encompasses all executables and the connections between them if you were to map them all out and visualize them.</p>
+<div class="section" id="historial">
+<h2><a class="toc-backref" href="#id1">Historial</a><a class="headerlink" href="#historial" title="Enlazar permanentemente con este título"></a></h2>
+<div class="section" id="el-grafo-ros-2">
+<h3><a class="toc-backref" href="#id2">1 El grafo ROS 2</a><a class="headerlink" href="#el-grafo-ros-2" title="Enlazar permanentemente con este título"></a></h3>
+<p>En los próximos tutoriales, aprenderás sobre una serie de conceptos básicos de ROS 2 que componen lo que se conoce como el “grafo de ROS (2)”.</p>
+<p>El grafo ROS es una red de elementos de ROS 2, que procesan datos al mismo tiempo.
+Abarca todos los ejecutables y las conexiones entre ellos, como si tuviera que mapearlos y visualizarlos.</p>
 </div>
-<div class="section" id="nodes-in-ros-2">
-<h3><a class="toc-backref" href="#id3">2 Nodes in ROS 2</a><a class="headerlink" href="#nodes-in-ros-2" title="Enlazar permanentemente con este título"></a></h3>
-<p>Each node in ROS should be responsible for a single, module purpose (e.g. one node for controlling wheel motors, one node for controlling a laser range-finder, etc).
-Each node can send and receive data to other nodes via topics, services, actions, or parameters.</p>
+<div class="section" id="nodos-in-ros-2">
+<h3><a class="toc-backref" href="#id3">2 Nodos in ROS 2</a><a class="headerlink" href="#nodos-in-ros-2" title="Enlazar permanentemente con este título"></a></h3>
+<p>Cada nodo en ROS debe ser responsable de un solo propósito, en forma modular (por ejemplo, un nodo para controlar los motores de las ruedas, un nodo para controlar un telémetro láser, etc.).
+Cada nodo puede enviar y recibir datos a otros nodos a través de topics, servicios, acciones o parámetros.</p>
 <img alt="../../../_images/Nodes-TopicandService.gif" src="../../../_images/Nodes-TopicandService.gif" />
-<p>A full robotic system is comprised of many nodes working in concert.
-In ROS 2, a single executable (C++ program, Python program, etc.) can contain one or more nodes.</p>
+<p>Un sistema robótico completo se compone de muchos nodos que trabajan en conjunto.
+En ROS 2, un único ejecutable (programa C++, programa Python, etc.) puede contener uno o más nodos.</p>
 </div>
 </div>
-<div class="section" id="prerequisites">
-<h2><a class="toc-backref" href="#id4">Prerequisites</a><a class="headerlink" href="#prerequisites" title="Enlazar permanentemente con este título"></a></h2>
-<p>The <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">previous tutorial</span></a> shows you how to install the <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> package used here.</p>
-<p>As always, don’t forget to source ROS 2 in <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">every new terminal you open</span></a>.</p>
+<div class="section" id="requisitos-previos">
+<h2><a class="toc-backref" href="#id4">Requisitos previos</a><a class="headerlink" href="#requisitos-previos" title="Enlazar permanentemente con este título"></a></h2>
+<p>El <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">tutorial previo</span></a> mustra como instalar el paquete <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> utilizado a continuación.</p>
+<p>Como siempre, no olvides hacer un source ROS 2 en <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">cada terminal nueva</span></a>.</p>
 </div>
-<div class="section" id="tasks">
-<h2><a class="toc-backref" href="#id5">Tasks</a><a class="headerlink" href="#tasks" title="Enlazar permanentemente con este título"></a></h2>
+<div class="section" id="tareas">
+<h2><a class="toc-backref" href="#id5">Tareas</a><a class="headerlink" href="#tareas" title="Enlazar permanentemente con este título"></a></h2>
 <div class="section" id="ros2-run">
 <h3><a class="toc-backref" href="#id6">1 ros2 run</a><a class="headerlink" href="#ros2-run" title="Enlazar permanentemente con este título"></a></h3>
-<p>The command <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> launches an executable from a package.</p>
+<p>El comando <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> lanza un ejecutable desde un paquete.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run &lt;package_name&gt; &lt;executable_name&gt;</span>
 </pre></div>
 </div>
-<p>To run turtlesim, open a new terminal, and enter the following command:</p>
+<p>Para ejecutar Turtlesim, abre una nueva terminal e introduce el siguiente comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node</span>
 </pre></div>
 </div>
-<p>The turtlesim window will open, as you saw in the <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">previous tutorial</span></a>.</p>
-<p>Here, the package name is <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and the executable name is <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>.</p>
-<p>We still don’t know the node name, however.
-You can find node names by using <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code></p>
+<p>Se abrirá la ventana de turtlesim, como se vió en el <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">tutorial previo</span></a>.</p>
+<p>Aquí, el nombre del paquete es <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y el nombre del ejecutable es <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>.</p>
+<p>Sin embargo, todavía no sabemos el nombre del nodo.
+Puedes encontrar nombres de nodos usando el comando <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code>.</p>
 </div>
 <div class="section" id="ros2-node-list">
 <h3><a class="toc-backref" href="#id7">2 ros2 node list</a><a class="headerlink" href="#ros2-node-list" title="Enlazar permanentemente con este título"></a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> will show you the names of all running nodes.
-This is especially useful when you want to interact with a node, or when you have a system running many nodes and need to keep track of them.</p>
-<p>Open a new terminal while turtlesim is still running in the other one, and enter the following command:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> te mostrará los nombres de todos los nodos que están actualmente en ejecución.
+Esto es especialmente útil cuando desea interactuar con un nodo o cuando tiene un sistema que ejecuta muchos nodos y necesitas realizar un seguimiento de ellos.</p>
+<p>Abre una nueva terminal mientras turtlesim aún se está ejecutando en la otra, e ingrese el siguiente comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node list</span>
 </pre></div>
 </div>
-<p>The terminal will return the node name:</p>
+<p>El terminal devolverá el nombre del nodo:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/turtlesim</span>
 </pre></div>
 </div>
-<p>Open another new terminal and start the teleop node with the command:</p>
+<p>Abre otra terminal nueva e inicia el nodo teleop con el comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key</span>
 </pre></div>
 </div>
-<p>Here, we are searching the <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> package again, this time for the executable named <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code>.</p>
-<p>Return to the terminal where you ran <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> and run it again.
-You will now see the names of two active nodes:</p>
+<p>Aquí estamos buscando de nuevo en el paquete turtlesim, esta vez el ejecutable llamado <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code>.</p>
+<p>Regresa a la terminal donde se ejecutó <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> y vuelve a ejecutarlo.
+Ahora verás los nombres de dos nodos activos:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/turtlesim</span>
 <span class="go">/teleop_turtle</span>
 </pre></div>
 </div>
-<div class="section" id="remapping">
-<h4>2.1 Remapping<a class="headerlink" href="#remapping" title="Enlazar permanentemente con este título"></a></h4>
-<p><a class="reference external" href="https://design.ros2.org/articles/ros_command_line_arguments.html#name-remapping-rules">Remapping</a> allows you to reassign default node properties, like node name, topic names, service names, etc., to custom values.
-In the last tutorial, you used remapping on <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> to change the default turtle being controlled.</p>
-<p>Now, lets reassign the name of our <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> node.
-In a new terminal, run the following command:</p>
+<div class="section" id="reasignacion">
+<h4>2.1 Reasignación<a class="headerlink" href="#reasignacion" title="Enlazar permanentemente con este título"></a></h4>
+<p>La reasignación te permite cambiar propiedades predeterminadas de los nodos, como su nombre, nombre del topic, nombres de servicios, etc., a valores personalizados.
+En el último tutorial, utilizaste la reasignación en <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> para cambiar la tortuga que se controla.</p>
+<p>Ahora, vamos a reasignar el nombre de nuestro nodo <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>.
+En una nueva terminal, ejecuta el siguiente comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtlesim_node --ros-args --remap __node:=my_turtle</span>
 </pre></div>
 </div>
-<p>Since you’re calling <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> on turtlesim again, another turtlesim window will open.
-However, now if you return to the terminal where you ran <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code>, and run it again, you will see three node names:</p>
+<p>Ya que estás llamando a <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">run</span></code> para que se ejecute en turtlesim nuevamente, se abrirá otra ventana de turtlesim.
+Sin embargo, ahora, si regresas a la terminal donde ejecutó la lista de nodos ros2 y lo vuelves a ejecutar, verás tres nombres de nodos:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/my_turtle</span>
 <span class="go">/turtlesim</span>
 <span class="go">/teleop_turtle</span>
@@ -473,16 +477,16 @@ However, now if you return to the terminal where you ran <code class="docutils l
 </div>
 <div class="section" id="ros2-node-info">
 <h3><a class="toc-backref" href="#id8">3 ros2 node info</a><a class="headerlink" href="#ros2-node-info" title="Enlazar permanentemente con este título"></a></h3>
-<p>Now that you know the names of your nodes, you can access more information about them with:</p>
+<p>Ahora que conoces los nombres de tus nodos, puedes acceder a más información sobre ellos con:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node info &lt;node_name&gt;</span>
 </pre></div>
 </div>
-<p>To examine your latest node, <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code>, run the following command:</p>
+<p>Para obtener información del nodo <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code>, ejecuta el siguiente comando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node info /my_turtle</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> returns a list of subscribers, publishers, services, and actions (the ROS graph connections) that interact with that node.
-The output should look like this:</p>
+<p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> devuelve una lista de suscriptores, publicadores, servicios y acciones (las conexiones del grafo de ROS) que interactúan con ese nodo.
+La salida debería verse así:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">/my_turtle</span>
 <span class="go">  Subscribers:</span>
 <span class="go">    /parameter_events: rcl_interfaces/msg/ParameterEvent</span>
@@ -513,25 +517,25 @@ The output should look like this:</p>
 <span class="go">  Action Clients:</span>
 </pre></div>
 </div>
-<p>Now try running the same command on the <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> node, and see how its connections differ from <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code>.</p>
-<p>You will learn more about the ROS graph connection concepts including the message types in the upcoming tutorials.</p>
+<p>Ahora intenta ejecutar el mismo comando en el nodo <code class="docutils literal notranslate"><span class="pre">/teleop_turtle</span></code> y vea cómo las conexiones difieren de <code class="docutils literal notranslate"><span class="pre">my_turtle</span></code>.</p>
+<p>Aprenderás más sobre los conceptos de conexión de gráficos de ROS, incluidos los tipos de mensajes, en los próximos tutoriales.</p>
 </div>
 </div>
-<div class="section" id="summary">
-<h2><a class="toc-backref" href="#id9">Summary</a><a class="headerlink" href="#summary" title="Enlazar permanentemente con este título"></a></h2>
-<p>A node is a fundamental ROS 2 element that serves a single, modular purpose in a robotics system.</p>
-<p>In this tutorial, you utilized nodes created from the <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> package by running the executables <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> and <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code>.</p>
-<p>You learned how to use <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> to discover active node names and <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> to introspect on a single node.
-These tools are vital to understanding the flow of data in a complex, real-world robot system.</p>
+<div class="section" id="resumen">
+<h2><a class="toc-backref" href="#id9">Resumen</a><a class="headerlink" href="#resumen" title="Enlazar permanentemente con este título"></a></h2>
+<p>Un nodo es un elemento fundamental de ROS 2, que es modular y tiene un único propósito en un sistema de robótica.</p>
+<p>En este tutorial, utilizaste nodos creados a partir del paquete <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> ejecutando <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code> y <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code>.</p>
+<p>Aprendiste a usar el comando <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">list</span></code> para descubrir nombres de nodos activos y el comando <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">node</span> <span class="pre">info</span></code> para obtener información de un nodo en particular.
+Estas herramientas son vitales para comprender el flujo de datos en un sistema robótico complejo del mundo real.</p>
 </div>
-<div class="section" id="next-steps">
-<h2><a class="toc-backref" href="#id10">Next steps</a><a class="headerlink" href="#next-steps" title="Enlazar permanentemente con este título"></a></h2>
-<p>Now that you understand nodes in ROS 2, you can move on to the <a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"><span class="doc">topics tutorial</span></a>.
-Topics are one of the communication types that connects nodes.</p>
+<div class="section" id="pasos-siguientes">
+<h2><a class="toc-backref" href="#id10">Pasos siguientes</a><a class="headerlink" href="#pasos-siguientes" title="Enlazar permanentemente con este título"></a></h2>
+<p>Ahora que comprendes los nodos en ROS 2, puedes continuar con el tutorial <a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html"><span class="doc">de topics</span></a>.
+Los topics son uno de los tipos de comunicación que conecta los nodos.</p>
 </div>
-<div class="section" id="related-content">
-<h2><a class="toc-backref" href="#id11">Related content</a><a class="headerlink" href="#related-content" title="Enlazar permanentemente con este título"></a></h2>
-<p>The <a class="reference internal" href="../../../Concepts.html"><span class="doc">Concepts</span></a> page adds some more detail to the concept of nodes.</p>
+<div class="section" id="contenido-relacionado">
+<h2><a class="toc-backref" href="#id11">Contenido Relacionado</a><a class="headerlink" href="#contenido-relacionado" title="Enlazar permanentemente con este título"></a></h2>
+<p>La página <a class="reference internal" href="../../../Concepts.html"><span class="doc">Concepts</span></a> agrega más detalles al concepto de nodos.</p>
 </div>
 </div>
 
@@ -540,8 +544,8 @@ Topics are one of the communication types that connects nodes.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="../Introducing-Turtlesim/Introducing-Turtlesim.html" class="btn btn-neutral float-left" title="Using turtlesim and rqt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html" class="btn btn-neutral float-right" title="Understanding topics" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../Introducing-Turtlesim/Introducing-Turtlesim.html" class="btn btn-neutral float-left" title="Utilizar turtlesim y rqt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html" class="btn btn-neutral float-right" title="Comprender los Topics" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

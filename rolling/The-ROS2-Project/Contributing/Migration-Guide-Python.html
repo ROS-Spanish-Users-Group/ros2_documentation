@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python migration guide from ROS 1 &mdash; documentación de ROS 2 Documentation: Rolling - </title>
+  <title>Guía de Python sobre migración desde ROS1 &mdash; documentación de ROS 2 Documentation: Rolling - </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -26,7 +26,7 @@
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
     <link rel="next" title="ROS Build Farms" href="Build-Farms.html" />
-    <link rel="prev" title="Migration guide from ROS 1" href="Migration-Guide.html" /> 
+    <link rel="prev" title="Guía de migración desde ROS 1" href="Migration-Guide.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -106,11 +106,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Understanding nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Understanding topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Understanding parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Comprender los Parámetros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Understanding actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html">Using <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> to view logs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Launching nodes</a></li>
@@ -169,6 +169,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Testing-Main.html">Testing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/CLI.html">Running Tests in ROS 2 from the Command Line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Cpp.html">Writing Basic Tests with C++ with GTest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Python.html">Writing Basic Tests with Python</a></li>
 </ul>
 </li>
@@ -200,6 +201,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Security-on-Two.html">Ensuring security across machines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Examine-Traffic.html">Examining network traffic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Access-Controls.html">Setting access controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Deployment-Guidelines.html">Deployment Guidelines</a></li>
 </ul>
 </li>
 </ul>
@@ -260,6 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Disabling-ZeroCopy-loaned-messages.html">Disabling Zero Copy Loaned Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installing-on-Raspberry-Pi.html">ROS 2 on Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-callback-groups.html">Using Callback Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html">Setup ROS 2 with VSCode and Docker [community-contributed]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
@@ -292,12 +295,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Contact.html">Contacto</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../The-ROS2-Project.html">The ROS 2 Project</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../Contributing.html">Contributing</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Contributing.html">Contribuir</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Developer-Guide.html">Guía para desarrolladores de ROS 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Code-Style-Language-Versions.html">Estilo de código y versiones de lenguaje</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Quality-Guide.html">Quality guide: ensuring code quality</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="Migration-Guide.html">Migration guide from ROS 1</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Python migration guide from ROS 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Quality-Guide.html">Guía de calidad: garantizar la calidad del código</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="Migration-Guide.html">Guía de migración desde ROS 1</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Guía de Python sobre migración desde ROS1</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Build-Farms.html">ROS Build Farms</a></li>
@@ -318,6 +321,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Marketing.html">Marketing</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../API-Docs.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Related-Projects.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Intel-ROS2-Projects.html">Proyectos de Intel en ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">Proyectos de ROS 2 por NVIDIA</a></li>
@@ -342,9 +346,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../../The-ROS2-Project.html">The ROS 2 Project</a></li>
-          <li class="breadcrumb-item"><a href="../Contributing.html">Contributing</a></li>
-          <li class="breadcrumb-item"><a href="Migration-Guide.html">Migration guide from ROS 1</a></li>
-      <li class="breadcrumb-item active">Python migration guide from ROS 1</li>
+          <li class="breadcrumb-item"><a href="../Contributing.html">Contribuir</a></li>
+          <li class="breadcrumb-item"><a href="Migration-Guide.html">Guía de migración desde ROS 1</a></li>
+      <li class="breadcrumb-item active">Guía de Python sobre migración desde ROS1</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Migration-Guide-Python.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
@@ -358,24 +362,24 @@
 <p>
   <strong>
     
-    You're reading the documentation for a development version.
-    For the latest released version, please have a look at <a href="../../../humble/The-ROS2-Project/Contributing/Migration-Guide-Python.html">Humble</a>.
+    Estás leyendo la documentación para una versión de desarrollo.
+    Para la última versión publicada, por favor revisa <a href="../../../humble/The-ROS2-Project/Contributing/Migration-Guide-Python.html">Humble</a>.
     
   </strong>
 </p>
 
 
-  <div class="section" id="python-migration-guide-from-ros-1">
-<h1>Python migration guide from ROS 1<a class="headerlink" href="#python-migration-guide-from-ros-1" title="Enlazar permanentemente con este título"></a></h1>
-<div class="section" id="node-initialization">
-<h2>Node Initialization<a class="headerlink" href="#node-initialization" title="Enlazar permanentemente con este título"></a></h2>
-<p>In ROS 1:</p>
+  <div class="section" id="guia-de-python-sobre-migracion-desde-ros1">
+<h1>Guía de Python sobre migración desde ROS1<a class="headerlink" href="#guia-de-python-sobre-migracion-desde-ros1" title="Enlazar permanentemente con este título"></a></h1>
+<div class="section" id="initializacion-de-nodo">
+<h2>Initialización de Nodo<a class="headerlink" href="#initializacion-de-nodo" title="Enlazar permanentemente con este título"></a></h2>
+<p>En ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rospy</span><span class="o">.</span><span class="n">init_node</span><span class="p">(</span><span class="s1">&#39;asdf&#39;</span><span class="p">)</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s1">&#39;Created node&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In ROS 2:</p>
+<p>En ROS 2:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rclpy</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
 <span class="n">node</span> <span class="o">=</span> <span class="n">rclpy</span><span class="o">.</span><span class="n">create_node</span><span class="p">(</span><span class="s1">&#39;asdf&#39;</span><span class="p">)</span>
 
@@ -383,71 +387,71 @@
 </pre></div>
 </div>
 </div>
-<div class="section" id="ros-parameters">
-<h2>ROS Parameters<a class="headerlink" href="#ros-parameters" title="Enlazar permanentemente con este título"></a></h2>
-<p>In ROS 1:</p>
+<div class="section" id="parametros-de-ros">
+<h2>Parametros de ROS<a class="headerlink" href="#parametros-de-ros" title="Enlazar permanentemente con este título"></a></h2>
+<p>En ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span> <span class="n">port</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span>
  <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="s1">&#39;port parameter must be a str&#39;</span>
 
- <span class="n">buadrate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;baudrate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">)</span>
- <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;port parameter must be an integer&#39;</span>
+ <span class="n">baudrate</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s1">&#39;baudrate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">)</span>
+ <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">baudrate</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;baudrate parameter must be an integer&#39;</span>
 
 <span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="s1">&#39;port: &#39;</span> <span class="o">+</span> <span class="n">port</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In ROS 2:</p>
+<p>En ROS 2:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">port</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;port&#39;</span><span class="p">,</span> <span class="s1">&#39;/dev/ttyUSB0&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
 <span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="nb">str</span><span class="p">),</span> <span class="s1">&#39;port parameter must be a str&#39;</span>
 
 <span class="n">baudrate</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">declare_parameter</span><span class="p">(</span><span class="s1">&#39;baudrate&#39;</span><span class="p">,</span> <span class="mi">115200</span><span class="p">)</span><span class="o">.</span><span class="n">value</span>
-<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;port parameter must be an integer&#39;</span>
+<span class="k">assert</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">baudrate</span><span class="p">,</span> <span class="nb">int</span><span class="p">),</span> <span class="s1">&#39;baudrate parameter must be an integer&#39;</span>
 
 <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;port: &#39;</span> <span class="o">+</span> <span class="n">port</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="creating-a-publisher">
-<h2>Creating a Publisher<a class="headerlink" href="#creating-a-publisher" title="Enlazar permanentemente con este título"></a></h2>
-<p>In ROS 1:</p>
+<div class="section" id="crear-un-publicador">
+<h2>Crear un Publicador<a class="headerlink" href="#crear-un-publicador" title="Enlazar permanentemente con este título"></a></h2>
+<p>En ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Publisher</span><span class="p">(</span><span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In ROS 2:</p>
+<p>En ROS 2:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pub</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_publisher</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;chatter&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="creating-a-subscriber">
-<h2>Creating a Subscriber<a class="headerlink" href="#creating-a-subscriber" title="Enlazar permanentemente con este título"></a></h2>
-<p>In ROS 1:</p>
+<div class="section" id="crear-un-subscriptor">
+<h2>Crear un Subscriptor<a class="headerlink" href="#crear-un-subscriptor" title="Enlazar permanentemente con este título"></a></h2>
+<p>En ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Subscriber</span><span class="p">(</span><span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">String</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In ROS 2:</p>
+<p>En ROS 2:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sub</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">String</span><span class="p">,</span> <span class="s1">&#39;chatter&#39;</span><span class="p">,</span> <span class="n">callback</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="creating-a-service">
-<h2>Creating a Service<a class="headerlink" href="#creating-a-service" title="Enlazar permanentemente con este título"></a></h2>
-<p>In ROS 1:</p>
+<div class="section" id="crear-un-servicio">
+<h2>Crear un Servicio<a class="headerlink" href="#crear-un-servicio" title="Enlazar permanentemente con este título"></a></h2>
+<p>En ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">srv</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">Service</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">AddTwoInts</span><span class="p">,</span> <span class="n">add_two_ints_callback</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In ROS 2:</p>
+<p>En ROS 2:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">srv</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_service</span><span class="p">(</span><span class="n">AddTwoInts</span><span class="p">,</span> <span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">add_two_ints_callback</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="creating-a-service-client">
-<h2>Creating a Service Client<a class="headerlink" href="#creating-a-service-client" title="Enlazar permanentemente con este título"></a></h2>
-<p>In ROS 1:</p>
+<div class="section" id="crear-un-cliente-para-un-servicio">
+<h2>Crear un Cliente para un Servicio<a class="headerlink" href="#crear-un-cliente-para-un-servicio" title="Enlazar permanentemente con este título"></a></h2>
+<p>En ROS 1:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">)</span>
 <span class="n">add_two_ints</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span><span class="s1">&#39;add_two_ints&#39;</span><span class="p">,</span> <span class="n">AddTwoInts</span><span class="p">)</span>
 <span class="n">resp</span> <span class="o">=</span> <span class="n">add_two_ints</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>In ROS 2:</p>
+<p>En ROS 2:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">add_two_ints</span> <span class="o">=</span> <span class="n">node</span><span class="o">.</span><span class="n">create_client</span><span class="p">(</span><span class="n">AddTwoInts</span><span class="p">,</span> <span class="s1">&#39;add_two_ints&#39;</span><span class="p">)</span>
 <span class="k">while</span> <span class="ow">not</span> <span class="n">add_two_ints</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span><span class="n">timeout_sec</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
     <span class="n">node</span><span class="o">.</span><span class="n">get_logger</span><span class="p">()</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;service not available, waiting again...&#39;</span><span class="p">)</span>
@@ -463,7 +467,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="Migration-Guide.html" class="btn btn-neutral float-left" title="Migration guide from ROS 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="Migration-Guide.html" class="btn btn-neutral float-left" title="Guía de migración desde ROS 1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="Build-Farms.html" class="btn btn-neutral float-right" title="ROS Build Farms" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

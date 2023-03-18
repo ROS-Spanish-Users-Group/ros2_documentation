@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quality guide: ensuring code quality &mdash; documentación de ROS 2 Documentation: Rolling - </title>
+  <title>Guía de calidad: garantizar la calidad del código &mdash; documentación de ROS 2 Documentation: Rolling - </title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex.html" />
     <link rel="search" title="Búsqueda" href="../../search.html" />
-    <link rel="next" title="Migration guide from ROS 1" href="Migration-Guide.html" />
+    <link rel="next" title="Guía de migración desde ROS 1" href="Migration-Guide.html" />
     <link rel="prev" title="Estilo de código y versiones de lenguaje" href="Code-Style-Language-Versions.html" /> 
 </head>
 
@@ -106,11 +106,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Using <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> and <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Understanding nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Understanding topics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Understanding parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Parameters/Understanding-ROS2-Parameters.html">Comprender los Parámetros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Actions/Understanding-ROS2-Actions.html">Understanding actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Using-Rqt-Console/Using-Rqt-Console.html">Using <code class="docutils literal notranslate"><span class="pre">rqt_console</span></code> to view logs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Launching-Multiple-Nodes/Launching-Multiple-Nodes.html">Launching nodes</a></li>
@@ -169,6 +169,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Testing-Main.html">Testing</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/CLI.html">Running Tests in ROS 2 from the Command Line</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Cpp.html">Writing Basic Tests with C++ with GTest</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Intermediate/Testing/Python.html">Writing Basic Tests with Python</a></li>
 </ul>
 </li>
@@ -200,6 +201,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Security-on-Two.html">Ensuring security across machines</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Examine-Traffic.html">Examining network traffic</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Access-Controls.html">Setting access controls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../Tutorials/Advanced/Security/Deployment-Guidelines.html">Deployment Guidelines</a></li>
 </ul>
 </li>
 </ul>
@@ -260,6 +262,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Disabling-ZeroCopy-loaned-messages.html">Disabling Zero Copy Loaned Messages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Installing-on-Raspberry-Pi.html">ROS 2 on Raspberry Pi</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Using-callback-groups.html">Using Callback Groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/Setup-ROS-2-with-VSCode-and-Docker-Container.html">Setup ROS 2 with VSCode and Docker [community-contributed]</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install.html">Building RQt from source</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-MacOS.html">Building RQt from source on macOS</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../How-To-Guides/RQt-Source-Install-Windows10.html">Building RQt from source on Windows 10</a></li>
@@ -292,12 +295,12 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../Contact.html">Contacto</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../../The-ROS2-Project.html">The ROS 2 Project</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../Contributing.html">Contributing</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="Developer-Guide.html">ROS 2 developer guide</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../Contributing.html">Contribuir</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Developer-Guide.html">Guía para desarrolladores de ROS 2</a></li>
 <li class="toctree-l3"><a class="reference internal" href="Code-Style-Language-Versions.html">Estilo de código y versiones de lenguaje</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Quality guide: ensuring code quality</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Migration-Guide.html">Migration guide from ROS 1</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="Migration-Guide-Python.html">Python migration guide from ROS 1</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Guía de calidad: garantizar la calidad del código</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Migration-Guide.html">Guía de migración desde ROS 1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Migration-Guide-Python.html">Guía de Python sobre migración desde ROS1</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="Build-Farms.html">ROS Build Farms</a></li>
@@ -318,6 +321,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Marketing.html">Marketing</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../API-Docs.html">API Documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../Related-Projects.html">Related Projects</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Intel-ROS2-Projects.html">Proyectos de Intel en ROS 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Related-Projects/Nvidia-ROS2-Projects.html">Proyectos de ROS 2 por NVIDIA</a></li>
@@ -342,8 +346,8 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../../The-ROS2-Project.html">The ROS 2 Project</a></li>
-          <li class="breadcrumb-item"><a href="../Contributing.html">Contributing</a></li>
-      <li class="breadcrumb-item active">Quality guide: ensuring code quality</li>
+          <li class="breadcrumb-item"><a href="../Contributing.html">Contribuir</a></li>
+      <li class="breadcrumb-item active">Guía de calidad: garantizar la calidad del código</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/The-ROS2-Project/Contributing/Quality-Guide.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
@@ -357,46 +361,46 @@
 <p>
   <strong>
     
-    You're reading the documentation for a development version.
-    For the latest released version, please have a look at <a href="../../../humble/The-ROS2-Project/Contributing/Quality-Guide.html">Humble</a>.
+    Estás leyendo la documentación para una versión de desarrollo.
+    Para la última versión publicada, por favor revisa <a href="../../../humble/The-ROS2-Project/Contributing/Quality-Guide.html">Humble</a>.
     
   </strong>
 </p>
 
 
-  <div class="section" id="quality-guide-ensuring-code-quality">
-<h1>Quality guide: ensuring code quality<a class="headerlink" href="#quality-guide-ensuring-code-quality" title="Enlazar permanentemente con este título"></a></h1>
-<div class="contents local topic" id="table-of-contents">
-<p class="topic-title">Table of Contents</p>
+  <div class="section" id="guia-de-calidad-garantizar-la-calidad-del-codigo">
+<h1>Guía de calidad: garantizar la calidad del código<a class="headerlink" href="#guia-de-calidad-garantizar-la-calidad-del-codigo" title="Enlazar permanentemente con este título"></a></h1>
+<div class="contents local topic" id="tabla-de-contenido">
+<p class="topic-title">Tabla de Contenido</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#static-code-analysis-as-part-of-the-ament-package-build" id="id1">Static code analysis as part of the ament package build</a></p></li>
-<li><p><a class="reference internal" href="#static-thread-safety-analysis-via-code-annotation" id="id2">Static Thread Safety Analysis via Code Annotation</a></p></li>
-<li><p><a class="reference internal" href="#dynamic-analysis-data-races-deadlocks" id="id3">Dynamic analysis (data races &amp; deadlocks)</a></p></li>
+<li><p><a class="reference internal" href="#analisis-de-codigo-estatico-como-parte-de-la-compilacion-del-paquete-ament" id="id1">Análisis de código estático como parte de la compilación del paquete ament</a></p></li>
+<li><p><a class="reference internal" href="#analisis-estatico-de-seguridad-de-hilos-a-traves-de-la-anotacion-de-codigo" id="id2">Análisis estático de seguridad de hilos a través de la anotación de código</a></p></li>
+<li><p><a class="reference internal" href="#analisis-dinamico-ejecucion-de-datos-y-puntos-muertos" id="id3">Análisis dinámico (ejecución de datos y puntos muertos)</a></p></li>
 </ul>
 </div>
 <p>This page gives guidance about how to improve the software quality of ROS 2 packages, focusing on more specific areas than the Quality Practices section of the <a class="reference internal" href="Developer-Guide.html"><span class="doc">Developer Guide</span></a>.</p>
-<p>The sections below intend to address ROS 2 core, application and ecosystem packages and the core client libraries, C++ and Python.
-The solutions presented are motivated by design and implementation considerations to improve quality attributes like «Reliability», «Security», «Maintainability», «Determinism», etc. which relate to non-functional requirements.</p>
-<div class="section" id="static-code-analysis-as-part-of-the-ament-package-build">
-<h2><a class="toc-backref" href="#id1">Static code analysis as part of the ament package build</a><a class="headerlink" href="#static-code-analysis-as-part-of-the-ament-package-build" title="Enlazar permanentemente con este título"></a></h2>
-<p><strong>Context</strong>:</p>
+<p>Las siguientes secciones pretenden abordar los paquetes básicos, de aplicaciones y de ecosistemas de ROS 2 y las bibliotecas principales de clientes, C++ y Python.
+Las soluciones presentadas están motivadas por consideraciones de diseño e implementación para mejorar atributos de calidad como «Confiabilidad», «Seguridad», «Mantenibilidad», «Determinismo», etc. que se relacionan con requisitos no funcionales.</p>
+<div class="section" id="analisis-de-codigo-estatico-como-parte-de-la-compilacion-del-paquete-ament">
+<h2><a class="toc-backref" href="#id1">Análisis de código estático como parte de la compilación del paquete ament</a><a class="headerlink" href="#analisis-de-codigo-estatico-como-parte-de-la-compilacion-del-paquete-ament" title="Enlazar permanentemente con este título"></a></h2>
+<p><strong>Contexto</strong>:</p>
 <ul class="simple">
-<li><p>You have developed your C++ production code.</p></li>
-<li><p>You have created a ROS 2 package with build support with <code class="docutils literal notranslate"><span class="pre">ament</span></code>.</p></li>
+<li><p>Has desarrollado tu código de producción C++.</p></li>
+<li><p>Has creado un paquete ROS 2 con soporte de compilación con <code class="docutils literal notranslate"><span class="pre">ament</span></code>.</p></li>
 </ul>
-<p><strong>Problem</strong>:</p>
+<p><strong>Problema</strong>:</p>
 <ul class="simple">
-<li><p>Library level static code analysis is not run as part of the package build procedure.</p></li>
-<li><p>Library level static code analysis needs to be executed manually.</p></li>
-<li><p>Risk of forgetting to execute library level static code analysis before building
-a new package version.</p></li>
+<li><p>El análisis de código estático a nivel de biblioteca no se ejecuta como parte del procedimiento de creación del paquete.</p></li>
+<li><p>El análisis de código estático a nivel de biblioteca debe ejecutarse manualmente.</p></li>
+<li><p>Riesgo de olvidarse de ejecutar el análisis de código estático a nivel de biblioteca antes de construir
+una nueva versión del paquete.</p></li>
 </ul>
-<p><strong>Solution</strong>:</p>
+<p><strong>Solución</strong>:</p>
 <ul class="simple">
-<li><p>Use the integration capabilities of <code class="docutils literal notranslate"><span class="pre">ament</span></code> to execute static code analysis as
-part of the package build procedure.</p></li>
+<li><p>Usa las capacidades de integración de <code class="docutils literal notranslate"><span class="pre">ament</span></code> para ejecutar análisis de código estático como
+parte del procedimiento de construcción del paquete.</p></li>
 </ul>
-<p><strong>Implementation</strong>:</p>
+<p><strong>Implementación</strong>:</p>
 <ul class="simple">
 <li><p>Insert into the packages <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file.</p></li>
 </ul>
@@ -410,7 +414,7 @@ endif<span class="o">()</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Insert the <code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> test dependencies into the packages <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> file.</p></li>
+<li><p>Inserta las dependencias de prueba <code class="docutils literal notranslate"><span class="pre">ament_lint</span></code> en el archivo <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> de los paquetes.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>...
 &lt;package <span class="nv">format</span><span class="o">=</span><span class="s2">&quot;2&quot;</span>&gt;
@@ -421,7 +425,7 @@ endif<span class="o">()</span>
 &lt;/package&gt;
 </pre></div>
 </div>
-<p><strong>Examples</strong>:</p>
+<p><strong>Ejemplos</strong>:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rclcpp</span></code>:</p>
 <ul>
@@ -436,46 +440,50 @@ endif<span class="o">()</span>
 </ul>
 </li>
 </ul>
-<p><strong>Resulting context</strong>:</p>
+<p><strong>Contexto resultante</strong>:</p>
 <ul class="simple">
-<li><p>The static code analysis tools supported by <code class="docutils literal notranslate"><span class="pre">ament</span></code> are run as part of the package build.</p></li>
-<li><p>Static code analysis tools not supported by <code class="docutils literal notranslate"><span class="pre">ament</span></code> need to be executed separately.</p></li>
+<li><p>Las herramientas de análisis de código estático soportadas por <code class="docutils literal notranslate"><span class="pre">ament</span></code> se ejecutan como parte de la construcción del paquete.</p></li>
+<li><p>Las herramientas de análisis de código estático que no son compatibles con <code class="docutils literal notranslate"><span class="pre">ament</span></code> deben ejecutarse por separado.</p></li>
 </ul>
 </div>
-<div class="section" id="static-thread-safety-analysis-via-code-annotation">
-<h2><a class="toc-backref" href="#id2">Static Thread Safety Analysis via Code Annotation</a><a class="headerlink" href="#static-thread-safety-analysis-via-code-annotation" title="Enlazar permanentemente con este título"></a></h2>
-<p><strong>Context:</strong></p>
+<div class="section" id="analisis-estatico-de-seguridad-de-hilos-a-traves-de-la-anotacion-de-codigo">
+<h2><a class="toc-backref" href="#id2">Análisis estático de seguridad de hilos a través de la anotación de código</a><a class="headerlink" href="#analisis-estatico-de-seguridad-de-hilos-a-traves-de-la-anotacion-de-codigo" title="Enlazar permanentemente con este título"></a></h2>
+<p><strong>Contexto:</strong></p>
 <ul class="simple">
-<li><p>You are developing/debugging your multithreaded C++ production code</p></li>
-<li><p>You access data from multiple threads in C++ code</p></li>
+<li><p>Estás desarrollando/depurando tu código de producción C++ multihilo</p></li>
+<li><p>Accedes a datos de múltiples hilos en código C++</p></li>
 </ul>
-<p><strong>Problem:</strong></p>
+<p><strong>Problema:</strong></p>
 <ul class="simple">
-<li><p>Data races and deadlocks can lead to critical bugs.</p></li>
+<li><p>Las carreras de datos y los interbloqueos pueden provocar errores críticos.</p></li>
 </ul>
-<p><strong>Solution:</strong></p>
+<p><strong>Solución:</strong></p>
 <ul class="simple">
-<li><p>Utilize Clang’s static <a class="reference external" href="https://clang.llvm.org/docs/ThreadSafetyAnalysis.html">Thread Safety Analysis</a> by annotating threaded code</p></li>
+<li><p>Utiliza el <a class="reference external" href="https://clang.llvm.org/docs/ThreadSafetyAnalysis.html">Análisis de seguridad de hilos estático de Clang</a> al anotar el código de subproceso</p></li>
 </ul>
-<p><strong>Context For Implementation:</strong></p>
-<p>To enable Thread Safety Analysis, code must be annotated to let the compiler know more about the semantics of the code. These annotations are Clang-specific attributes - e.g. <code class="docutils literal notranslate"><span class="pre">__attribute__(capability()))</span></code>. Instead of using those attributes directly, ROS 2 provides preprocessor macros that are erased when using other compilers.</p>
-<p>These macros can be found in <a class="reference external" href="https://github.com/ros2/rcpputils/blob/rolling/include/rcpputils/thread_safety_annotations.hpp">rcpputils/thread_safety_annotations.hpp</a></p>
+<p><strong>Contexto para la implementación:</strong></p>
+<p>Para habilitar el Análisis de Seguridad de hilos, se debe anotar el código para que el compilador sepa más sobre la semántica del código. Estas anotaciones son atributos específicos de Clang, p. <code class="docutils literal notranslate"><span class="pre">__atributo__(capacidad()))</span></code>. En lugar de usar esos atributos directamente, ROS 2 proporciona macros de preprocesador que se borran cuando se usan otros compiladores.</p>
+<p>Estas macros se pueden encontrar en <a class="reference external" href="https://github.com/ros2/rcpputils/blob/rolling/include/rcpputils/thread_safety_annotations.hpp">rcpputils/thread_safety_annotations.hpp</a></p>
 <dl class="simple">
-<dt>The Thread Safety Analysis documentation states</dt><dd><p>Thread safety analysis can be used with any threading library, but it does require that the threading API be wrapped in classes and methods which have the appropriate annotations</p>
+<dt>La documentación del análisis de seguridad de hilos establece</dt><dd><p>El análisis de seguridad de hilos se puede usar con cualquier biblioteca de hilos, pero requiere que la API de hilos se incluya en clases y métodos que tengan las anotaciones adecuadas.</p>
 </dd>
 </dl>
-<p>We have decided that we want ROS 2 developers to be able to use <code class="docutils literal notranslate"><span class="pre">std::</span></code> threading primitives directly for their development. We do not want to provide our own wrapped types as is suggested above.</p>
-<p>There are three C++ standard libraries to be aware of
-* The GNU standard library <code class="docutils literal notranslate"><span class="pre">libstdc++</span></code> - default on Linux, explicitly via the compiler option <code class="docutils literal notranslate"><span class="pre">-stdlib=libstdc++</span></code>
-* The LLVM standard library <code class="docutils literal notranslate"><span class="pre">libc++</span></code> (also called <code class="docutils literal notranslate"><span class="pre">libcxx</span></code> ) - default on macOS,  explicitly set by the compiler option <code class="docutils literal notranslate"><span class="pre">-stdlib=libc++</span></code>
-* The Windows C++ Standard Library - not relevant to this use case</p>
-<p><code class="docutils literal notranslate"><span class="pre">libcxx</span></code> annotates its <code class="docutils literal notranslate"><span class="pre">std::mutex</span></code> and <code class="docutils literal notranslate"><span class="pre">std::lock_guard</span></code> implementations for Thread Safety Analysis. When using GNU <code class="docutils literal notranslate"><span class="pre">libstdc++</span></code> , those annotations are not present, so Thread Safety Analysis cannot be used on non-wrapped <code class="docutils literal notranslate"><span class="pre">std::</span></code> types.</p>
-<p><em>Therefore, to use Thread Safety Analysis directly with</em> <code class="docutils literal notranslate"><span class="pre">std::</span></code> <em>types, we must use</em> <code class="docutils literal notranslate"><span class="pre">libcxx</span></code></p>
-<p><strong>Implementation:</strong></p>
-<p>The code migration suggestions here are by no means complete - when writing (or annotating existing) threaded code, you are encouraged to utilize as many of the annotations as is logical for your use case. However, this step-by-step is a great place to start!</p>
+<p>Hemos decidido que queremos que los desarrolladores de ROS 2 puedan usar primitivas de subprocesamiento <code class="docutils literal notranslate"><span class="pre">std::</span></code> directamente para su desarrollo. No queremos proporcionar nuestros propios tipos envueltos como se sugiere anteriormente.</p>
+<p>Hay tres bibliotecas estándar de C++ a tener en cuenta</p>
+<ul class="simple">
+<li><p>La biblioteca estándar GNU <code class="docutils literal notranslate"><span class="pre">libstdc++</span></code>: predeterminada en Linux, explícitamente a través de la opción del compilador <code class="docutils literal notranslate"><span class="pre">-stdlib=libstdc++</span></code></p></li>
+<li><p>La biblioteca estándar LLVM <code class="docutils literal notranslate"><span class="pre">libc++</span></code> (también llamada <code class="docutils literal notranslate"><span class="pre">libcxx</span></code>) - predeterminada en macOS, establecida explícitamente por la opción del compilador <code class="docutils literal notranslate"><span class="pre">-stdlib=libc++</span></code></p></li>
+<li><p>La biblioteca estándar de Windows C++: no es relevante para este caso de uso</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">libcxx</span></code> anota sus implementaciones <code class="docutils literal notranslate"><span class="pre">std::mutex</span></code> y <code class="docutils literal notranslate"><span class="pre">std::lock_guard</span></code> para el análisis de seguridad de hilos. Cuando se usa GNU <code class="docutils literal notranslate"><span class="pre">libstdc++</span></code> , esas anotaciones no están presentes, por lo que el análisis de seguridad de hilos no se puede usar en tipos <code class="docutils literal notranslate"><span class="pre">std::</span></code> no encapsulados.</p>
+<p><em>Por lo tanto, para usar Thread Safety Analysis directamente con tipos</em> <code class="docutils literal notranslate"><span class="pre">std::</span></code> <em>, debemos usar</em> <code class="docutils literal notranslate"><span class="pre">libcxx</span></code></p>
+<p><strong>Implementación:</strong></p>
+<p>Las sugerencias de migración de código aquí de ninguna manera están completas - al escribir (o anotar las existentes) código multihilo, se te recomienda a utilizar tantas anotaciones como sea lógico para tu caso de uso. Sin embargo, ¡este paso a paso es un gran lugar para comenzar!</p>
 <ul>
-<li><p>Enabling Analysis for Package/Target</p>
-<p>When the C++ compiler is Clang, enable the <code class="docutils literal notranslate"><span class="pre">-Wthread-safety</span></code> flag. Example below for CMake-based projects</p>
+<li><p>Habilitación de análisis para paquete/objetivo</p>
+<blockquote>
+<div><p>Cuando el compilador de C++ es Clang, habilite el indicador <code class="docutils literal notranslate"><span class="pre">-Wthread-safety</span></code>. Ejemplo a continuación para proyectos basados en CMake</p>
+</div></blockquote>
 <div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">if</span><span class="p">(</span><span class="s">CMAKE_CXX_COMPILER_ID</span><span class="w"> </span><span class="s">MATCHES</span><span class="w"> </span><span class="s2">&quot;Clang&quot;</span><span class="p">)</span>
 <span class="w">  </span><span class="nb">add_compile_options</span><span class="p">(</span><span class="s">-Wthread-safety</span><span class="p">)</span><span class="w">   </span><span class="c"># for your whole package</span>
 <span class="w">  </span><span class="nb">target_compile_options</span><span class="p">(</span><span class="o">${</span><span class="nv">MY_TARGET</span><span class="o">}</span><span class="w"> </span><span class="s">PUBLIC</span><span class="w"> </span><span class="s">-Wthread-safety</span><span class="p">)</span><span class="w">  </span><span class="c"># for a single library or executable</span>
@@ -483,14 +491,18 @@ endif<span class="o">()</span>
 </pre></div>
 </div>
 </li>
-<li><p>Annotating Code</p>
+<li><p>Código de anotación</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Paso 1 - Anotar miembros de datos</p>
 <ul>
-<li><p>Step 1 - Annotate data members</p>
-<ul class="simple">
-<li><p>Find anywhere that <code class="docutils literal notranslate"><span class="pre">std::mutex</span></code> is used to protect some member data</p></li>
-<li><p>Add the <code class="docutils literal notranslate"><span class="pre">RCPPUTILS_TSA_GUARDED_BY(mutex_name)</span></code> annotation to the data that is protected by the mutex</p></li>
+<li><p>Encuentre en cualquier lugar que <code class="docutils literal notranslate"><span class="pre">std::mutex</span></code> se use para proteger algunos datos de miembros</p></li>
+<li><p>Agrega la anotación <code class="docutils literal notranslate"><span class="pre">RCPPUTILS_TSA_GUARDED_BY(mutex_name)</span></code> a los datos que están protegidos por el mutex</p></li>
 </ul>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</li>
+</ul>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">Foo</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="k">public</span><span class="o">:</span><span class="w"></span>
 <span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">incr</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">amount</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">mutex_</span><span class="p">);</span><span class="w"></span>
@@ -507,53 +519,60 @@ endif<span class="o">()</span>
 <span class="p">};</span><span class="w"></span>
 </pre></div>
 </div>
-</li>
-<li><p>Step 2 - Fix Warnings</p>
+</div></blockquote>
 <ul class="simple">
-<li><p>In the above example - <code class="docutils literal notranslate"><span class="pre">Foo::get</span></code> will produce a compiler warning! To fix it, lock before returning bar</p></li>
+<li><p>Paso 2: corregir advertencias</p>
+<ul>
+<li><p>En el ejemplo anterior, <code class="docutils literal notranslate"><span class="pre">Foo::get</span></code> producirá una advertencia del compilador. Para solucionarlo, bloquear antes de volver a la bar</p></li>
 </ul>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">get</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+</li>
+</ul>
+<blockquote>
+<div><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">get</span><span class="p">()</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">lock_guard</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">mutex</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lock</span><span class="p">(</span><span class="n">mutex_</span><span class="p">);</span><span class="w"></span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">bar</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</li>
-<li><p>Step 3 - (Optional but Recommended) Refactor Existing Code to Private-Mutex Pattern</p>
-<p>A recommended pattern in threaded C++ code is to always keep your <code class="docutils literal notranslate"><span class="pre">mutex</span></code> as a <code class="docutils literal notranslate"><span class="pre">private:</span></code> member of the data structure. This makes data safety the concern of the containing structure, offloading that responsibility from users of the structure and minimizing the surface area of affected code.</p>
-<p>Making your locks private may require rethinking the interfaces to your data. This is a great exercise - here are a few things to consider</p>
+</div></blockquote>
+<ul>
+<li><p>Paso 3 - (Opcional pero recomendado) Refactorizar el código existente a un patrón privado-Mutex</p>
+<p>Un patrón recomendado en código C++ multihilo es mantener siempre su <code class="docutils literal notranslate"><span class="pre">mutex</span></code> como miembro <code class="docutils literal notranslate"><span class="pre">privado:</span></code> de la estructura de datos. Esto hace que la seguridad de los datos sea la preocupación de la estructura contenedora, descargando esa responsabilidad de los usuarios de la estructura y minimizando el área superficial del código afectado.</p>
+<p>Hacer que sus bloqueos sean privados puede requerir repensar las interfaces de sus datos. Este es un gran ejercicio - aquí hay algunas cosas a considerar</p>
 <ul class="simple">
-<li><p>You may want to provide specialized interfaces for performing analysis that requires complex locking logic, e.g. counting members in a filtered set of a mutex-guarded map structure, instead of actually returning the underlying structure to consumers</p></li>
-<li><p>Consider copying to avoid blocking, where the amount of data is small. This can let other threads get on with accessing the shared data, which can potentially lead to better overall performance.</p></li>
+<li><p>Es posible que desees proporcionar interfaces especializadas para realizar análisis que requieran una lógica de bloqueo compleja, p. contar miembros en un conjunto filtrado de una estructura de mapa protegida por mutex, en lugar de devolver la estructura subyacente a los consumidores</p></li>
+<li><p>Considera la posibilidad de copiar para evitar el bloqueo, donde la cantidad de datos es pequeña. Esto puede permitir que otros hilos sigan accediendo a los datos compartidos, lo que potencialmente puede conducir a un mejor rendimiento general.</p></li>
 </ul>
 </li>
-<li><p>Step 4 - (Optional) Enable Negative Capability Analysis</p>
+<li><p>Paso 4 - (Opcional) Habilitar análisis de capacidad negativa</p>
 <p><a class="reference external" href="https://clang.llvm.org/docs/ThreadSafetyAnalysis.html#negative-capabilities">https://clang.llvm.org/docs/ThreadSafetyAnalysis.html#negative-capabilities</a></p>
-<p>Negative Capability Analysis lets you specify “this lock must not be held when calling this function”. It can reveal potential deadlock cases that other annotations cannot.</p>
+<p>El análisis de capacidad negativa te permite especificar «este bloqueo no debe mantenerse al llamar a esta función». Puede revelar posibles casos de punto muerto que otras anotaciones no pueden.</p>
 <ul class="simple">
-<li><p>Where you specified <code class="docutils literal notranslate"><span class="pre">-Wthread-safety</span></code>, add the additional flag <code class="docutils literal notranslate"><span class="pre">-Wthread-safety-negative</span></code></p></li>
-<li><p>On any function that acquires a lock, use the <code class="docutils literal notranslate"><span class="pre">RCPPUTILS_TSA_REQUIRES(!mutex)</span></code> pattern</p></li>
+<li><p>Donde especificas <code class="docutils literal notranslate"><span class="pre">-Wthread-safety</span></code>, agrega el indicador adicional <code class="docutils literal notranslate"><span class="pre">-Wthread-safety-negative</span></code></p></li>
+<li><p>En cualquier función que adquiera un bloqueo, a el patrón <code class="docutils literal notranslate"><span class="pre">RCPPUTILS_TSA_REQUIRES(!mutex)</span></code></p></li>
 </ul>
 </li>
 </ul>
+</div></blockquote>
 </li>
-<li><p>How to run the analysis</p>
-<ul class="simple">
-<li><p>The ROS CI build farm runs a nightly job with <code class="docutils literal notranslate"><span class="pre">libcxx</span></code>, which will surface any issues in the ROS 2 core stack by being marked «Unstable» when Thread Safety Analysis raises warnings</p></li>
-<li><p>For local runs, you have the following options, all equivalent</p>
+<li><p>Cómo ejecutar el análisis</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>La granja de compilación ROS CI ejecuta un trabajo nocturno con <code class="docutils literal notranslate"><span class="pre">libcxx</span></code>, que hará surgir cualquier problema en la pila principal de ROS 2 al marcarse como «Inestable» cuando Thread Safety Analysis genere advertencias</p></li>
+<li><p>Para ejecuciones locales, tienes las siguientes opciones, todas equivalentes</p>
 <ul>
-<li><p>Use the colcon <a class="reference external" href="https://github.com/colcon/colcon-mixin-repository/blob/master/clang-libcxx.mixin">clang-libcxx mixin</a></p>
+<li><p>Utiliza el mixin colcon <a class="reference external" href="https://github.com/colcon/colcon-mixin-repository/blob/master/clang-libcxx.mixin">clang-libcxx</a></p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span> <span class="pre">--mixin</span> <span class="pre">clang-libcxx</span></code></p></li>
-<li><p>You may only use this if you have <a class="reference external" href="https://github.com/colcon/colcon-mixin-repository/blob/master/README.md">configured mixins for your colcon installation</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">construcción</span> <span class="pre">colcon</span> <span class="pre">--mixin</span> <span class="pre">clang-libcxx</span></code></p></li>
+<li><p>Solo puedes usar esto si tiene <a class="reference external" href="https://github.com/colcon/colcon-mixin-repository/blob/master/README.md">mixins configurados para su instalación de colcon</a></p></li>
 </ul>
 </li>
-<li><p>Passing compiler to CMake</p>
+<li><p>Pasar el compilador a CMake</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span> <span class="pre">--cmake-args</span> <span class="pre">-DCMAKE_C_COMPILER=clang</span> <span class="pre">-DCMAKE_CXX_COMPILER=clang++</span> <span class="pre">-DCMAKE_CXX_FLAGS='-stdlib=libc++</span> <span class="pre">-D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS'</span> <span class="pre">-DFORCE_BUILD_VENDOR_PKG=ON</span> <span class="pre">--no-warn-unused-cli</span></code></p></li>
 </ul>
 </li>
-<li><p>Overriding system compiler</p>
+<li><p>Anulación del compilador del sistema</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">CC=clang</span> <span class="pre">CXX=clang++</span> <span class="pre">colcon</span> <span class="pre">build</span> <span class="pre">--cmake-args</span> <span class="pre">-DCMAKE_CXX_FLAGS='-stdlib=libc++</span> <span class="pre">-D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS'</span> <span class="pre">-DFORCE_BUILD_VENDOR_PKG=ON</span> <span class="pre">--no-warn-unused-cli</span></code></p></li>
 </ul>
@@ -561,46 +580,47 @@ endif<span class="o">()</span>
 </ul>
 </li>
 </ul>
+</div></blockquote>
 </li>
 </ul>
-<p><strong>Resulting Context:</strong></p>
+<p><strong>Contexto resultante:</strong></p>
 <ul class="simple">
-<li><p>Potential deadlocks and race conditions will be surfaced at compile time, when using Clang and <code class="docutils literal notranslate"><span class="pre">libcxx</span></code></p></li>
+<li><p>Los interbloqueos potenciales y las condiciones de ejecución aparecerán en el momento de la compilación, al usar Clang y <code class="docutils literal notranslate"><span class="pre">libcxx</span></code></p></li>
 </ul>
 </div>
-<div class="section" id="dynamic-analysis-data-races-deadlocks">
-<h2><a class="toc-backref" href="#id3">Dynamic analysis (data races &amp; deadlocks)</a><a class="headerlink" href="#dynamic-analysis-data-races-deadlocks" title="Enlazar permanentemente con este título"></a></h2>
-<p><strong>Context:</strong></p>
+<div class="section" id="analisis-dinamico-ejecucion-de-datos-y-puntos-muertos">
+<h2><a class="toc-backref" href="#id3">Análisis dinámico (ejecución de datos y puntos muertos)</a><a class="headerlink" href="#analisis-dinamico-ejecucion-de-datos-y-puntos-muertos" title="Enlazar permanentemente con este título"></a></h2>
+<p><strong>Contexto:</strong></p>
 <ul class="simple">
-<li><p>You are developing/debugging your multithreaded C++ production code.</p></li>
-<li><p>You use pthreads or C++11 threading + llvm libc++ (in case of ThreadSanitizer).</p></li>
-<li><p>You do not use Libc/libstdc++ static linking (in case of ThreadSanitizer).</p></li>
-<li><p>You do not build non-position-independent executables (in case of ThreadSanitizer).</p></li>
+<li><p>Estas desarrollando/depurando tu código de producción C++ multiproceso.</p></li>
+<li><p>Usas pthreads o C++11 threading + llvm libc++ (en el caso de ThreadSanitizer).</p></li>
+<li><p>No utilizas enlaces estáticos Libc/libstdc++ (en el caso de ThreadSanitizer).</p></li>
+<li><p>No creas ejecutables que no sean independientes de la posición (en el caso de ThreadSanitizer).</p></li>
 </ul>
-<p><strong>Problem:</strong></p>
+<p><strong>Problema:</strong></p>
 <ul class="simple">
-<li><p>Data races and deadlocks can lead to critical bugs.</p></li>
-<li><p>Data races and deadlocks cannot be detected using static analysis (reason: limitation of static analysis).</p></li>
-<li><p>Data races and deadlocks must not show up during development debugging / testing (reason: usually not all possible control paths through production code exercised).</p></li>
+<li><p>Las condiciones de carrera y los interbloqueos pueden provocar errores críticos.</p></li>
+<li><p>Las condiciones de carrerq y los interbloqueos no se pueden detectar mediante el análisis estático (motivo: limitación del análisis estático).</p></li>
+<li><p>Las condiciones de carrera y los interbloqueos no deben aparecer durante la depuración/prueba del desarrollo (razón: por lo general, no se ejercen todas las rutas de control posibles a través del código de producción).</p></li>
 </ul>
-<p><strong>Solution:</strong></p>
+<p><strong>Solución:</strong></p>
 <ul class="simple">
-<li><p>Use a dynamic analysis tool which focuses on finding data races and deadlocks (here clang ThreadSanitizer).</p></li>
+<li><p>Utilizar una herramienta de análisis dinámico que se centre en la búsqueda de condiciones de carrera y puntos muertos (aquí clang ThreadSanitizer).</p></li>
 </ul>
-<p><strong>Implementation:</strong></p>
+<p><strong>Implementación:</strong></p>
 <ul class="simple">
-<li><p>Compile and link the production code with clang using the option <code class="docutils literal notranslate"><span class="pre">-fsanitize=thread</span></code> (this instruments the production code).</p></li>
-<li><p>In case different production code shall be executed during analysis consider conditional compilation e.g. <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#has-feature-thread-sanitizer">ThreadSanitizers _has_feature(thread_sanitizer)</a>.</p></li>
-<li><p>In case some code shall not be instrumented consider <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#attribute-no-sanitize-thread">ThreadSanitizers _/*attribute*/_((no_sanitize(«thread»)))</a>.</p></li>
-<li><p>In case some files shall not be instrumented consider file or function-level exclusion <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#ignorelist">ThreadSanitizers blacklisting</a>, more specific: <a class="reference external" href="https://clang.llvm.org/docs/SanitizerSpecialCaseList.html">ThreadSanitizers Sanitizer Special Case List</a> or with <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#ignorelist">ThreadSanitizers no_sanitize(«thread»)</a> and use the option <code class="docutils literal notranslate"><span class="pre">--fsanitize-blacklist</span></code>.</p></li>
+<li><p>Compila y vincula el código de producción con clang usando la opción <code class="docutils literal notranslate"><span class="pre">-fsanitize=thread</span></code> (esto instrumenta el código de producción).</p></li>
+<li><p>En caso de que se ejecute un código de producción diferente durante el análisis, considere la compilación condicional, p. <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#has-feature-thread-sanitizer">ThreadSanitizers _has_feature(thread_sanitizer)</a>.</p></li>
+<li><p>En caso de que no se instrumente algún código, considere <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#attribute-no-higienizar-hilo">ThreadSanitizers _/*attribute*/_((no_sanitize(«thread»)))</a>.</p></li>
+<li><p>En caso de que algunos archivos no se instrumenten, considera la exclusión a nivel de archivo o función <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#ignorelist">ThreadSanitizers blacklisting</a>, más específicamente: <a class="reference external" href="https://clang.llvm.org/docs/SanitizerSpecialCaseList.html">ThreadSanitizers Sanitizer Special Case List</a> o con <a class="reference external" href="https://clang.llvm.org/docs/ThreadSanitizer.html#ignorelist">ThreadSanitizers no_sanitize(«thread»)</a> y usa la opción <code class="docutils literal notranslate"><span class="pre">--fsanitize-blacklist</span></code>.</p></li>
 </ul>
-<p><strong>Resulting context:</strong></p>
+<p><strong>Contexto resultante:</strong></p>
 <ul class="simple">
-<li><p>Higher chance to find data races and deadlocks in production code before deploying it.</p></li>
-<li><p>Analysis result may lack reliability, tool in beta phase stage (in case of ThreadSanitizer).</p></li>
-<li><p>Overhead due to production code instrumentation (maintenance of separate branches for instrumented/not instrumented production code, etc.).</p></li>
-<li><p>Instrumented code needs more memory per thread (in case of ThreadSanitizer).</p></li>
-<li><p>Instrumented code maps a lot virtual address space (in case of ThreadSanitizer).</p></li>
+<li><p>Mayor probabilidad de encontrar carreras de datos y puntos muertos en el código de producción antes de implementarlo.</p></li>
+<li><p>El resultado del análisis puede carecer de fiabilidad, herramienta en fase beta (en el caso de ThreadSanitizer).</p></li>
+<li><p>Overhead por instrumentación de código de producción (mantenimiento de ramas separadas para código de producción instrumentado/no instrumentado, etc.).</p></li>
+<li><p>El código instrumentado necesita más memoria por subproceso (en el caso de ThreadSanitizer).</p></li>
+<li><p>El código instrumentado asigna mucho espacio de direcciones virtuales (en el caso de ThreadSanitizer).</p></li>
 </ul>
 </div>
 </div>
@@ -611,7 +631,7 @@ endif<span class="o">()</span>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="Code-Style-Language-Versions.html" class="btn btn-neutral float-left" title="Estilo de código y versiones de lenguaje" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="Migration-Guide.html" class="btn btn-neutral float-right" title="Migration guide from ROS 1" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Migration-Guide.html" class="btn btn-neutral float-right" title="Guía de migración desde ROS 1" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
