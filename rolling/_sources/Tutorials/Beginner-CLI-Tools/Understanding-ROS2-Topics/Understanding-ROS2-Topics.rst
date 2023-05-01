@@ -37,7 +37,7 @@ Requisitos previos
 
 El :doc:`tutorial previo <../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes>` proporciona información básica sobre los nodos que se construyen aquí.
 
-Como siempre, no olvides ejecutar `source` con el archivo de setup :doc:`en cada nueva terminal<../Configuring-ROS2-Environment>`.
+Como siempre, no olvides ejecutar `source` con el archivo de setup :doc:`en cada terminalnueva <../Configuring-ROS2-Environment>`.
 
 Tareas
 ------
@@ -118,6 +118,7 @@ Estos atributos, particularmente el tipo, son la forma en que los nodos saben qu
 
 Si te preguntas dónde están todos estos topics en rqt_graph, puedes desmarcar todas las casillas debajo de **Hide**:
 
+
 .. image:: images/unhide.png
 
 Por ahora, deja esas opciones marcadas para evitar confusiones.
@@ -132,6 +133,7 @@ Para ver los datos que se publican sobre un topic, utiliza:
     ros2 topic echo <topic_name>
 
 Como sabemos que ``/teleop_turtle`` publica datos en ``/turtlesim`` sobre el topic ``/turtle1/cmd_vel``, utilizaremos ``echo`` para hacer una inspección sobre ese topic:
+
 
 .. code-block:: console
 
@@ -159,13 +161,13 @@ Ahora regresa a rqt_graph y desmarque la casilla **Debug**.
 
 .. image:: images/debug.png
 
-``/_ros2cli_26646`` es el nodo creado por el ``echo`` que acabamos de ejecutar (el número puede ser diferente).
-Ahora puedes ver que el editor está publicando datos sobre el topic ``cmd_vel`` y que hay dos suscriptores suscritos.
+``/_ros2cli_26646`` es el nodo creado por el comando ``echo`` que acabamos de ejecutar (el número puede ser diferente).
+Ahora puedes ver que el editor está publicando datos sobre el topic ``cmd_vel`` y que hay dos suscriptores suscritos a el.
 
 5 ros2 topic info
 ^^^^^^^^^^^^^^^^^
 
-Los topics no tienen que ser solo comunicación punto a punto; puede ser de uno a muchos, de muchos a uno o de muchos a muchos.
+Los topics no tienen que ser solo comunicación uno a uno; puede ser de uno a muchos, de muchos a uno o de muchos a muchos.
 
 Otra forma de ver esto es ejecutando:
 
@@ -196,7 +198,8 @@ Recuerda que el topic ``cmd_vel`` tiene el tipo:
 
 Esto significa que en el paquete ``geometric_msgs`` hay un ``mensaje`` llamado ``Twist``.
 
-Ahora podemos ejecutar ``ros2 interface show <msg type>`` con el tipo de mensaje anterio para conocer sus detalles, específicamente, qué estructura de datos espera el mensaje.
+Ahora podemos ejecutar ``ros2 interface show <msg type>`` con el tipo de mensaje anterior para conocer sus detalles.
+Específicamente, qué estructura de datos espera el mensaje.
 
 .. code-block:: console
 
@@ -252,7 +255,7 @@ Ingrese el comando completo así:
 
 ``--once`` es un argumento opcional que significa "publicar un mensaje y luego salir".
 
-Recibirás el siguiente mensaje en la terminal:
+Veras el siguiente mensaje en la terminal:
 
 .. code-block:: console
 
@@ -275,7 +278,7 @@ La diferencia aquí es la eliminación de la opción ``--once`` y la adición de
 .. image:: images/pub_stream.png
 
 Puedes actualizar rqt_graph para ver lo que sucede gráficamente.
-Verás que el nodo ``ros 2 topic pub ...`` (``/_ros2cli_30358``) se está publicando sobre el topic ``/turtle1/cmd_vel``, y lo está recibiendo tanto el nodo ``ros2 topic echo ...`` (``/_ros2cli_26646``) como el nodo ``/turtlesim``.
+Verás que el nodo ``ros 2 topic pub ...`` (``/_ros2cli_30358``) se está publicando sobre el topic ``/turtle1/cmd_vel``, el cual está recibiendo tanto el nodo ``ros2 topic echo ...`` (``/_ros2cli_26646``) como el nodo ``/turtlesim``.
 
 .. image:: images/rqt_graph2.png
 
@@ -287,7 +290,7 @@ Finalmente, puedes ejecutar ``echo`` en el topic de ``pose`` y volver a verifica
 
 .. image:: images/rqt_graph3.png
 
-Puedes ver que el nodo ``/turtlesim`` también está publicando en el topic de ``pose``, al que está suscrito el nuevo nodo de ``echo``.
+Puedes ver que el nodo ``/turtlesim`` también está publicando en el topic de ``pose``, al que se ha suscrito el nuevo nodo de ``echo``.
 
 8 ros2 topic hz
 ^^^^^^^^^^^^^^^
@@ -328,4 +331,4 @@ Ahora deberías tener una buena idea de cómo se mueven los datos en un sistema 
 Pasos siguientes
 ----------------
 
-A continuación, aprenderás sobre otro tipo de comunicación en el grafo ROS con el tutorial :doc:`../Understanding-ROS2-Services/Understanding-ROS2-Services`
+A continuación, aprenderás sobre otro tipo de comunicación en el grafo ROS con el tutorial :doc:`../Understanding-ROS2-Services/Understanding-ROS2-Services`.

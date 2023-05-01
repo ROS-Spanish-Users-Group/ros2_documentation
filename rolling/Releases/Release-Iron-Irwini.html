@@ -25,7 +25,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex.html" />
     <link rel="search" title="Búsqueda" href="../search.html" />
-    <link rel="next" title="End-of-Life Distributions" href="End-of-Life.html" />
+    <link rel="next" title="ROS 2 Iron Irwini Complete Changelog" href="Iron-Irwini-Complete-Changelog.html" />
     <link rel="prev" title="Development Distribution" href="Development.html" /> 
 </head>
 
@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="Development.html">Development Distribution</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -368,50 +369,229 @@
 </p>
 
 
-  <span class="target" id="iron-release"><span id="upcoming-release"></span></span><div class="section" id="ros-2-iron-irwini-codename-iron-may-2023">
-<h1>ROS 2 Iron Irwini (codename “iron”; May, 2023)<a class="headerlink" href="#ros-2-iron-irwini-codename-iron-may-2023" title="Enlazar permanentemente con este título"></a></h1>
+  <div class="section" id="ros-2-iron-irwini-codename-iron-may-2023">
+<span id="iron-release"></span><span id="upcoming-release"></span><h1>ROS 2 Iron Irwini (codename “iron”; May, 2023)<a class="headerlink" href="#ros-2-iron-irwini-codename-iron-may-2023" title="Enlazar permanentemente con este título"></a></h1>
 <div class="contents local topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#supported-platforms" id="id8">Supported Platforms</a></p></li>
-<li><p><a class="reference internal" href="#installation" id="id9">Installation</a></p></li>
-<li><p><a class="reference internal" href="#new-features-in-this-ros-2-release" id="id10">New features in this ROS 2 release</a></p>
+<li><p><a class="reference internal" href="#supported-platforms" id="id16">Supported Platforms</a></p></li>
+<li><p><a class="reference internal" href="#installation" id="id17">Installation</a></p></li>
+<li><p><a class="reference internal" href="#new-features-in-this-ros-2-release" id="id18">New features in this ROS 2 release</a></p>
 <ul>
-<li><p><a class="reference internal" href="#ros2topic" id="id11">ros2topic</a></p></li>
+<li><p><a class="reference internal" href="#service-introspection" id="id19">Service introspection</a></p></li>
+<li><p><a class="reference internal" href="#pre-and-post-set-parameter-callback-support" id="id20">Pre and post set parameter callback support</a></p></li>
+<li><p><a class="reference internal" href="#launch" id="id21"><code class="docutils literal notranslate"><span class="pre">launch</span></code></a></p></li>
+<li><p><a class="reference internal" href="#launch-ros" id="id22"><code class="docutils literal notranslate"><span class="pre">launch_ros</span></code></a></p></li>
+<li><p><a class="reference internal" href="#launch-testing" id="id23"><code class="docutils literal notranslate"><span class="pre">launch_testing</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rclcpp" id="id24"><code class="docutils literal notranslate"><span class="pre">rclcpp</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rclpy" id="id25"><code class="docutils literal notranslate"><span class="pre">rclpy</span></code></a></p></li>
+<li><p><a class="reference internal" href="#ros2param" id="id26"><code class="docutils literal notranslate"><span class="pre">ros2param</span></code></a></p></li>
+<li><p><a class="reference internal" href="#ros2topic" id="id27"><code class="docutils literal notranslate"><span class="pre">ros2topic</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#changes-since-the-humble-release" id="id12">Changes since the Humble release</a></p>
+<li><p><a class="reference internal" href="#changes-since-the-humble-release" id="id28">Changes since the Humble release</a></p>
 <ul>
-<li><p><a class="reference internal" href="#launch-ros" id="id13"><code class="docutils literal notranslate"><span class="pre">launch_ros</span></code></a></p></li>
-<li><p><a class="reference internal" href="#change-to-the-default-console-logging-file-flushing-behavior" id="id14">Change to the default console logging file flushing behavior</a></p></li>
+<li><p><a class="reference internal" href="#change-to-the-default-console-logging-file-flushing-behavior" id="id29">Change to the default console logging file flushing behavior</a></p></li>
+<li><p><a class="reference internal" href="#ament-cmake-auto" id="id30"><code class="docutils literal notranslate"><span class="pre">ament_cmake_auto</span></code></a></p></li>
+<li><p><a class="reference internal" href="#ament-cmake-nose" id="id31"><code class="docutils literal notranslate"><span class="pre">ament_cmake_nose</span></code></a></p></li>
+<li><p><a class="reference internal" href="#ament-lint" id="id32"><code class="docutils literal notranslate"><span class="pre">ament_lint</span></code></a></p></li>
+<li><p><a class="reference internal" href="#camera-info-manager" id="id33"><code class="docutils literal notranslate"><span class="pre">camera_info_manager</span></code></a></p></li>
+<li><p><a class="reference internal" href="#id1" id="id34"><code class="docutils literal notranslate"><span class="pre">launch</span></code></a></p></li>
+<li><p><a class="reference internal" href="#id2" id="id35"><code class="docutils literal notranslate"><span class="pre">launch_ros</span></code></a></p></li>
+<li><p><a class="reference internal" href="#launch-xml" id="id36"><code class="docutils literal notranslate"><span class="pre">launch_xml</span></code></a></p></li>
+<li><p><a class="reference internal" href="#launch-yaml" id="id37"><code class="docutils literal notranslate"><span class="pre">launch_yaml</span></code></a></p></li>
+<li><p><a class="reference internal" href="#message-filters" id="id38"><code class="docutils literal notranslate"><span class="pre">message_filters</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rcl-yaml-param-parser" id="id39"><code class="docutils literal notranslate"><span class="pre">rcl_yaml_param_parser</span></code></a></p></li>
+<li><p><a class="reference internal" href="#id3" id="id40"><code class="docutils literal notranslate"><span class="pre">rclcpp</span></code></a></p></li>
+<li><p><a class="reference internal" href="#id4" id="id41"><code class="docutils literal notranslate"><span class="pre">rclpy</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rcutils" id="id42"><code class="docutils literal notranslate"><span class="pre">rcutils</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rmw" id="id43"><code class="docutils literal notranslate"><span class="pre">rmw</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rmw-dds-common" id="id44"><code class="docutils literal notranslate"><span class="pre">rmw_dds_common</span></code></a></p></li>
+<li><p><a class="reference internal" href="#id8" id="id45"><code class="docutils literal notranslate"><span class="pre">ros2topic</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rosbag2" id="id46"><code class="docutils literal notranslate"><span class="pre">rosbag2</span></code></a></p></li>
+<li><p><a class="reference internal" href="#rviz" id="id47"><code class="docutils literal notranslate"><span class="pre">rviz</span></code></a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#known-issues" id="id15">Known Issues</a></p></li>
-<li><p><a class="reference internal" href="#release-timeline" id="id16">Release Timeline</a></p></li>
-<li><p><a class="reference internal" href="#development-progress" id="id17">Development progress</a></p></li>
+<li><p><a class="reference internal" href="#known-issues" id="id48">Known Issues</a></p></li>
+<li><p><a class="reference internal" href="#release-timeline" id="id49">Release Timeline</a></p></li>
+<li><p><a class="reference internal" href="#development-progress" id="id50">Development progress</a></p></li>
 </ul>
 </div>
 <p><em>Iron Irwini</em> is the ninth release of ROS 2.
 What follows is highlights of the important changes and features in Iron Irwini since the last release.</p>
 <div class="section" id="supported-platforms">
-<h2><a class="toc-backref" href="#id8">Supported Platforms</a><a class="headerlink" href="#supported-platforms" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id16">Supported Platforms</a><a class="headerlink" href="#supported-platforms" title="Enlazar permanentemente con este título"></a></h2>
 <p>Iron Irwini is primarily supported on the following platforms:</p>
 <p>Tier 1 platforms:</p>
-<p>TBD</p>
+<ul class="simple">
+<li><p>Ubuntu 22.04 (Jammy): <code class="docutils literal notranslate"><span class="pre">amd64</span></code> and <code class="docutils literal notranslate"><span class="pre">arm64</span></code></p></li>
+<li><p>Windows 10 (Visual Studio 2019): <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+</ul>
 <p>Tier 2 platforms:</p>
-<p>TBD</p>
+<ul class="simple">
+<li><p>RHEL 9: <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+</ul>
 <p>Tier 3 platforms:</p>
-<p>TBD</p>
+<ul class="simple">
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+<li><p>Debian Bullseye: <code class="docutils literal notranslate"><span class="pre">amd64</span></code></p></li>
+</ul>
 <p>For more information about RMW implementations, compiler / interpreter versions, and system dependency versions see <a class="reference external" href="https://www.ros.org/reps/rep-2000.html">REP 2000</a>.</p>
 </div>
 <div class="section" id="installation">
-<h2><a class="toc-backref" href="#id9">Installation</a><a class="headerlink" href="#installation" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id17">Installation</a><a class="headerlink" href="#installation" title="Enlazar permanentemente con este título"></a></h2>
 <p>To come.</p>
 </div>
 <div class="section" id="new-features-in-this-ros-2-release">
-<h2><a class="toc-backref" href="#id10">New features in this ROS 2 release</a><a class="headerlink" href="#new-features-in-this-ros-2-release" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id18">New features in this ROS 2 release</a><a class="headerlink" href="#new-features-in-this-ros-2-release" title="Enlazar permanentemente con este título"></a></h2>
+<div class="section" id="service-introspection">
+<h3><a class="toc-backref" href="#id19">Service introspection</a><a class="headerlink" href="#service-introspection" title="Enlazar permanentemente con este título"></a></h3>
+<p>It is now possible to enable service introspection on a per-service basis.
+When enabled, this allows users to see the metadata associated with the client requesting a service, the server accepting the request, the server sending the response, and the client accepting the response.
+Optionally, the contents of the client/server requests/responses can also be introspected.
+All of the information is published on a hidden topic generated from the name of the service.
+So if the service is called <code class="docutils literal notranslate"><span class="pre">/myservice</span></code>, then the information will be published on <code class="docutils literal notranslate"><span class="pre">/myservice/_service_event</span></code>.</p>
+<p>Note that this functionality is disabled by default; to enable it, users must call <code class="docutils literal notranslate"><span class="pre">configure_introspection</span></code> after creating a server client or server.
+There are examples showing how to do this in <a class="reference external" href="https://github.com/ros2/demos/tree/rolling/demo_nodes_cpp/src/services">https://github.com/ros2/demos/tree/rolling/demo_nodes_cpp/src/services</a> (C++) and <a class="reference external" href="https://github.com/ros2/demos/blob/rolling/demo_nodes_py/demo_nodes_py/services/introspection.py">https://github.com/ros2/demos/blob/rolling/demo_nodes_py/demo_nodes_py/services/introspection.py</a> (Python).</p>
+<p>See <a class="reference external" href="https://github.com/ros-infrastructure/rep/pull/360">REP 2012</a> and the tracking bug at <a class="reference external" href="https://github.com/ros2/ros2/issues/1285">https://github.com/ros2/ros2/issues/1285</a> for more information.</p>
+</div>
+<div class="section" id="pre-and-post-set-parameter-callback-support">
+<h3><a class="toc-backref" href="#id20">Pre and post set parameter callback support</a><a class="headerlink" href="#pre-and-post-set-parameter-callback-support" title="Enlazar permanentemente con este título"></a></h3>
+<p>For many releases now, users could register a callback to be called when parameters on a node were changed by an external entity (like <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span> <span class="pre">set</span></code>).
+This callback could examine the changed parameter types and values, and reject the whole lot if one of them didn’t meet certain criteria.
+However, it could not modify the parameter list, nor should it have modified state (since there might be other callbacks after the set one that would reject the parameters).</p>
+<p>This release adds in a pre and post callback.
+The callbacks are called in this order:</p>
+<ul class="simple">
+<li><p>The «pre» set parameter callback, which can modify the list of parameters based on arbitrary criteria.</p></li>
+<li><p>The «set» parameter callback, which cannot modify the list and should only accept or reject the parameters based on their type and value (this is the existing callback).</p></li>
+<li><p>The «post» set parameter callback, which can make state changes based on parameters and is only called if the previous two callbacks are successful.</p></li>
+</ul>
+<p>There are examples of this in action in <a class="reference external" href="https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/parameters/set_parameters_callback.cpp">https://github.com/ros2/demos/blob/rolling/demo_nodes_cpp/src/parameters/set_parameters_callback.cpp</a> (C++) and <a class="reference external" href="https://github.com/ros2/demos/blob/rolling/demo_nodes_py/demo_nodes_py/parameters/set_parameters_callback.py">https://github.com/ros2/demos/blob/rolling/demo_nodes_py/demo_nodes_py/parameters/set_parameters_callback.py</a> (Python).</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclcpp/pull/1947">https://github.com/ros2/rclcpp/pull/1947</a>, <a class="reference external" href="https://github.com/ros2/rclpy/pull/966">https://github.com/ros2/rclpy/pull/966</a>, and <a class="reference external" href="https://github.com/ros2/demos/pull/565">https://github.com/ros2/demos/pull/565</a> for more information.</p>
+</div>
+<div class="section" id="launch">
+<h3><a class="toc-backref" href="#id21"><code class="docutils literal notranslate"><span class="pre">launch</span></code></a><a class="headerlink" href="#launch" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="pythonexpression-now-supports-importing-modules">
+<h4><code class="docutils literal notranslate"><span class="pre">PythonExpression</span></code> now supports importing modules<a class="headerlink" href="#pythonexpression-now-supports-importing-modules" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to have a launch <code class="docutils literal notranslate"><span class="pre">PythonExpression</span></code> import modules before performing the evaluation.
+This can be useful for pulling in additional functionality to be used when evaluating an expression.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/655">https://github.com/ros2/launch/pull/655</a> for more information.</p>
+</div>
+<div class="section" id="readytotest-can-be-called-from-an-event-handler">
+<h4><code class="docutils literal notranslate"><span class="pre">ReadyToTest</span></code> can be called from an event handler<a class="headerlink" href="#readytotest-can-be-called-from-an-event-handler" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to register an event handler that uses <code class="docutils literal notranslate"><span class="pre">ReadyToTest</span></code> in its output.
+This can be useful for doing things like downloading an asset before allowing a test to run.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/665">https://github.com/ros2/launch/pull/665</a> for more information.</p>
+</div>
+<div class="section" id="addition-of-anysubstitution-and-allsubstitution">
+<h4>Addition of <code class="docutils literal notranslate"><span class="pre">AnySubstitution</span></code> and <code class="docutils literal notranslate"><span class="pre">AllSubstitution</span></code><a class="headerlink" href="#addition-of-anysubstitution-and-allsubstitution" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to specify a substitution to happen when any of the input arguments are true (<code class="docutils literal notranslate"><span class="pre">AnySubstitution</span></code>), or when all of the input arguments are true (<code class="docutils literal notranslate"><span class="pre">AllSubstitution</span></code>).</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/649">https://github.com/ros2/launch/pull/649</a> for more details.</p>
+</div>
+<div class="section" id="addition-of-a-new-substitution-to-get-the-launch-logging-directory">
+<h4>Addition of a new substitution to get the launch logging directory<a class="headerlink" href="#addition-of-a-new-substitution-to-get-the-launch-logging-directory" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to use a substitution called <code class="docutils literal notranslate"><span class="pre">LaunchLogDir</span></code> to get the current logging directory for launch.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/652">https://github.com/ros2/launch/pull/652</a> for more details.</p>
+</div>
+</div>
+<div class="section" id="launch-ros">
+<h3><a class="toc-backref" href="#id22"><code class="docutils literal notranslate"><span class="pre">launch_ros</span></code></a><a class="headerlink" href="#launch-ros" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="add-a-lifecycletransition-action">
+<h4>Add a <code class="docutils literal notranslate"><span class="pre">LifecycleTransition</span></code> action<a class="headerlink" href="#add-a-lifecycletransition-action" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to send a transition signal to a lifecycle node via the new <code class="docutils literal notranslate"><span class="pre">LifeCycleTransition</span></code> action.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch_ros/pull/317">https://github.com/ros2/launch_ros/pull/317</a> for more information.</p>
+</div>
+<div class="section" id="add-a-setroslogdir-action">
+<h4>Add a <code class="docutils literal notranslate"><span class="pre">SetROSLogDir</span></code> action<a class="headerlink" href="#add-a-setroslogdir-action" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to configure the directory used for logging via the <code class="docutils literal notranslate"><span class="pre">SetROSLogDir</span></code> action.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch_ros/pull/325">https://github.com/ros2/launch_ros/pull/325</a> for more information.</p>
+</div>
+<div class="section" id="ability-to-specify-a-condition-to-a-composablenode">
+<h4>Ability to specify a condition to a <code class="docutils literal notranslate"><span class="pre">ComposableNode</span></code><a class="headerlink" href="#ability-to-specify-a-condition-to-a-composablenode" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to specify a condition that must be satisfied in order for a <code class="docutils literal notranslate"><span class="pre">ComposableNode</span></code> to be inserted into its container.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch_ros/pull/311">https://github.com/ros2/launch_ros/pull/311</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="launch-testing">
+<h3><a class="toc-backref" href="#id23"><code class="docutils literal notranslate"><span class="pre">launch_testing</span></code></a><a class="headerlink" href="#launch-testing" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="timeout-for-process-startup-is-now-configurable">
+<h4>Timeout for process startup is now configurable<a class="headerlink" href="#timeout-for-process-startup-is-now-configurable" title="Enlazar permanentemente con este título"></a></h4>
+<p>Prior to this release, the <code class="docutils literal notranslate"><span class="pre">ReadyToTest</span></code> action would wait exactly 15 seconds for processes to start up.
+If the processes took longer than that, they would fail.
+There is now a new decorator called <code class="docutils literal notranslate"><span class="pre">ready_to_test_action_timeout</span></code> that allows the user to configure the amount of time to wait for the processes to start.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/625">https://github.com/ros2/launch/pull/625</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="rclcpp">
+<h3><a class="toc-backref" href="#id24"><code class="docutils literal notranslate"><span class="pre">rclcpp</span></code></a><a class="headerlink" href="#rclcpp" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="addition-of-a-new-paradigm-for-handling-node-and-lifecyclenode">
+<h4>Addition of a new paradigm for handling <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">LifecycleNode</span></code><a class="headerlink" href="#addition-of-a-new-paradigm-for-handling-node-and-lifecyclenode" title="Enlazar permanentemente con este título"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">Node</span></code> and <code class="docutils literal notranslate"><span class="pre">LifecycleNode</span></code> classes are related in that they both provide the same base set of methods (though <code class="docutils literal notranslate"><span class="pre">LifecycleNode</span></code> provides additional methods as well).
+Due to various implementation considerations, they are not derived from a common base class.</p>
+<p>This has led to some trouble for downstream code that wants to accept either a <code class="docutils literal notranslate"><span class="pre">Node</span></code> or a <code class="docutils literal notranslate"><span class="pre">LifecycleNode</span></code>.
+One solution is to have two method signatures, one that accepts a <code class="docutils literal notranslate"><span class="pre">Node</span></code> and one that accepts a <code class="docutils literal notranslate"><span class="pre">LifecycleNode</span></code>.
+The other, recommended solution is to have a method that accepts the «node interfaces» pointers that can be accessed from both classes, e.g.</p>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="kt">void</span><span class="w"> </span><span class="nf">do_thing</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">node_interfaces</span><span class="o">::</span><span class="n">NodeGraphInterface</span><span class="w"> </span><span class="n">graph</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Doing a thing</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">do_thing</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">Node</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">node</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">do_thing</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">get_node_graph_interface</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">do_thing</span><span class="p">(</span><span class="n">rclcpp</span><span class="o">::</span><span class="n">LifecycleNode</span><span class="o">::</span><span class="n">SharedPtr</span><span class="w"> </span><span class="n">node</span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">do_thing</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">get_node_graph_interface</span><span class="p">());</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>This works, but can get a bit unwieldy when many node interfaces are needed.
+To make this a bit better, there is now a new <code class="docutils literal notranslate"><span class="pre">NodeInterfaces</span></code> class that can be constructed to contain the interfaces, and then be used by other code.</p>
+<p>There are examples on how to use this in <a class="reference external" href="https://github.com/ros2/rclcpp/pull/2041">https://github.com/ros2/rclcpp/pull/2041</a>.</p>
+</div>
+</div>
+<div class="section" id="rclpy">
+<h3><a class="toc-backref" href="#id25"><code class="docutils literal notranslate"><span class="pre">rclpy</span></code></a><a class="headerlink" href="#rclpy" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="ability-to-wait-for-another-node-to-join-the-graph">
+<h4>Ability to wait for another node to join the graph<a class="headerlink" href="#ability-to-wait-for-another-node-to-join-the-graph" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to wait for another node to join the network graph with code like the following:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="n">node</span><span class="o">.</span><span class="n">wait_for_node</span><span class="p">(</span><span class="s1">&#39;/fully_qualified_node_name&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://github.com/ros2/rclpy/pull/930">https://github.com/ros2/rclpy/pull/930</a> for more information.</p>
+</div>
+<div class="section" id="implementation-of-asyncparameterclient">
+<h4>Implementation of <code class="docutils literal notranslate"><span class="pre">AsyncParameterClient</span></code><a class="headerlink" href="#implementation-of-asyncparameterclient" title="Enlazar permanentemente con este título"></a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">rclpy</span></code> now has an <code class="docutils literal notranslate"><span class="pre">AsyncParameterClient</span></code> class, bringing it to feature parity with <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code>.
+This class is used to perform parameter actions on a remote node without blocking the calling node.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclpy/pull/959">https://github.com/ros2/rclpy/pull/959</a> for more information and examples.</p>
+</div>
+<div class="section" id="subscription-callbacks-can-now-optionally-get-the-message-info">
+<h4>Subscription callbacks can now optionally get the message info<a class="headerlink" href="#subscription-callbacks-can-now-optionally-get-the-message-info" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to register for a subscription callback with a function signature that takes both the message, and the message info, like:</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">msg_info_cb</span><span class="p">(</span><span class="n">msg</span><span class="p">,</span> <span class="n">msg_info</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Message info:&#39;</span><span class="p">,</span> <span class="n">msg_info</span><span class="p">)</span>
+
+<span class="n">node</span><span class="o">.</span><span class="n">create_subscription</span><span class="p">(</span><span class="n">msg_type</span><span class="o">=</span><span class="n">std_msgs</span><span class="o">.</span><span class="n">msg</span><span class="o">.</span><span class="n">String</span><span class="p">,</span> <span class="n">topic</span><span class="o">=</span><span class="s1">&#39;/chatter&#39;</span><span class="p">,</span> <span class="n">qos_profile</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">callback</span><span class="o">=</span><span class="n">msg_info_cb</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The message info structure contains various pieces of information like the sequence number of the message, the source and received timestamps, and the GID of the publisher.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclpy/pull/922">https://github.com/ros2/rclpy/pull/922</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="ros2param">
+<h3><a class="toc-backref" href="#id26"><code class="docutils literal notranslate"><span class="pre">ros2param</span></code></a><a class="headerlink" href="#ros2param" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="option-to-timeout-when-waiting-for-a-node-with-ros2-param">
+<h4>Option to timeout when waiting for a node with <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code><a class="headerlink" href="#option-to-timeout-when-waiting-for-a-node-with-ros2-param" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to have the various <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> commands timeout by passing <code class="docutils literal notranslate"><span class="pre">--timeout</span></code> to the command.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/ros2cli/pull/802">https://github.com/ros2/ros2cli/pull/802</a> for more information.</p>
+</div>
+</div>
 <div class="section" id="ros2topic">
-<h3><a class="toc-backref" href="#id11">ros2topic</a><a class="headerlink" href="#ros2topic" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id27"><code class="docutils literal notranslate"><span class="pre">ros2topic</span></code></a><a class="headerlink" href="#ros2topic" title="Enlazar permanentemente con este título"></a></h3>
 <div class="section" id="now-as-keyword-for-builtin-interfaces-msg-time-and-auto-for-std-msgs-msg-header">
 <h4><code class="docutils literal notranslate"><span class="pre">now</span></code> as keyword for <code class="docutils literal notranslate"><span class="pre">builtin_interfaces.msg.Time</span></code> and <code class="docutils literal notranslate"><span class="pre">auto</span></code> for <code class="docutils literal notranslate"><span class="pre">std_msgs.msg.Header</span></code><a class="headerlink" href="#now-as-keyword-for-builtin-interfaces-msg-time-and-auto-for-std-msgs-msg-header" title="Enlazar permanentemente con este título"></a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span></code> now allows to set a <code class="docutils literal notranslate"><span class="pre">builtin_interfaces.msg.Time</span></code> message to the current time via the <code class="docutils literal notranslate"><span class="pre">now</span></code> keyword.
@@ -419,24 +599,23 @@ Similarly, a <code class="docutils literal notranslate"><span class="pre">std_ms
 This behavior matches that of ROS 1’s <code class="docutils literal notranslate"><span class="pre">rostopic</span></code> (<a class="reference external" href="http://wiki.ros.org/ROS/YAMLCommandLine#Headers.2Ftimestamps">http://wiki.ros.org/ROS/YAMLCommandLine#Headers.2Ftimestamps</a>)</p>
 <p>Related PR: <a class="reference external" href="https://github.com/ros2/ros2cli/pull/749">ros2/ros2cli#749</a></p>
 </div>
+<div class="section" id="ros2-topic-pub-can-be-configured-to-wait-a-maximum-amount-of-time">
+<h4><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span></code> can be configured to wait a maximum amount of time<a class="headerlink" href="#ros2-topic-pub-can-be-configured-to-wait-a-maximum-amount-of-time" title="Enlazar permanentemente con este título"></a></h4>
+<p>The command <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">-w</span> <span class="pre">1</span></code> will wait for at least that number of subscribers before publishing a message.
+This release adds in a <code class="docutils literal notranslate"><span class="pre">--max-wait-time</span></code> option so that the command will only wait a maximum amount of time before quitting if no subscribers are seen.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/ros2cli/pull/800">https://github.com/ros2/ros2cli/pull/800</a> for more information.</p>
+</div>
+<div class="section" id="ros2-topic-echo-can-be-configured-to-wait-a-maximum-amount-of-time">
+<h4><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span></code> can be configured to wait a maximum amount of time<a class="headerlink" href="#ros2-topic-echo-can-be-configured-to-wait-a-maximum-amount-of-time" title="Enlazar permanentemente con este título"></a></h4>
+<p>The command <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span></code> now accepts a <code class="docutils literal notranslate"><span class="pre">--timeout</span></code> option, which controls the maximum amount of time that the command will wait for a publication to happen.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/ros2cli/pull/792">https://github.com/ros2/ros2cli/pull/792</a> for more information.</p>
+</div>
 </div>
 </div>
 <div class="section" id="changes-since-the-humble-release">
-<h2><a class="toc-backref" href="#id12">Changes since the Humble release</a><a class="headerlink" href="#changes-since-the-humble-release" title="Enlazar permanentemente con este título"></a></h2>
-<div class="section" id="launch-ros">
-<h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">launch_ros</span></code></a><a class="headerlink" href="#launch-ros" title="Enlazar permanentemente con este título"></a></h3>
-<div class="section" id="renamed-classes-which-used-ros-in-the-name-to-use-ros-in-line-with-pep8">
-<h4>Renamed classes which used <code class="docutils literal notranslate"><span class="pre">Ros</span></code> in the name to use <code class="docutils literal notranslate"><span class="pre">ROS</span></code> in line with PEP8<a class="headerlink" href="#renamed-classes-which-used-ros-in-the-name-to-use-ros-in-line-with-pep8" title="Enlazar permanentemente con este título"></a></h4>
-<p>Classes that were changed:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">launch.actions.RosTimer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">launch.actions.ROSTimer</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">launch.actions.PushRosNamespace</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">launch.actions.PushROSNamespace</span></code></p></li>
-</ul>
-<p>The old class names are still there, but will be deprecated.</p>
-</div>
-</div>
+<h2><a class="toc-backref" href="#id28">Changes since the Humble release</a><a class="headerlink" href="#changes-since-the-humble-release" title="Enlazar permanentemente con este título"></a></h2>
 <div class="section" id="change-to-the-default-console-logging-file-flushing-behavior">
-<h3><a class="toc-backref" href="#id14">Change to the default console logging file flushing behavior</a><a class="headerlink" href="#change-to-the-default-console-logging-file-flushing-behavior" title="Enlazar permanentemente con este título"></a></h3>
+<h3><a class="toc-backref" href="#id29">Change to the default console logging file flushing behavior</a><a class="headerlink" href="#change-to-the-default-console-logging-file-flushing-behavior" title="Enlazar permanentemente con este título"></a></h3>
 <p>This specifically applies to the default <code class="docutils literal notranslate"><span class="pre">spdlog</span></code> based logging backend in ROS 2, implemented in <code class="docutils literal notranslate"><span class="pre">rcl_logging_spdlog</span></code>.
 Log file flushing was changed to flush every time an «error» log message is used, e.g. each <code class="docutils literal notranslate"><span class="pre">RCLCPP_ERROR()</span></code> call, and also periodically every five seconds.</p>
 <p>Previously, <code class="docutils literal notranslate"><span class="pre">spdlog</span></code> was used without configuring anything other than creating the sink for logging to a file.</p>
@@ -448,34 +627,256 @@ However, if this change is causing you problems, you can get the old behavior by
 </div></blockquote>
 <p>See this pull request for more details about the change: <a class="reference external" href="https://github.com/ros2/rcl_logging/pull/95">https://github.com/ros2/rcl_logging/pull/95</a></p>
 </div>
+<div class="section" id="ament-cmake-auto">
+<h3><a class="toc-backref" href="#id30"><code class="docutils literal notranslate"><span class="pre">ament_cmake_auto</span></code></a><a class="headerlink" href="#ament-cmake-auto" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="include-dependencies-are-now-marked-as-system">
+<h4>Include dependencies are now marked as SYSTEM<a class="headerlink" href="#include-dependencies-are-now-marked-as-system" title="Enlazar permanentemente con este título"></a></h4>
+<p>When using <code class="docutils literal notranslate"><span class="pre">ament_auto_add_executable</span></code> or <code class="docutils literal notranslate"><span class="pre">ament_auto_add_library</span></code>, dependencies are now automatically added as <code class="docutils literal notranslate"><span class="pre">SYSTEM</span></code>.
+This means that warnings in the header files of the dependencies will not be reported.</p>
+<p>See <a class="reference external" href="https://github.com/ament/ament_cmake/pull/385">https://github.com/ament/ament_cmake/pull/385</a> for more details.</p>
+</div>
+</div>
+<div class="section" id="ament-cmake-nose">
+<h3><a class="toc-backref" href="#id31"><code class="docutils literal notranslate"><span class="pre">ament_cmake_nose</span></code></a><a class="headerlink" href="#ament-cmake-nose" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="package-has-been-deprecated-and-removed">
+<h4>Package has been deprecated and removed<a class="headerlink" href="#package-has-been-deprecated-and-removed" title="Enlazar permanentemente con este título"></a></h4>
+<p>The Python <code class="docutils literal notranslate"><span class="pre">nose</span></code> package has long been deprecated.
+Since none of the open-source packages currently released into Humble or Rolling currently depend on it, this release deprecates and removes the ament wrapper around it.</p>
+<p>See <a class="reference external" href="https://github.com/ament/ament_cmake/pull/415">https://github.com/ament/ament_cmake/pull/415</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="ament-lint">
+<h3><a class="toc-backref" href="#id32"><code class="docutils literal notranslate"><span class="pre">ament_lint</span></code></a><a class="headerlink" href="#ament-lint" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="files-can-be-excluded-from-linter-checks">
+<h4>Files can be excluded from linter checks<a class="headerlink" href="#files-can-be-excluded-from-linter-checks" title="Enlazar permanentemente con este título"></a></h4>
+<p>Certain files can now be excluded from linter checks by setting the <code class="docutils literal notranslate"><span class="pre">AMENT_LINT_AUTO_FILE_EXCLUDE</span></code> CMake variable before calling <code class="docutils literal notranslate"><span class="pre">ament_lint_auto_find_test_dependencies</span></code>.</p>
+<p>See <a class="reference external" href="https://github.com/ament/ament_lint/pull/386">https://github.com/ament/ament_lint/pull/386</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="camera-info-manager">
+<h3><a class="toc-backref" href="#id33"><code class="docutils literal notranslate"><span class="pre">camera_info_manager</span></code></a><a class="headerlink" href="#camera-info-manager" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="lifecycle-node-support">
+<h4>Lifecycle node support<a class="headerlink" href="#lifecycle-node-support" title="Enlazar permanentemente con este título"></a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">camera_info_manager</span></code> now supports lifecycle nodes in additional to regular ROS 2 nodes.</p>
+<p>See <a class="reference external" href="https://github.com/ros-perception/image_common/pull/190">https://github.com/ros-perception/image_common/pull/190</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id34"><code class="docutils literal notranslate"><span class="pre">launch</span></code></a><a class="headerlink" href="#id1" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="launchconfigurationequals-and-launchconfigurationnotequals-are-deprecated">
+<h4><code class="docutils literal notranslate"><span class="pre">LaunchConfigurationEquals</span></code> and <code class="docutils literal notranslate"><span class="pre">LaunchConfigurationNotEquals</span></code> are deprecated<a class="headerlink" href="#launchconfigurationequals-and-launchconfigurationnotequals-are-deprecated" title="Enlazar permanentemente con este título"></a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">LaunchConfigurationEquals</span></code> and <code class="docutils literal notranslate"><span class="pre">LaunchConfigurationNotEquals</span></code> conditions are deprecated, and will be removed in a future release.
+Instead, the more universal <code class="docutils literal notranslate"><span class="pre">Equals</span></code> and <code class="docutils literal notranslate"><span class="pre">NotEquals</span></code> substitutions should be used instead.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/649">https://github.com/ros2/launch/pull/649</a> for more details.</p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3><a class="toc-backref" href="#id35"><code class="docutils literal notranslate"><span class="pre">launch_ros</span></code></a><a class="headerlink" href="#id2" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="renamed-classes-which-used-ros-in-the-name-to-use-ros-in-line-with-pep8">
+<h4>Renamed classes which used <code class="docutils literal notranslate"><span class="pre">Ros</span></code> in the name to use <code class="docutils literal notranslate"><span class="pre">ROS</span></code> in line with PEP8<a class="headerlink" href="#renamed-classes-which-used-ros-in-the-name-to-use-ros-in-line-with-pep8" title="Enlazar permanentemente con este título"></a></h4>
+<p>Classes that were changed:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">launch_ros.actions.RosTimer</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">launch_ros.actions.ROSTimer</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">launch_ros.actions.PushRosNamespace</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">launch.actions.PushROSNamespace</span></code></p></li>
+</ul>
+<p>The old class names are still there, but will be deprecated.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch_ros/pull/326">https://github.com/ros2/launch_ros/pull/326</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="launch-xml">
+<h3><a class="toc-backref" href="#id36"><code class="docutils literal notranslate"><span class="pre">launch_xml</span></code></a><a class="headerlink" href="#launch-xml" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="expose-emulate-tty-to-xml-frontend">
+<h4>Expose <code class="docutils literal notranslate"><span class="pre">emulate_tty</span></code> to XML frontend<a class="headerlink" href="#expose-emulate-tty-to-xml-frontend" title="Enlazar permanentemente con este título"></a></h4>
+<p>It has been possible for several releases to have the <code class="docutils literal notranslate"><span class="pre">launch</span></code> Python code use pseudo-terminals to emulate a TTY (and hence do things like print colors).
+That functionality is now available in the XML frontend by passing the <code class="docutils literal notranslate"><span class="pre">emulate_tty</span></code> argument to an executable command.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/669">https://github.com/ros2/launch/pull/669</a> for more information.</p>
+</div>
+<div class="section" id="expose-sigterm-timeout-and-sigkill-timeout-to-xml-frontend">
+<h4>Expose <code class="docutils literal notranslate"><span class="pre">sigterm_timeout</span></code> and <code class="docutils literal notranslate"><span class="pre">sigkill_timeout</span></code> to XML frontend<a class="headerlink" href="#expose-sigterm-timeout-and-sigkill-timeout-to-xml-frontend" title="Enlazar permanentemente con este título"></a></h4>
+<p>It has been possible for several releases to configure the maximum timeout value for the SIGTERM and SIGKILL signals in the <code class="docutils literal notranslate"><span class="pre">launch</span></code> Python code.
+That functionality is now available in the XML frontend by passing the <code class="docutils literal notranslate"><span class="pre">sigterm_timeout</span></code> or <code class="docutils literal notranslate"><span class="pre">sigkill_timeout</span></code> argument to an executable command.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/667">https://github.com/ros2/launch/pull/667</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="launch-yaml">
+<h3><a class="toc-backref" href="#id37"><code class="docutils literal notranslate"><span class="pre">launch_yaml</span></code></a><a class="headerlink" href="#launch-yaml" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="expose-emulate-tty-to-yaml-frontend">
+<h4>Expose <code class="docutils literal notranslate"><span class="pre">emulate_tty</span></code> to YAML frontend<a class="headerlink" href="#expose-emulate-tty-to-yaml-frontend" title="Enlazar permanentemente con este título"></a></h4>
+<p>It has been possible for several releases to have the <code class="docutils literal notranslate"><span class="pre">launch</span></code> Python code use pseudo-terminals to emulate a TTY (and hence do things like print colors).
+That functionality is now available in the YAML frontend by passing the <code class="docutils literal notranslate"><span class="pre">emulate_tty</span></code> argument to an executable command.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/669">https://github.com/ros2/launch/pull/669</a> for more information.</p>
+</div>
+<div class="section" id="expose-sigterm-timeout-and-sigkill-timeout-to-yaml-frontend">
+<h4>Expose <code class="docutils literal notranslate"><span class="pre">sigterm_timeout</span></code> and <code class="docutils literal notranslate"><span class="pre">sigkill_timeout</span></code> to YAML frontend<a class="headerlink" href="#expose-sigterm-timeout-and-sigkill-timeout-to-yaml-frontend" title="Enlazar permanentemente con este título"></a></h4>
+<p>It has been possible for several releases to configure the maximum timeout value for the SIGTERM and SIGKILL signals in the <code class="docutils literal notranslate"><span class="pre">launch</span></code> Python code.
+That functionality is now available in the YAML frontend by passing the <code class="docutils literal notranslate"><span class="pre">sigterm_timeout</span></code> or <code class="docutils literal notranslate"><span class="pre">sigkill_timeout</span></code> argument to an executable command.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/launch/pull/667">https://github.com/ros2/launch/pull/667</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="message-filters">
+<h3><a class="toc-backref" href="#id38"><code class="docutils literal notranslate"><span class="pre">message_filters</span></code></a><a class="headerlink" href="#message-filters" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="new-approximate-time-policy">
+<h4>New approximate time policy<a class="headerlink" href="#new-approximate-time-policy" title="Enlazar permanentemente con este título"></a></h4>
+<p>Add in a simpler approximate time policy called <code class="docutils literal notranslate"><span class="pre">ApproximateEpsilonTime</span></code>.
+This time policy works like <code class="docutils literal notranslate"><span class="pre">ExactTime</span></code>, but allows timestamps being within a epsilon tolerance.
+See <a class="reference external" href="https://github.com/ros2/message_filters/pull/84">https://github.com/ros2/message_filters/pull/84</a> for more information.</p>
+</div>
+<div class="section" id="new-upsampling-time-policy">
+<h4>New upsampling time policy<a class="headerlink" href="#new-upsampling-time-policy" title="Enlazar permanentemente con este título"></a></h4>
+<p>Adds in a new time policy called <code class="docutils literal notranslate"><span class="pre">LatestTime</span></code>.
+It can synchronize up to 9 messages by their rates with upsampling via zero-order-hold.
+See <a class="reference external" href="https://github.com/ros2/message_filters/pull/73">https://github.com/ros2/message_filters/pull/73</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="rcl-yaml-param-parser">
+<h3><a class="toc-backref" href="#id39"><code class="docutils literal notranslate"><span class="pre">rcl_yaml_param_parser</span></code></a><a class="headerlink" href="#rcl-yaml-param-parser" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="support-for-yaml-str-syntax-in-parameter-files">
+<h4>Support for YAML <code class="docutils literal notranslate"><span class="pre">!!str</span></code> syntax in parameter files<a class="headerlink" href="#support-for-yaml-str-syntax-in-parameter-files" title="Enlazar permanentemente con este título"></a></h4>
+<p>It is now possible to force the ROS parameter file parser to interpret a field as a string using the YAML <code class="docutils literal notranslate"><span class="pre">!!str</span></code> syntax.
+See <a class="reference external" href="https://github.com/ros2/rcl/pull/999">https://github.com/ros2/rcl/pull/999</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h3><a class="toc-backref" href="#id40"><code class="docutils literal notranslate"><span class="pre">rclcpp</span></code></a><a class="headerlink" href="#id3" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="default-number-of-threads-for-multi-threaded-executor-has-been-changed">
+<h4>Default number of threads for multi-threaded executor has been changed<a class="headerlink" href="#default-number-of-threads-for-multi-threaded-executor-has-been-changed" title="Enlazar permanentemente con este título"></a></h4>
+<p>If the user doesn’t specify otherwise, the default number of threads for the multi-threaded executor will be set to the number of CPUs on the machine.
+If the underlying OS doesn’t support getting this information, it will be set to 2.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclcpp/pull/2032">https://github.com/ros2/rclcpp/pull/2032</a> for more information.</p>
+</div>
+<div class="section" id="a-warning-is-now-printed-when-qos-of-keep-last-is-specified-with-a-depth-of-0">
+<h4>A warning is now printed when QoS of KEEP_LAST is specified with a depth of 0<a class="headerlink" href="#a-warning-is-now-printed-when-qos-of-keep-last-is-specified-with-a-depth-of-0" title="Enlazar permanentemente con este título"></a></h4>
+<p>Specifying a QoS of KEEP_LAST with a depth of 0 is a nonsensical arrangement, since the entity wouldn’t be able to send or receive any data.
+<code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> will now print a warning if this combination is specified, but will still continue on and let the underlying middleware choose a sane value (generally a depth of 1).</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclcpp/pull/2048">https://github.com/ros2/rclcpp/pull/2048</a> for more information.</p>
+</div>
+<div class="section" id="deprecated-rclcpp-scope-exit-macro-was-removed">
+<h4>Deprecated <code class="docutils literal notranslate"><span class="pre">RCLCPP_SCOPE_EXIT</span></code> macro was removed<a class="headerlink" href="#deprecated-rclcpp-scope-exit-macro-was-removed" title="Enlazar permanentemente con este título"></a></h4>
+<p>In Humble, the macro <code class="docutils literal notranslate"><span class="pre">RCLCPP_SCOPE_EXIT</span></code> was deprecated in favor of <code class="docutils literal notranslate"><span class="pre">RCPPUTILS_SCOPE_EXIT</span></code>.
+In Iron, the <code class="docutils literal notranslate"><span class="pre">RCLCPP_SCOPE_EXIT</span></code> macro has been completely removed.</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h3><a class="toc-backref" href="#id41"><code class="docutils literal notranslate"><span class="pre">rclpy</span></code></a><a class="headerlink" href="#id4" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="id5">
+<h4>Default number of threads for multi-threaded executor has been changed<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título"></a></h4>
+<p>If the user doesn’t specify otherwise, the default number of threads for the multi-threaded executor will be set to the number of CPUs on the machine.
+If the underlying OS doesn’t support getting this information, it will be set to 2.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclpy/pull/1031">https://github.com/ros2/rclpy/pull/1031</a> for more information.</p>
+</div>
+<div class="section" id="id6">
+<h4>A warning is now printed when QoS of KEEP_LAST is specified with a depth of 0<a class="headerlink" href="#id6" title="Enlazar permanentemente con este título"></a></h4>
+<p>Specifying a QoS of KEEP_LAST with a depth of 0 is a nonsensical arrangement, since the entity wouldn’t be able to send or receive any data.
+<code class="docutils literal notranslate"><span class="pre">rclpy</span></code> will now print a warning if this combination is specified, but will still continue on and let the underlying middleware choose a sane value (generally a depth of 1).</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rclpy/pull/1048">https://github.com/ros2/rclpy/pull/1048</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="rcutils">
+<h3><a class="toc-backref" href="#id42"><code class="docutils literal notranslate"><span class="pre">rcutils</span></code></a><a class="headerlink" href="#rcutils" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="improve-the-performance-of-message-logging">
+<h4>Improve the performance of message logging<a class="headerlink" href="#improve-the-performance-of-message-logging" title="Enlazar permanentemente con este título"></a></h4>
+<p>The code used to output a log message when <code class="docutils literal notranslate"><span class="pre">RCUTILS_LOG_*</span></code> or <code class="docutils literal notranslate"><span class="pre">RCLCPP_*</span></code> was optimized to reduce overhead.
+These log messages should now be more efficient, though they should still not be called at high rates.
+See <a class="reference external" href="https://github.com/ros2/rcutils/pull/381">https://github.com/ros2/rcutils/pull/381</a>, <a class="reference external" href="https://github.com/ros2/rcutils/pull/372">https://github.com/ros2/rcutils/pull/372</a>, <a class="reference external" href="https://github.com/ros2/rcutils/pull/369">https://github.com/ros2/rcutils/pull/369</a>, and <a class="reference external" href="https://github.com/ros2/rcutils/pull/367">https://github.com/ros2/rcutils/pull/367</a> for more information.</p>
+</div>
+<div class="section" id="deprecated-rcutils-get-env-h-header-was-removed">
+<h4>Deprecated <code class="docutils literal notranslate"><span class="pre">rcutils/get_env.h</span></code> header was removed<a class="headerlink" href="#deprecated-rcutils-get-env-h-header-was-removed" title="Enlazar permanentemente con este título"></a></h4>
+<p>In Humble, the header <code class="docutils literal notranslate"><span class="pre">rcutils/get_env.h</span></code> was deprecated in favor of <code class="docutils literal notranslate"><span class="pre">rcutils/env.h</span></code>.
+In Iron, the <code class="docutils literal notranslate"><span class="pre">rcutils/get_env.h</span></code> header been completely removed.</p>
+</div>
+</div>
+<div class="section" id="rmw">
+<h3><a class="toc-backref" href="#id43"><code class="docutils literal notranslate"><span class="pre">rmw</span></code></a><a class="headerlink" href="#rmw" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="change-the-gid-storage-to-16-bytes">
+<h4>Change the GID storage to 16 bytes<a class="headerlink" href="#change-the-gid-storage-to-16-bytes" title="Enlazar permanentemente con este título"></a></h4>
+<p>The GID in the RMW layer is meant to be a globally unique identifier for writers in the ROS graph.
+Previously, this was erroneously set to 24 bytes based on a bug in an old RMW implementation.
+But the <code class="docutils literal notranslate"><span class="pre">rmw</span></code> package should define this, and all of the implementations should conform to that.
+Thus, this release defines it as 16 bytes (the DDS standard), and changes all implementations to use that definition.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rmw/pull/345">https://github.com/ros2/rmw/pull/345</a> and the (closed, but relevant) <a class="reference external" href="https://github.com/ros2/rmw/pull/328">https://github.com/ros2/rmw/pull/328</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="rmw-dds-common">
+<h3><a class="toc-backref" href="#id44"><code class="docutils literal notranslate"><span class="pre">rmw_dds_common</span></code></a><a class="headerlink" href="#rmw-dds-common" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="id7">
+<h4>Change the GID storage to 16 bytes<a class="headerlink" href="#id7" title="Enlazar permanentemente con este título"></a></h4>
+<p>Along with the change in the <code class="docutils literal notranslate"><span class="pre">rmw</span></code> layer, change the message that sends out GID information to 16 bytes.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rmw_dds_common/pull/68">https://github.com/ros2/rmw_dds_common/pull/68</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h3><a class="toc-backref" href="#id45"><code class="docutils literal notranslate"><span class="pre">ros2topic</span></code></a><a class="headerlink" href="#id8" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="ros2-topic-hz-bw-pub-now-respect-use-sim-time">
+<h4><code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">hz/bw/pub</span></code> now respect <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code><a class="headerlink" href="#ros2-topic-hz-bw-pub-now-respect-use-sim-time" title="Enlazar permanentemente con este título"></a></h4>
+<p>When running under simulation, the ROS 2 ecosystem generally gets its time from a <code class="docutils literal notranslate"><span class="pre">/clock</span></code> topic published by the simulator (rather than using the system clock).
+ROS 2 nodes are typically informed of this change by setting the <code class="docutils literal notranslate"><span class="pre">use_sim_time</span></code> parameter on the node.
+The node created by the <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span></code> commands <code class="docutils literal notranslate"><span class="pre">hz</span></code>, <code class="docutils literal notranslate"><span class="pre">bw</span></code>, and <code class="docutils literal notranslate"><span class="pre">pub</span></code> now respect that parameter and will use simulation time as appropriate.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/ros2cli/pull/754">https://github.com/ros2/ros2cli/pull/754</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="rosbag2">
+<h3><a class="toc-backref" href="#id46"><code class="docutils literal notranslate"><span class="pre">rosbag2</span></code></a><a class="headerlink" href="#rosbag2" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="change-default-bag-file-type-to-mcap">
+<h4>Change default bag file type to <code class="docutils literal notranslate"><span class="pre">mcap</span></code><a class="headerlink" href="#change-default-bag-file-type-to-mcap" title="Enlazar permanentemente con este título"></a></h4>
+<p>Prior to this release, by default rosbag2 would record data into sqlite3 databases.
+During testing, it was found that in many cases this was not performant enough and lacked certain features desirable for offline processing.</p>
+<p>To meet these needs, a new bag format (influenced by the original ROS 1 bag file format) called <code class="docutils literal notranslate"><span class="pre">mcap</span></code> was developed.
+This bag file format has many of the missing features from the sqlite3 file format, and should also be more performant.</p>
+<p>This release switches to using <code class="docutils literal notranslate"><span class="pre">mcap</span></code> as the default file format for writing new bags.
+The old <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> file format is still available and can be selected by the user for writing if desired.
+This release also allows playing back data from either the <code class="docutils literal notranslate"><span class="pre">sqlite3</span></code> file format or the <code class="docutils literal notranslate"><span class="pre">mcap</span></code> file format.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rosbag2/pull/1160">https://github.com/ros2/rosbag2/pull/1160</a> for more information.</p>
+</div>
+</div>
+<div class="section" id="rviz">
+<h3><a class="toc-backref" href="#id47"><code class="docutils literal notranslate"><span class="pre">rviz</span></code></a><a class="headerlink" href="#rviz" title="Enlazar permanentemente con este título"></a></h3>
+<div class="section" id="map-display-can-now-be-shown-as-binary">
+<h4>Map display can now be shown as binary<a class="headerlink" href="#map-display-can-now-be-shown-as-binary" title="Enlazar permanentemente con este título"></a></h4>
+<p>The RViz map display can now display the map as binary, with a settable threshold.
+This is useful in some cases to inspect maps or in combination with planners that have a settable threshold.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rviz/pull/846">https://github.com/ros2/rviz/pull/846</a> for more information.</p>
+</div>
+<div class="section" id="camera-display-plugin-respects-the-roi-in-the-camerainfo-message">
+<h4>Camera display plugin respects the ROI in the CameraInfo message<a class="headerlink" href="#camera-display-plugin-respects-the-roi-in-the-camerainfo-message" title="Enlazar permanentemente con este título"></a></h4>
+<p>The CameraDisplay plugin now honors the region-of-interest (ROI) settings in the CameraInfo message, if it is provided.
+This accounts for the fact that an image was cropped by the camera driver to reduce the bandwidth.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rviz/pull/864">https://github.com/ros2/rviz/pull/864</a> for more information.</p>
+</div>
+<div class="section" id="binary-stl-files-from-solidworks-work-without-error">
+<h4>Binary STL files from SOLIDWORKS work without error<a class="headerlink" href="#binary-stl-files-from-solidworks-work-without-error" title="Enlazar permanentemente con este título"></a></h4>
+<p>A change was made to the STL loader such that it accepts binary STL files from SOLIDWORKS that have the word «solid» in them.
+This technically violates the STL specification, but is common enough that a special case is added to handle these files.</p>
+<p>See <a class="reference external" href="https://github.com/ros2/rviz/pull/917">https://github.com/ros2/rviz/pull/917</a> for more information.</p>
+</div>
+</div>
 </div>
 <div class="section" id="known-issues">
-<h2><a class="toc-backref" href="#id15">Known Issues</a><a class="headerlink" href="#known-issues" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id48">Known Issues</a><a class="headerlink" href="#known-issues" title="Enlazar permanentemente con este título"></a></h2>
 <p>To come.</p>
 </div>
 <div class="section" id="release-timeline">
-<h2><a class="toc-backref" href="#id16">Release Timeline</a><a class="headerlink" href="#release-timeline" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id49">Release Timeline</a><a class="headerlink" href="#release-timeline" title="Enlazar permanentemente con este título"></a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>November, 2022 - Platform decisions</dt><dd><p>REP 2000 is updated with the target platforms and major dependency versions.</p>
 </dd>
 <dt>By January, 2023 - Rolling platform shift</dt><dd><p>Build farm is updated with the new platform versions and dependency versions for Iron Irwini (if necessary).</p>
 </dd>
-<dt>Mon. April 10, 2023 - Alpha + RMW freeze</dt><dd><p>Preliminary testing and stabilization of ROS Base <a class="footnote-reference brackets" href="#id6" id="id1">1</a> packages, and API and feature freeze for RMW provider packages.</p>
+<dt>Mon. April 10, 2023 - Alpha + RMW freeze</dt><dd><p>Preliminary testing and stabilization of ROS Base <a class="footnote-reference brackets" href="#id14" id="id9">1</a> packages, and API and feature freeze for RMW provider packages.</p>
 </dd>
-<dt>Mon. April 17, 2023 - Freeze</dt><dd><p>API and feature freeze for ROS Base <a class="footnote-reference brackets" href="#id6" id="id2">1</a> packages in Rolling Ridley.
+<dt>Mon. April 17, 2023 - Freeze</dt><dd><p>API and feature freeze for ROS Base <a class="footnote-reference brackets" href="#id14" id="id10">1</a> packages in Rolling Ridley.
 Only bug fix releases should be made after this point.
 New packages can be released independently.</p>
 </dd>
 <dt>Mon. April 24, 2023 - Branch</dt><dd><p>Branch from Rolling Ridley.
-<code class="docutils literal notranslate"><span class="pre">rosdistro</span></code> is reopened for Rolling PRs for ROS Base <a class="footnote-reference brackets" href="#id6" id="id3">1</a> packages.
+<code class="docutils literal notranslate"><span class="pre">rosdistro</span></code> is reopened for Rolling PRs for ROS Base <a class="footnote-reference brackets" href="#id14" id="id11">1</a> packages.
 Iron development shifts from <code class="docutils literal notranslate"><span class="pre">ros-rolling-*</span></code> packages to <code class="docutils literal notranslate"><span class="pre">ros-iron-*</span></code> packages.</p>
 </dd>
-<dt>Mon. May 1, 2023 - Beta</dt><dd><p>Updated releases of ROS Desktop <a class="footnote-reference brackets" href="#id7" id="id4">2</a> packages available.
+<dt>Mon. May 1, 2023 - Beta</dt><dd><p>Updated releases of ROS Desktop <a class="footnote-reference brackets" href="#id15" id="id12">2</a> packages available.
 Call for general testing.</p>
 </dd>
 <dt>Mon. May 15, 2023 - Release Candidate</dt><dd><p>Release Candidate packages are built.
-Updated releases of ROS Desktop <a class="footnote-reference brackets" href="#id7" id="id5">2</a> packages available.</p>
+Updated releases of ROS Desktop <a class="footnote-reference brackets" href="#id15" id="id13">2</a> packages available.</p>
 </dd>
 <dt>Thu. May 18, 2023 - Distro Freeze</dt><dd><p>Freeze rosdistro.
 No PRs for Iron on the <code class="docutils literal notranslate"><span class="pre">rosdistro</span></code> repo will be merged (reopens after the release announcement).</p>
@@ -486,16 +887,16 @@ No PRs for Iron on the <code class="docutils literal notranslate"><span class="p
 </dl>
 </div></blockquote>
 <dl class="footnote brackets">
-<dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>,<a href="#id3">3</a>)</span></dt>
+<dt class="label" id="id14"><span class="brackets">1</span><span class="fn-backref">(<a href="#id9">1</a>,<a href="#id10">2</a>,<a href="#id11">3</a>)</span></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">ros_base</span></code> variant is described in <a class="reference external" href="https://www.ros.org/reps/rep-2001.html#ros-base">REP 2001 (ros-base)</a>.</p>
 </dd>
-<dt class="label" id="id7"><span class="brackets">2</span><span class="fn-backref">(<a href="#id4">1</a>,<a href="#id5">2</a>)</span></dt>
+<dt class="label" id="id15"><span class="brackets">2</span><span class="fn-backref">(<a href="#id12">1</a>,<a href="#id13">2</a>)</span></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">desktop</span></code> variant is described in <a class="reference external" href="https://www.ros.org/reps/rep-2001.html#desktop-variants">REP 2001 (desktop-variants)</a>.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="development-progress">
-<h2><a class="toc-backref" href="#id17">Development progress</a><a class="headerlink" href="#development-progress" title="Enlazar permanentemente con este título"></a></h2>
+<h2><a class="toc-backref" href="#id50">Development progress</a><a class="headerlink" href="#development-progress" title="Enlazar permanentemente con este título"></a></h2>
 <p>For progress on the development and release of Iron Irwini, see <a class="reference external" href="https://github.com/ros2/ros2/issues/1298">the tracking GitHub issue</a>.</p>
 <p>For the broad process followed by Iron Irwini, see the <a class="reference internal" href="Release-Process.html"><span class="doc">process description page</span></a>.</p>
 </div>
@@ -507,7 +908,7 @@ No PRs for Iron on the <code class="docutils literal notranslate"><span class="p
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="Development.html" class="btn btn-neutral float-left" title="Development Distribution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
-        <a href="End-of-Life.html" class="btn btn-neutral float-right" title="End-of-Life Distributions" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Iron-Irwini-Complete-Changelog.html" class="btn btn-neutral float-right" title="ROS 2 Iron Irwini Complete Changelog" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

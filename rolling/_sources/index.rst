@@ -130,6 +130,7 @@ Otros recursos de ROS
    - Muestra proyectos de robots de la comunidad.
    - Instrucciones sobre cómo contribuir con un robot
 
+
 * `ROS Wiki <http://wiki.ros.org/>`__ (ROS 1)
 
    - Documentación de ROS 1 y contenido modificable por el usuario

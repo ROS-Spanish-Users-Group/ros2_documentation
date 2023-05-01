@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../Tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Understanding services</a></li>
@@ -396,7 +397,7 @@
 <div class="section" id="background">
 <h2><a class="toc-backref" href="#id1">Background</a><a class="headerlink" href="#background" title="Enlazar permanentemente con este título"></a></h2>
 <p>Services are another method of communication for nodes in the ROS graph.
-Services are based on a call-and-response model, versus topics’ publisher-subscriber model.
+Services are based on a call-and-response model versus the publisher-subscriber model of topics.
 While topics allow nodes to subscribe to data streams and get continual updates, services only provide data when they are specifically called by a client.</p>
 <img alt="../../../_images/Service-SingleServiceClient.gif" src="../../../_images/Service-SingleServiceClient.gif" />
 <img alt="../../../_images/Service-MultipleServiceClient.gif" src="../../../_images/Service-MultipleServiceClient.gif" />
@@ -448,9 +449,9 @@ While topics allow nodes to subscribe to data streams and get continual updates,
 <p>You will see that both nodes have the same six services with <code class="docutils literal notranslate"><span class="pre">parameters</span></code> in their names.
 Nearly every node in ROS 2 has these infrastructure services that parameters are built off of.
 There will be more about parameters in the next tutorial.
-In this tutorial, the parameter services will be omitted from discussion.</p>
+In this tutorial, the parameter services will be omitted from the discussion.</p>
 <p>For now, let’s focus on the turtlesim-specific services, <code class="docutils literal notranslate"><span class="pre">/clear</span></code>, <code class="docutils literal notranslate"><span class="pre">/kill</span></code>, <code class="docutils literal notranslate"><span class="pre">/reset</span></code>, <code class="docutils literal notranslate"><span class="pre">/spawn</span></code>, <code class="docutils literal notranslate"><span class="pre">/turtle1/set_pen</span></code>, <code class="docutils literal notranslate"><span class="pre">/turtle1/teleport_absolute</span></code>, and <code class="docutils literal notranslate"><span class="pre">/turtle1/teleport_relative</span></code>.
-You may recall interacting with some of these services using rqt in the <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">Use turtlesim and rqt</span></a> tutorial.</p>
+You may recall interacting with some of these services using rqt in the <a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html"><span class="doc">Use turtlesim, ros2, and rqt</span></a> tutorial.</p>
 </div>
 <div class="section" id="ros2-service-type">
 <h3><a class="toc-backref" href="#id6">3 ros2 service type</a><a class="headerlink" href="#ros2-service-type" title="Enlazar permanentemente con este título"></a></h3>
@@ -512,7 +513,7 @@ In a new terminal, enter the command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show &lt;type_name&gt;</span>
 </pre></div>
 </div>
-<p>To run this command on the <code class="docutils literal notranslate"><span class="pre">/clear</span></code> service’s type, <code class="docutils literal notranslate"><span class="pre">Empty</span></code>:</p>
+<p>Try this on the <code class="docutils literal notranslate"><span class="pre">/clear</span></code> service’s type, <code class="docutils literal notranslate"><span class="pre">Empty</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show std_srvs/srv/Empty</span>
 </pre></div>
 </div>
@@ -525,7 +526,7 @@ But, as you learned earlier, the <code class="docutils literal notranslate"><spa
 So, naturally, its structure is blank.</p>
 <p>Let’s introspect a service with a type that sends and receives data, like <code class="docutils literal notranslate"><span class="pre">/spawn</span></code>.
 From the results of <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">service</span> <span class="pre">list</span> <span class="pre">-t</span></code>, we know <code class="docutils literal notranslate"><span class="pre">/spawn</span></code>’s type is <code class="docutils literal notranslate"><span class="pre">turtlesim/srv/Spawn</span></code>.</p>
-<p>To see the arguments in a <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> call-and-request, run the command:</p>
+<p>To see the request and response arguments of the <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> service, run the command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show turtlesim/srv/Spawn</span>
 </pre></div>
 </div>
@@ -539,7 +540,7 @@ From the results of <code class="docutils literal notranslate"><span class="pre"
 </pre></div>
 </div>
 <p>The information above the <code class="docutils literal notranslate"><span class="pre">---</span></code> line tells us the arguments needed to call <code class="docutils literal notranslate"><span class="pre">/spawn</span></code>.
-<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">theta</span></code> determine the location of the spawned turtle, and <code class="docutils literal notranslate"><span class="pre">name</span></code> is clearly optional.</p>
+<code class="docutils literal notranslate"><span class="pre">x</span></code>, <code class="docutils literal notranslate"><span class="pre">y</span></code> and <code class="docutils literal notranslate"><span class="pre">theta</span></code> determine the 2D pose of the spawned turtle, and <code class="docutils literal notranslate"><span class="pre">name</span></code> is clearly optional.</p>
 <p>The information below the line isn’t something you need to know in this case, but it can help you understand the data type of the response you get from the call.</p>
 </div>
 <div class="section" id="ros2-service-call">
@@ -555,7 +556,7 @@ For example, you know that <code class="docutils literal notranslate"><span clas
 </div>
 <p>This command will clear the turtlesim window of any lines your turtle has drawn.</p>
 <img alt="../../../_images/clear.png" src="../../../_images/clear.png" />
-<p>Now let’s spawn a new turtle by calling <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> and inputting arguments.
+<p>Now let’s spawn a new turtle by calling <code class="docutils literal notranslate"><span class="pre">/spawn</span></code> and setting arguments.
 Input <code class="docutils literal notranslate"><span class="pre">&lt;arguments&gt;</span></code> in a service call from the command-line need to be in YAML syntax.</p>
 <p>Enter the command:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 service call /spawn turtlesim/srv/Spawn &quot;{x: 2, y: 2, theta: 0.2, name: &#39;&#39;}&quot;</span>
@@ -577,7 +578,7 @@ Input <code class="docutils literal notranslate"><span class="pre">&lt;arguments
 <p>Nodes can communicate using services in ROS 2.
 Unlike a topic - a one way communication pattern where a node publishes information that can be consumed by one or more subscribers - a service is a request/response pattern where a client makes a request to a node providing the service and the service processes the request and generates a response.</p>
 <p>You generally don’t want to use a service for continuous calls; topics or even actions would be better suited.</p>
-<p>In this tutorial you used command line tools to identify, elaborate on, and call services.</p>
+<p>In this tutorial you used command line tools to identify, introspect, and call services.</p>
 </div>
 <div class="section" id="next-steps">
 <h2><a class="toc-backref" href="#id11">Next steps</a><a class="headerlink" href="#next-steps" title="Enlazar permanentemente con este título"></a></h2>

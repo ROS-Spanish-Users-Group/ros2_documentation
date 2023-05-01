@@ -6,9 +6,9 @@
 Grabación y reproducción de datos con ``rosbag`` utilizando ROS 1 bridge
 ========================================================================
 
-Este tutorial es una continuación de la demostración de *Comunicación puente entre ROS 1 y ROS 2* que se puede encontrar `aquí <https://github.com/ros2/ros1_bridge/blob/{REPOS_FILE_BRANCH}/README.md>`__ , y en lo siguiente se supone que ya ha completado ese tutorial.
+Este tutorial es una continuación de la demostración de *Comunicación puente entre ROS 1 y ROS 2* que se puede encontrar `aquí <https://github.com/ros2/ros1_bridge/blob/master/README.md>`__ , y en lo siguiente se supone que ya ha completado ese tutorial.
 
-El ros1_bridge puede instalarse desde `paquetes binarios <../../Installation>` o `construido desde la fuente <https://github.com/ros2/ros1_bridge/blob/{REPOS_FILE_BRANCH}/README.md#building- el-puente-desde-la-fuente>`__; ambos funcionan para estos ejemplos.
+Para estos ejemplos ros1_bridge puede instalarse desde :doc:`source <../../How-To-Guides/Using-ros1_bridge-Jammy-upstream>`.
 
 Lo que sigue es una serie de ejemplos adicionales, como los que vienen al final de la demo antes mencionada *Puente de comunicación entre ROS 1 y ROS 2*.
 

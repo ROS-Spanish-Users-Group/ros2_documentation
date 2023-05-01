@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../Tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -407,7 +408,7 @@ Los topic son un elemento vital del grafo de ROS, que actúa como un bus para qu
 <div class="section" id="requisitos-previos">
 <h2><a class="toc-backref" href="#id2">Requisitos previos</a><a class="headerlink" href="#requisitos-previos" title="Enlazar permanentemente con este título"></a></h2>
 <p>El <a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html"><span class="doc">tutorial previo</span></a> proporciona información básica sobre los nodos que se construyen aquí.</p>
-<p>Como siempre, no olvides ejecutar <code class="xref any docutils literal notranslate"><span class="pre">source</span></code> con el archivo de setup <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">en cada nueva terminal</span></a>.</p>
+<p>Como siempre, no olvides ejecutar <code class="xref any docutils literal notranslate"><span class="pre">source</span></code> con el archivo de setup <a class="reference internal" href="../Configuring-ROS2-Environment.html"><span class="doc">en cada terminalnueva</span></a>.</p>
 </div>
 <div class="section" id="tareas">
 <h2><a class="toc-backref" href="#id3">Tareas</a><a class="headerlink" href="#tareas" title="Enlazar permanentemente con este título"></a></h2>
@@ -493,12 +494,12 @@ Si observas la terminal donde se ejecuta el comando <code class="docutils litera
 </div>
 <p>Ahora regresa a rqt_graph y desmarque la casilla <strong>Debug</strong>.</p>
 <img alt="../../../_images/debug.png" src="../../../_images/debug.png" />
-<p><code class="docutils literal notranslate"><span class="pre">/_ros2cli_26646</span></code> es el nodo creado por el <code class="docutils literal notranslate"><span class="pre">echo</span></code> que acabamos de ejecutar (el número puede ser diferente).
-Ahora puedes ver que el editor está publicando datos sobre el topic <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> y que hay dos suscriptores suscritos.</p>
+<p><code class="docutils literal notranslate"><span class="pre">/_ros2cli_26646</span></code> es el nodo creado por el comando <code class="docutils literal notranslate"><span class="pre">echo</span></code> que acabamos de ejecutar (el número puede ser diferente).
+Ahora puedes ver que el editor está publicando datos sobre el topic <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> y que hay dos suscriptores suscritos a el.</p>
 </div>
 <div class="section" id="ros2-topic-info">
 <h3><a class="toc-backref" href="#id8">5 ros2 topic info</a><a class="headerlink" href="#ros2-topic-info" title="Enlazar permanentemente con este título"></a></h3>
-<p>Los topics no tienen que ser solo comunicación punto a punto; puede ser de uno a muchos, de muchos a uno o de muchos a muchos.</p>
+<p>Los topics no tienen que ser solo comunicación uno a uno; puede ser de uno a muchos, de muchos a uno o de muchos a muchos.</p>
 <p>Otra forma de ver esto es ejecutando:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic info /turtle1/cmd_vel</span>
 </pre></div>
@@ -520,7 +521,8 @@ Recuerda que el topic <code class="docutils literal notranslate"><span class="pr
 </pre></div>
 </div>
 <p>Esto significa que en el paquete <code class="docutils literal notranslate"><span class="pre">geometric_msgs</span></code> hay un <code class="docutils literal notranslate"><span class="pre">mensaje</span></code> llamado <code class="docutils literal notranslate"><span class="pre">Twist</span></code>.</p>
-<p>Ahora podemos ejecutar <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">&lt;msg</span> <span class="pre">type&gt;</span></code> con el tipo de mensaje anterio para conocer sus detalles, específicamente, qué estructura de datos espera el mensaje.</p>
+<p>Ahora podemos ejecutar <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">interface</span> <span class="pre">show</span> <span class="pre">&lt;msg</span> <span class="pre">type&gt;</span></code> con el tipo de mensaje anterior para conocer sus detalles.
+Específicamente, qué estructura de datos espera el mensaje.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 interface show geometry_msgs/msg/Twist</span>
 </pre></div>
 </div>
@@ -564,7 +566,7 @@ Ingrese el comando completo así:</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">--once</span></code> es un argumento opcional que significa «publicar un mensaje y luego salir».</p>
-<p>Recibirás el siguiente mensaje en la terminal:</p>
+<p>Veras el siguiente mensaje en la terminal:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">publisher: beginning loop</span>
 <span class="go">publishing #1: geometry_msgs.msg.Twist(linear=geometry_msgs.msg.Vector3(x=2.0, y=0.0, z=0.0), angular=geometry_msgs.msg.Vector3(x=0.0, y=0.0, z=1.8))</span>
 </pre></div>
@@ -579,14 +581,14 @@ Entonces, para que la tortuga siga moviéndose, puedes ejecutar:</p>
 <p>La diferencia aquí es la eliminación de la opción <code class="docutils literal notranslate"><span class="pre">--once</span></code> y la adición de la opción <code class="docutils literal notranslate"><span class="pre">--rate</span> <span class="pre">1</span></code>, que le dice a <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">pub</span></code> que publique el comando en un flujo constante a 1 Hz.</p>
 <img alt="../../../_images/pub_stream.png" src="../../../_images/pub_stream.png" />
 <p>Puedes actualizar rqt_graph para ver lo que sucede gráficamente.
-Verás que el nodo <code class="docutils literal notranslate"><span class="pre">ros</span> <span class="pre">2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">...</span></code> (<code class="docutils literal notranslate"><span class="pre">/_ros2cli_30358</span></code>) se está publicando sobre el topic <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code>, y lo está recibiendo tanto el nodo <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span> <span class="pre">...</span></code> (<code class="docutils literal notranslate"><span class="pre">/_ros2cli_26646</span></code>) como el nodo <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>.</p>
+Verás que el nodo <code class="docutils literal notranslate"><span class="pre">ros</span> <span class="pre">2</span> <span class="pre">topic</span> <span class="pre">pub</span> <span class="pre">...</span></code> (<code class="docutils literal notranslate"><span class="pre">/_ros2cli_30358</span></code>) se está publicando sobre el topic <code class="docutils literal notranslate"><span class="pre">/turtle1/cmd_vel</span></code>, el cual está recibiendo tanto el nodo <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">topic</span> <span class="pre">echo</span> <span class="pre">...</span></code> (<code class="docutils literal notranslate"><span class="pre">/_ros2cli_26646</span></code>) como el nodo <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code>.</p>
 <img alt="../../../_images/rqt_graph2.png" src="../../../_images/rqt_graph2.png" />
 <p>Finalmente, puedes ejecutar <code class="docutils literal notranslate"><span class="pre">echo</span></code> en el topic de <code class="docutils literal notranslate"><span class="pre">pose</span></code> y volver a verificar rqt_graph:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 topic echo /turtle1/pose</span>
 </pre></div>
 </div>
 <img alt="../../../_images/rqt_graph3.png" src="../../../_images/rqt_graph3.png" />
-<p>Puedes ver que el nodo <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> también está publicando en el topic de <code class="docutils literal notranslate"><span class="pre">pose</span></code>, al que está suscrito el nuevo nodo de <code class="docutils literal notranslate"><span class="pre">echo</span></code>.</p>
+<p>Puedes ver que el nodo <code class="docutils literal notranslate"><span class="pre">/turtlesim</span></code> también está publicando en el topic de <code class="docutils literal notranslate"><span class="pre">pose</span></code>, al que se ha suscrito el nuevo nodo de <code class="docutils literal notranslate"><span class="pre">echo</span></code>.</p>
 </div>
 <div class="section" id="ros2-topic-hz">
 <h3><a class="toc-backref" href="#id11">8 ros2 topic hz</a><a class="headerlink" href="#ros2-topic-hz" title="Enlazar permanentemente con este título"></a></h3>
@@ -616,7 +618,7 @@ Ahora deberías tener una buena idea de cómo se mueven los datos en un sistema 
 </div>
 <div class="section" id="pasos-siguientes">
 <h2><a class="toc-backref" href="#id14">Pasos siguientes</a><a class="headerlink" href="#pasos-siguientes" title="Enlazar permanentemente con este título"></a></h2>
-<p>A continuación, aprenderás sobre otro tipo de comunicación en el grafo ROS con el tutorial <a class="reference internal" href="../Understanding-ROS2-Services/Understanding-ROS2-Services.html"><span class="doc">Understanding services</span></a></p>
+<p>A continuación, aprenderás sobre otro tipo de comunicación en el grafo ROS con el tutorial <a class="reference internal" href="../Understanding-ROS2-Services/Understanding-ROS2-Services.html"><span class="doc">Understanding services</span></a>.</p>
 </div>
 </div>
 

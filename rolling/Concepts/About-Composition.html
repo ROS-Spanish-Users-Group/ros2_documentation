@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -389,7 +390,7 @@ ROS 1 nodelets on the other hand are compiled into a shared library which is the
 <h2><a class="toc-backref" href="#id2">ROS 2 - Unified API</a><a class="headerlink" href="#ros-2-unified-api" title="Enlazar permanentemente con este título"></a></h2>
 <p>In ROS 2 the recommended way of writing your code is similar to a nodelet - we call it a <code class="docutils literal notranslate"><span class="pre">Component</span></code>.
 This makes it easy to add common concepts to existing code, like a <a class="reference external" href="https://design.ros2.org/articles/node_lifecycle.html">life cycle</a>.
-The biggest drawback of different APIs is avoided in ROS 2 since both approaches use the same API in ROS 2.</p>
+Having different APIs, which was the biggest drawback in ROS 1, is avoided in ROS 2 since both approaches use the same API.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>It is still possible to use the node-like style of «writing your own main» but for the common case it is not recommended.</p>
@@ -403,16 +404,15 @@ The biggest drawback of different APIs is avoided in ROS 2 since both approaches
 </div>
 <div class="section" id="writing-a-component">
 <h2><a class="toc-backref" href="#id3">Writing a Component</a><a class="headerlink" href="#writing-a-component" title="Enlazar permanentemente con este título"></a></h2>
-<p>Since a component is only built into a shared library it doesn’t have a <code class="docutils literal notranslate"><span class="pre">main</span></code> function (see <a class="reference external" href="https://github.com/ros2/demos/blob/rolling/composition/src/talker_component.cpp">Talker source code</a>).
+<p>Since a component is only built into a shared library, it doesn’t have a <code class="docutils literal notranslate"><span class="pre">main</span></code> function (see <a class="reference external" href="https://github.com/ros2/demos/blob/rolling/composition/src/talker_component.cpp">Talker source code</a>).
 A component is commonly a subclass of <code class="docutils literal notranslate"><span class="pre">rclcpp::Node</span></code>.
-Since it is not in control of the thread it shouldn’t perform any long running or blocking tasks in its constructor.
-Instead it can use timers to get periodic notification.
-Additionally it can create publishers, subscribers, servers, and clients.</p>
+Since it is not in control of the thread, it shouldn’t perform any long running or blocking tasks in its constructor.
+Instead, it can use timers to get periodic notifications.
+Additionally, it can create publishers, subscriptions, servers, and clients.</p>
 <p>An important aspect of making such a class a component is that the class registers itself using macros from the package <code class="docutils literal notranslate"><span class="pre">rclcpp_components</span></code> (see the last line in the source code).
 This makes the component discoverable when its library is being loaded into a running process - it acts as kind of an entry point.</p>
 <p>Additionally, once a component is created, it must be registered with the index to be discoverable by the tooling.</p>
-<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">add_library</span><span class="p">(</span><span class="s">talker_component</span><span class="w"> </span><span class="s">SHARED</span>
-<span class="w">   </span><span class="s">src/talker_component.cpp</span><span class="p">)</span>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">add_library</span><span class="p">(</span><span class="s">talker_component</span><span class="w"> </span><span class="s">SHARED</span><span class="w"> </span><span class="s">src/talker_component.cpp</span><span class="p">)</span>
 <span class="nb">rclcpp_components_register_nodes</span><span class="p">(</span><span class="s">talker_component</span><span class="w"> </span><span class="s2">&quot;composition::Talker&quot;</span><span class="p">)</span>
 <span class="c"># To register multiple components in the same shared library, use multiple calls</span>
 <span class="c"># rclcpp_components_register_nodes(talker_component &quot;composition::Talker2&quot;)</span>

@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -375,7 +376,7 @@
 <dt>Open Robotics provides pre-built ROS 2 packages for multiple platforms, but a number of developers still rely on <a class="reference external" href="https://en.wikipedia.org/wiki/Cross_compiler">cross-compilation</a> for different reasons such as:</dt><dd><ul class="simple">
 <li><p>The development machine does not match the target system.</p></li>
 <li><p>Tuning the build for specific core architecture (e.g. setting -mcpu=cortex-a53 -mfpu=neon-fp-armv8 when building for Raspberry Pi3).</p></li>
-<li><p>Targeting a different file systems other than the ones supported by the pre-built images released by Open Robotics.</p></li>
+<li><p>Targeting a file system other than the ones supported by the pre-built images released by Open Robotics.</p></li>
 </ul>
 </dd>
 </dl>
@@ -383,10 +384,14 @@
 <div class="section" id="how-does-it-work">
 <h2>How does it work ?<a class="headerlink" href="#how-does-it-work" title="Enlazar permanentemente con este título"></a></h2>
 <p>Cross-compiling simple software (e.g. no dependencies on external libraries) is relatively simple and only requiring a cross-compiler toolchain to be used instead of the native toolchain.</p>
-<p>There are a number of factors which make this process more complex:
-- The software being built must support the target architecture. Architecture specific code must be properly isolated and enabled during the build according to the target architecture. Examples include assembly code.
-- All dependencies (e.g. libraries) must be present, either as pre-built packages or also cross-compiled before the target software using them is cross-compiled.
-- When building software stacks (as opposed to standalone software) using build tools (e.g. colcon), it is expected that the build tool provides a mechanism to allow the developer to enable cross-compilation on the underlying build system used by each piece of software in the stack.</p>
+<dl class="simple">
+<dt>There are a number of factors which make this process more complex:</dt><dd><ul class="simple">
+<li><p>The software being built must support the target architecture. Architecture specific code must be properly isolated and enabled during the build according to the target architecture. Examples include assembly code.</p></li>
+<li><p>All dependencies (e.g. libraries) must be present, either as pre-built or cross-compiled packages, before the target software using them is cross-compiled.</p></li>
+<li><p>When building software stacks (as opposed to standalone software) using build tools (e.g. colcon), it is expected that the build tool provides a mechanism to allow the developer to enable cross-compilation on the underlying build system used by each piece of software in the stack.</p></li>
+</ul>
+</dd>
+</dl>
 </div>
 <div class="section" id="cross-compiling-ros-2">
 <h2>Cross-compiling ROS 2<a class="headerlink" href="#cross-compiling-ros-2" title="Enlazar permanentemente con este título"></a></h2>

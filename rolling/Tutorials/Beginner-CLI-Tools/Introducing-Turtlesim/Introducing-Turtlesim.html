@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Utilizar turtlesim y rqt &mdash; documentación de ROS 2 Documentation: Rolling - </title>
+  <title>Utilizar turtlesim , ros2 y rqt &mdash; documentación de ROS 2 Documentation: Rolling - </title>
       <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
@@ -83,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -107,7 +108,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../../../Tutorials.html">Tutorials</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -348,7 +349,7 @@
       <li><a href="../../../index.html" class="icon icon-home"></a></li>
           <li class="breadcrumb-item"><a href="../../../Tutorials.html">Tutorials</a></li>
           <li class="breadcrumb-item"><a href="../../Beginner-CLI-Tools.html">Beginner: CLI tools</a></li>
-      <li class="breadcrumb-item active">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></li>
+      <li class="breadcrumb-item active">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ros2/ros2_documentation/blob/rolling/source/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.rst" class="fa fa-github"> Editar en GitHub</a>
       </li>
@@ -369,8 +370,8 @@
 </p>
 
 
-  <div class="section" id="utilizar-turtlesim-y-rqt">
-<span id="turtlesim"></span><h1>Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code><a class="headerlink" href="#utilizar-turtlesim-y-rqt" title="Enlazar permanentemente con este título"></a></h1>
+  <div class="section" id="utilizar-turtlesim-ros2-y-rqt">
+<span id="turtlesim"></span><h1>Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code><a class="headerlink" href="#utilizar-turtlesim-ros2-y-rqt" title="Enlazar permanentemente con este título"></a></h1>
 <p><strong>Objetivo:</strong> Instalar y utilizar el paquete turtlesim y la herramienta rqt, para prepararse para los próximos tutoriales.</p>
 <p><strong>Nivel del Tutorial:</strong> Principiante</p>
 <p><strong>Tiempo:</strong> 15 minutos</p>
@@ -397,12 +398,14 @@
 </div>
 <div class="section" id="historial">
 <h2><a class="toc-backref" href="#id1">Historial</a><a class="headerlink" href="#historial" title="Enlazar permanentemente con este título"></a></h2>
-<p>turtlesim es un simulador ligero para aprender ROS 2.
-Permite ilustrar lo que ROS 2 hace en el nivel más básico, para darle una idea de lo que puedes hacer con un robot real o una simulación de robots más adelante.</p>
+<p>La herramienta ros2 es la forma como los usuarios administran, analizan e interactúan con el sistema ROS.
+Soporta múltiples comandos que se dirigen a diferentes aspectos del sistema y su funcionamiento.
+Uno podría usarlo para iniciar un nodo, establecer un parámetro, escuchar un tópico y mucho más.
+La herramienta ros2 es parte de la instalación principal de ROS 2.</p>
 <p>rqt es una herramienta Interfaz Gráfica de Usuario (GUI) para ROS 2.
-Todo lo hecho en rqt se puede hacer mediante la línea de comandos, pero proporciona una forma más fácil de manipular los elementos ROS 2.</p>
-<p>Este tutorial involucra conceptos de fundamentales de ROS 2, como la separación de nodos, topics y servicios.
-Todos estos conceptos se elaborarán en tutoriales posteriores; Por ahora, simplemente configurará las herramientas y tendrá una idea de ellas.</p>
+Todo lo hecho en rqt se puede hacer mediante la línea de comandos, pero rtq proporciona una forma más fácil de manipular los elementos ROS 2.</p>
+<p>Este tutorial involucra conceptos fundamentales de ROS 2, como la separación de nodos, topics y servicios.
+Todos estos conceptos se elaborarán en tutoriales posteriores; Por ahora, simplemente configurarás las herramientas y tendrás una idea general de ellas.</p>
 </div>
 <div class="section" id="requisitos-previos">
 <h2><a class="toc-backref" href="#id2">Requisitos previos</a><a class="headerlink" href="#requisitos-previos" title="Enlazar permanentemente con este título"></a></h2>
@@ -443,13 +446,12 @@ Todos estos conceptos se elaborarán en tutoriales posteriores; Por ahora, simpl
 </div>
 <p>Debería aparecer la ventana del simulador, con un diseño de tortuga aleatorio en el centro.</p>
 <img alt="../../../_images/turtlesim.png" src="../../../_images/turtlesim.png" />
-<p>En la terminal debajo el comando, verás los mensajes generados por el nodo:</p>
+<p>En la terminal, debajo el comando, verás los mensajes generados por el nodo:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[INFO] [turtlesim]: Starting turtlesim with node name /turtlesim</span>
-
 <span class="go">[INFO] [turtlesim]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]</span>
 </pre></div>
 </div>
-<p>Aquí puedes ver que el nombre de la tortuga es <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>, y las coordenadas predeterminadas donde se generó.</p>
+<p>Ahi puedes ver que el nombre de la tortuga y las coordenadas predeterminadas donde se generó.</p>
 </div>
 <div class="section" id="utilizar-turtlesim">
 <h3><a class="toc-backref" href="#id6">3 Utilizar turtlesim</a><a class="headerlink" href="#utilizar-turtlesim" title="Enlazar permanentemente con este título"></a></h3>
@@ -467,7 +469,7 @@ Se moverá por la pantalla, usando su «bolígrafo» adjunto para dibujar el cam
 <p>Presionar las flechas del teclado solo hará que la tortuga se mueva una distancia corta y luego se detenga.
 Esto se debe a que, de manera realista, no le gustaría que un robot continuara con una instrucción si, por ejemplo, el operador perdiera la conexión con el robot.</p>
 </div>
-<p>Puedes ver los nodos, topics, servicios y acciones asociadas mediante el comando <code class="docutils literal notranslate"><span class="pre">list</span></code>:</p>
+<p>Puedes ver los nodos, asi como sus topics, servicios y acciones asociadas mediante el subcomando <code class="docutils literal notranslate"><span class="pre">list</span></code> de los comandos respectivos:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 node list</span>
 <span class="go">ros2 topic list</span>
 <span class="go">ros2 service list</span>
@@ -475,7 +477,7 @@ Esto se debe a que, de manera realista, no le gustaría que un robot continuara 
 </pre></div>
 </div>
 <p>Aprenderás más sobre estos conceptos en los próximos tutoriales.
-Dado que el objetivo de este tutorial es solo obtener una descripción general de turtlesim, utilizaremos rqt (una interfaz gráfica de usuario para ROS 2) la cual nos permite ver los servicios más de cerca.</p>
+Dado que el objetivo de este tutorial es solo obtener una descripción general de turtlesim, utiliza rqt para llamar algunos de los servicios de turtlesim e interactuar con el nodo <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>.</p>
 </div>
 <div class="section" id="instalar-rqt">
 <h3><a class="toc-backref" href="#id7">4 Instalar rqt</a><a class="headerlink" href="#instalar-rqt" title="Enlazar permanentemente con este título"></a></h3>
@@ -502,7 +504,7 @@ Dado que el objetivo de este tutorial es solo obtener una descripción general d
 <div class="section" id="utilizar-rqt">
 <h3><a class="toc-backref" href="#id8">5 Utilizar rqt</a><a class="headerlink" href="#utilizar-rqt" title="Enlazar permanentemente con este título"></a></h3>
 <p>Después de ejecutar rqt por primera vez, la ventana estará en blanco.
-No te precoupes; simplemente selecciona <strong>Plugins</strong> &gt; <strong>Services</strong> &gt; <strong>Service Caller</strong> en la barra de menú de la parte superior.</p>
+No te preocupes; simplemente selecciona <strong>Plugins</strong> &gt; <strong>Services</strong> &gt; <strong>Service Caller</strong> en la barra de menú de la parte superior.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
 <p>Es posible que rqt tarde un tiempo en localizar todos los complementos.
@@ -521,40 +523,43 @@ Puedes ver que esta expresión corresponde al valor de <strong>name</strong> y e
 <img alt="../../../_images/spawn.png" src="../../../_images/spawn.png" />
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-<p>Si intentas generar una nueva tortuga con el mismo nombre que una tortuga existente, como la tortuga predeterminada <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>, obtendrá un mensaje de error en la terminal que ejecuta <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>:</p>
+<p>Si intentas generar una nueva tortuga con el mismo nombre que una tortuga existente, como la tortuga predeterminada <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>, obtendrás un mensaje de error en la terminal que esta ejecutando <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">[ERROR] [turtlesim]: A turtle named [turtle1] already exists</span>
 </pre></div>
 </div>
 </div>
-<p>Para generar turtle2, debes llamar al servicio haciendo clic en el botón <strong>Call</strong> en la parte superior derecha de la ventana rqt.</p>
+<p>Para generar <code class="docutils literal notranslate"><span class="pre">turtle2</span></code>, debes llamar al servicio haciendo clic en el botón <strong>Call</strong> en la parte superior derecha de la ventana rqt.</p>
 <p>Verás aparecer una nueva tortuga (nuevamente con un diseño aleatorio) en las coordenadas que ingresó para <strong>x</strong> e <strong>y</strong>.</p>
-<p>Si actualiza la lista de servicios en rqt, podrás ver que ahora hay servicios relacionados con la nueva tortuga, <code class="docutils literal notranslate"><span class="pre">/turtle2/…</span></code>, además de <code class="docutils literal notranslate"><span class="pre">/turtle1/…</span></code>.</p>
+<p>Si actualiza la lista de servicios en rqt, podrás ver que ahora hay servicios relacionados con la nueva tortuga, <code class="docutils literal notranslate"><span class="pre">/turtle2/...</span></code>, además de <code class="docutils literal notranslate"><span class="pre">/turtle1/...</span></code>.</p>
 </div>
 <div class="section" id="pruebe-el-servicio-set-pen">
 <h4>5.2 Pruebe el servicio set_pen<a class="headerlink" href="#pruebe-el-servicio-set-pen" title="Enlazar permanentemente con este título"></a></h4>
-<p>Ahora vamos a darle a turtle1 un bolígrafo único mediante el servicio <code class="docutils literal notranslate"><span class="pre">/set_pen</span></code>:</p>
+<p>Ahora vamos a darle a <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> un bolígrafo único mediante el servicio <code class="docutils literal notranslate"><span class="pre">/set_pen</span></code>:</p>
 <img alt="../../../_images/set_pen.png" src="../../../_images/set_pen.png" />
-<p>Los valores para <strong>r</strong>, <strong>g</strong> y <strong>b</strong> deben estar entre 0 y 255, y establecerán el color del bolígrafo con el que dibuja turtle1. Con <strong>width</strong> se establece el grosor de la línea.</p>
-<p>Para que turtle1 dibuje con una línea roja, cambia el valor de <strong>r</strong> a 255 y el valor de <strong>width</strong> a 5.
+<p>Los valores para <strong>r</strong>, <strong>g</strong> y <strong>b</strong> deben estar entre 0 y 255, y establecerán el color del bolígrafo con el que dibuja <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>. Con <strong>width</strong> se establece el grosor de la línea.</p>
+<p>Para que <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> dibuje con una línea roja, cambia el valor de <strong>r</strong> a 255 y el valor de <strong>width</strong> a 5.
 No olvides llamar al servicio después de actualizar los valores.</p>
 <p>Si regresas a la terminal donde se está ejecutando <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> y presionas las flechas del teclado, verás que el bolígrafo de turtle1 ha cambiado.</p>
 <img alt="../../../_images/new_pen.png" src="../../../_images/new_pen.png" />
-<p>Probablemente hayas notado que no hay forma de mover la segunda tortuga.
-Esto se puede lograr reasignando el tópico <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code> de turtle1 a turtle2.</p>
+<p>Probablemente hayas notado que no hay forma de mover <code class="docutils literal notranslate"><span class="pre">turtle2</span></code>.
+Esto se debe a que no hay un nodo teleop para <code class="docutils literal notranslate"><span class="pre">turtle2</span></code>.</p>
 </div>
 </div>
 <div class="section" id="reasignacion">
 <h3><a class="toc-backref" href="#id9">6 Reasignación</a><a class="headerlink" href="#reasignacion" title="Enlazar permanentemente con este título"></a></h3>
+<p>Necesitas un segundo nodo teleop para controlar <code class="docutils literal notranslate"><span class="pre">turtle2</span></code>
+Sin embargo, si intentas ejecutar el mismo comando que antes, notaras que este tambien controla la <code class="docutils literal notranslate"><span class="pre">turtle1</span></code>.
+La forma para cambiar este comportamiento es remapear el topic <code class="docutils literal notranslate"><span class="pre">cmd_vel</span></code>.</p>
 <p>Abre una nueva terminal y ejecuta <code class="xref any docutils literal notranslate"><span class="pre">source</span></code> con el archivo de setup y ejecuta:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run turtlesim turtle_teleop_key --ros-args --remap turtle1/cmd_vel:=turtle2/cmd_vel</span>
 </pre></div>
 </div>
-<p>Ahora puedes mover la segunda tortuga mientras esta terminal está activa, y la primer tortuga cuando la otra terminal que ejecuta <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> está activa.</p>
+<p>Ahora puedes mover la <code class="docutils literal notranslate"><span class="pre">turtle2</span></code> mientras esta terminal este activa, y <code class="docutils literal notranslate"><span class="pre">turtle1</span></code> cuando la otra terminal que ejecuta <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code> este activa.</p>
 <img alt="../../../_images/remap.png" src="../../../_images/remap.png" />
 </div>
 <div class="section" id="cerrar-turtlesim">
 <h3><a class="toc-backref" href="#id10">7 Cerrar turtlesim</a><a class="headerlink" href="#cerrar-turtlesim" title="Enlazar permanentemente con este título"></a></h3>
-<p>Para detener la simulación puedes introducir <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code> en la terminal <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>, y <code class="docutils literal notranslate"><span class="pre">q</span></code> en la terminal que ejecuta <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code>.</p>
+<p>Para detener la simulación puedes introducir <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">C</span></code> en la terminal <code class="docutils literal notranslate"><span class="pre">turtlesim_node</span></code>, y <code class="docutils literal notranslate"><span class="pre">q</span></code> en las terminales que ejecutan <code class="docutils literal notranslate"><span class="pre">turtle_teleop_key</span></code>.</p>
 </div>
 </div>
 <div class="section" id="resumen">
@@ -567,7 +572,7 @@ Esto se puede lograr reasignando el tópico <code class="docutils literal notran
 </div>
 <div class="section" id="contenido-relacionado">
 <h2><a class="toc-backref" href="#id13">Contenido Relacionado</a><a class="headerlink" href="#contenido-relacionado" title="Enlazar permanentemente con este título"></a></h2>
-<p>El paquete turtlesim se puede encontrar en el <a class="reference external" href="https://github.com/ros/ros_tutorials/tree/humble/turtlesim">repositorio ros_tutorials</a>.
+<p>El paquete turtlesim se puede encontrar en el <a class="reference external" href="https://github.com/ros/ros_tutorials/tree/rolling/turtlesim">repositorio ros_tutorials</a>.
 Asegúrate de seleccionar la rama correspondiente a su distribución ROS 2 instalada.</p>
 <p><a class="reference external" href="https://youtu.be/xwT7XWflMdc">Este video aportado por la comunidad</a> demuestra muchos de los elementos cubiertos en este tutorial.</p>
 </div>

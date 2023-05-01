@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -394,7 +395,7 @@
 <p>ROS applications typically communicate through interfaces of one of three types: messages, services and actions.
 ROS 2 uses a simplified description language, the interface definition language (IDL), to describe these interfaces.
 This description makes it easy for ROS tools to automatically generate source code for the interface type in several target languages.</p>
-<p>In this document we will describe the supported types.</p>
+<p>In this document we will describe the supported types:</p>
 <ul class="simple">
 <li><p>msg: <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files are simple text files that describe the fields of a ROS message. They are used to generate source code for messages in different languages.</p></li>
 <li><p>srv: <code class="docutils literal notranslate"><span class="pre">.srv</span></code> files describe a service. They are composed of two parts: a request and a response. The request and response are message declarations.</p></li>
@@ -567,19 +568,20 @@ string string_of_unbounded_size
 string&lt;<span class="o">=</span><span class="m">10</span> up_to_ten_characters_string
 
 string<span class="o">[</span>&lt;<span class="o">=</span><span class="m">5</span><span class="o">]</span> up_to_five_unbounded_strings
-string&lt;<span class="o">=</span><span class="m">10</span><span class="o">[]</span> unbounded_array_of_string_up_to_ten_characters_each
+string&lt;<span class="o">=</span><span class="m">10</span><span class="o">[]</span> unbounded_array_of_strings_up_to_ten_characters_each
 string&lt;<span class="o">=</span><span class="m">10</span><span class="o">[</span>&lt;<span class="o">=</span><span class="m">5</span><span class="o">]</span> up_to_five_strings_up_to_ten_characters_each
 </pre></div>
 </div>
 </div>
 <div class="section" id="field-names">
 <h4><a class="toc-backref" href="#id5">2.1.2 Field names</a><a class="headerlink" href="#field-names" title="Enlazar permanentemente con este título"></a></h4>
-<p>Field names must be lowercase alphanumeric characters with underscores for separating words. They must start with an alphabetic character, they must not end with an underscore and never have two consecutive underscores.</p>
+<p>Field names must be lowercase alphanumeric characters with underscores for separating words.
+They must start with an alphabetic character, and they must not end with an underscore or have two consecutive underscores.</p>
 </div>
 <div class="section" id="field-default-value">
 <h4><a class="toc-backref" href="#id6">2.1.3 Field default value</a><a class="headerlink" href="#field-default-value" title="Enlazar permanentemente con este título"></a></h4>
 <p>Default values can be set to any field in the message type.
-Currently default values are not supported for string arrays and complex types (i.e. types not present in the built-in-types table above, that applies to all nested messages)</p>
+Currently default values are not supported for string arrays and complex types (i.e. types not present in the built-in-types table above; that applies to all nested messages).</p>
 <p>Defining a default value is done by adding a third element to the field definition line, i.e:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fieldtype fieldname fielddefaultvalue
 </pre></div>
@@ -593,7 +595,7 @@ int32<span class="o">[]</span> samples <span class="o">[</span>-200, -100, <span
 </div>
 <p>Note:</p>
 <ul class="simple">
-<li><p>string values must be defined in single <code class="docutils literal notranslate"><span class="pre">'</span></code> or double quotes <code class="docutils literal notranslate"><span class="pre">&quot;</span></code></p></li>
+<li><p>string values must be defined in single <code class="docutils literal notranslate"><span class="pre">'</span></code> or double <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> quotes</p></li>
 <li><p>currently string values are not escaped</p></li>
 </ul>
 </div>
@@ -620,7 +622,8 @@ string <span class="nv">EXAMPLE</span><span class="o">=</span><span class="s1">&
 <div class="section" id="service-description-specification">
 <h2><a class="toc-backref" href="#id8">3. Service description specification</a><a class="headerlink" href="#service-description-specification" title="Enlazar permanentemente con este título"></a></h2>
 <p>Services are described and defined in <code class="docutils literal notranslate"><span class="pre">.srv</span></code> files in the <code class="docutils literal notranslate"><span class="pre">srv/</span></code> directory of a ROS package.</p>
-<p>A service description file consists of a request and a response msg type, separated by “—”. Any two <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files concatenated with a “—” are a legal service description.</p>
+<p>A service description file consists of a request and a response msg type, separated by <code class="docutils literal notranslate"><span class="pre">---</span></code>.
+Any two <code class="docutils literal notranslate"><span class="pre">.msg</span></code> files concatenated with a <code class="docutils literal notranslate"><span class="pre">---</span></code> are a legal service description.</p>
 <p>Here is a very simple example of a service that takes in a string and returns a string:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>string str
 ---

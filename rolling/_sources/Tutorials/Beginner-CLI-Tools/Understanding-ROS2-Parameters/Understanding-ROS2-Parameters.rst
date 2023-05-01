@@ -130,6 +130,7 @@ Para cambiar el valor de un parámetro en tiempo de ejecución, usa el comando:
 
 Cambiemos el color de fondo de ``/turtlesim``:
 
+
 .. code-block:: console
 
     ros2 param set /turtlesim background_r 150
@@ -151,6 +152,7 @@ Sin embargo, puedes guardar tu configuración y volver a cargarla la próxima ve
 ^^^^^^^^^^^^^^^^^
 
 Puedes ver todos los parámetros y sus valores actuales de un nodo usando el comando:
+
 
 .. code-block:: console
 
@@ -225,10 +227,9 @@ Para iniciar el mismo nodo usando los valores de parámetros guardados, ejecuta:
 
   ros2 run <package_name> <executable_name> --ros-args --params-file <file_name>
 
-Stop your running turtlesim node so you can try reloading it with your saved parameters, using:
 Este es el mismo comando que utilizas para iniciar turtlesim, con las banderas añadidas ``--ros-args`` y ``--params-file``, seguidas del archivo que desea cargar.
 
-Intentá detener el nodo turtlesim en ejecución, para volver a cargarlo con sus parámetros guardados usando:
+Intentá detener el nodo turtlesim en ejecución, e intenta  volver a cargarlo con tus parámetros guardados usando:
 
 .. code-block:: console
 
@@ -238,7 +239,7 @@ La ventana de turtlesim debería aparecer como de costumbre, pero con el fondo m
 
 .. note::
 
-  En este caso, los parámetros se modifican al inicio, por lo que los parámetros de solo lectura especificados también tendrán efecto.
+  Cuando se usa un archivo de parámetros al inicio de un nodo, todos los parámetros serán actualizados, incluyendo los de solo lectura.
 
 Resumen
 -------

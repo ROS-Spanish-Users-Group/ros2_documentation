@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -383,11 +384,12 @@ del <a class="reference internal" href="../Alternatives/Ubuntu-Development-Setup
 <p>The following description assumes that you have completed the “Environment setup” process
 from the <a class="reference internal" href="../Ubuntu-Install-Debians.html"><span class="doc">Installing ROS 2 via Debian Packages</span></a> or
 from the <a class="reference internal" href="../Alternatives/Ubuntu-Development-Setup.html"><span class="doc">Compilando ROS 2 en Ubuntu Linux</span></a>.</p>
-<p>rmw_gurumdds requiere la versión de GurumDDS-2.7.x.
+<p>rmw_gurumdds requiere la versión de GurumDDS-2.8.x.
 Los paquetes Debian de GurumDDS se proporcionan en los repositorios apt de ROS 2 en Linux.
 El instalador binario de Windows de GurumDDS estára compatible pronto.</p>
-<p>GurumDDS requiere una licencia. Consulte la página siguiente: <a class="reference external" href="https://gurum.cc/free_trial_eng.html">https://gurum.cc/free_trial_eng.html</a>
-Después de obtener una licencia, muévala a la siguiente ubicación.</p>
+<p>GurumDDS requiere una licencia. Consulte la página siguiente: <a class="reference external" href="https://gurum.cc/free_trial_eng.html">https://gurum.cc/free_trial_eng.html</a></p>
+<p>Después de solicitar la licencia de prueba, por favor descargala desde la página web de licencia.
+Después de obtener una licencia, muévela a la siguiente ubicación.</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 45%" />
@@ -405,13 +407,16 @@ Después de obtener una licencia, muévala a la siguiente ubicación.</p>
 <tr class="row-odd"><td><p>&gt;= 2.7.2861</p></td>
 <td><p>/etc/gurumnet</p></td>
 </tr>
+<tr class="row-even"><td><p>2.8.x</p></td>
+<td><p>/etc/gurumnet</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="instalar-paquetes">
 <h2>Instalar paquetes<a class="headerlink" href="#instalar-paquetes" title="Enlazar permanentemente con este título"></a></h2>
 <p>La forma más fácil es instalar desde el repositorio apt de ROS 2.
-Cuando se instala ros-rolling-rmw-gurumdds-cpp, también se instala gutumdds-2.7.</p>
+Cuando se instala ros-rolling-rmw-gurumdds-cpp, también se instala gutumdds-2.8 .</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install ros-rolling-rmw-gurumdds-cpp
 </pre></div>
 </div>
@@ -419,10 +424,9 @@ Cuando se instala ros-rolling-rmw-gurumdds-cpp, también se instala gutumdds-2.7
 <div class="section" id="compilar-a-partir-del-codigo-fuente">
 <h2>Compilar a partir del código fuente<a class="headerlink" href="#compilar-a-partir-del-codigo-fuente" title="Enlazar permanentemente con este título"></a></h2>
 <p>Compilar a partir del código fuente también es otra forma de instalar.</p>
-<p>Primero, clona rosidl_typesupport_gurumdds y rmw_gurumdds en el directorio src del espacio de trabajo de ROS 2.</p>
+<p>Primero, clona rmw_gurumdds en el directorio src del espacio de trabajo de ROS 2.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> ros2_ws/src
-git clone https://github.com/ros2/rmw_gurumdds ros2/rmw_gurumdds
-git clone https://github.com/ros2/rosidl_typesupport_gurumdds ros2/rosidl_typesupport_gurumdds
+git clone https://github.com/ros2/rmw_gurumdds -b rolling ros2/rmw_gurumdds
 </pre></div>
 </div>
 <p>Luego, instale los paquetes necesarios para GurumDDS.</p>

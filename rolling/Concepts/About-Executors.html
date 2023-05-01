@@ -83,6 +83,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -107,7 +108,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -510,7 +511,7 @@ The following flow diagram visualizes this scheduling semantics.</p>
 </div>
 <div class="section" id="outlook">
 <h2><a class="toc-backref" href="#id7">Outlook</a><a class="headerlink" href="#outlook" title="Enlazar permanentemente con este título"></a></h2>
-<p>While the three Executors of rclcpp work well for most applications there are some issues that make them not suitable for real-time applications, which require well-defined execution times, determinism, and custom control over the execution order.
+<p>While the three Executors of rclcpp work well for most applications, there are some issues that make them not suitable for real-time applications, which require well-defined execution times, determinism, and custom control over the execution order.
 Here is a summary of some of these issues:</p>
 <ol class="arabic simple">
 <li><p>Complex and mixed scheduling semantics.
@@ -521,13 +522,13 @@ Higher priority callbacks may be blocked by lower priority callbacks.</p></li>
 <li><p>No built-in control over triggering for specific topics.</p></li>
 </ol>
 <p>Additionally, the executor overhead in terms of CPU and memory usage is considerable.
-The Static Single-Threaded Executor reduces this overhead greatly but it might be not enough for some applications.</p>
+The Static Single-Threaded Executor reduces this overhead greatly but it might not be enough for some applications.</p>
 <p>These issues have been partially addressed by the following developments:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ros2/rclcpp/blob/rolling/rclcpp/include/rclcpp/wait_set.hpp">rclcpp WaitSet</a>: The <code class="docutils literal notranslate"><span class="pre">WaitSet</span></code> class of rclcpp allows waiting directly on subscriptions, timers, service servers, action servers, etc. instead of using an Executor.
 It can be used to implement deterministic, user-defined processing sequences, possibly processing multiple messages from different subscriptions together.
 The <a class="reference external" href="https://github.com/ros2/examples/tree/rolling/rclcpp/wait_set">examples_rclcpp_wait_set package</a> provides several examples for the use of this user-level wait set mechanism.</p></li>
-<li><p><a class="reference external" href="https://github.com/ros2/rclc/blob/master/rclc/include/rclc/executor.h">rclc Executor</a>: This Executor from the C Client Library <em>rclc</em> developed for micro-ROS gives the user fine-grained control over the execution order of callbacks and allows for custom trigger conditions to activate callbacks.
+<li><p><a class="reference external" href="https://github.com/ros2/rclc/blob/master/rclc/include/rclc/executor.h">rclc Executor</a>: This Executor from the C Client Library <em>rclc</em>, developed for micro-ROS, gives the user fine-grained control over the execution order of callbacks and allows for custom trigger conditions to activate callbacks.
 Furthermore, it implements ideas of the Logical Execution Time (LET) semantics.</p></li>
 </ul>
 </div>

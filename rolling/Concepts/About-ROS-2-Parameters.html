@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -404,7 +405,7 @@ By default all descriptors are empty, but can contain parameter descriptions, va
 <div class="section" id="declaring-parameters">
 <h3><a class="toc-backref" href="#id3">Declaring parameters</a><a class="headerlink" href="#declaring-parameters" title="Enlazar permanentemente con este título"></a></h3>
 <p>By default, a node needs to <em>declare</em> all of the parameters that it will accept during its lifetime.
-This is so that the type and the name of the parameter are well-defined at node startup time, which reduces the chances of misconfiguration later on.
+This is so that the type and name of the parameters are well-defined at node startup time, which reduces the chances of misconfiguration later on.
 See <a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-CPP.html"><span class="doc">Using parameters in a class (C++)</span></a> or <a class="reference internal" href="../Tutorials/Beginner-Client-Libraries/Using-Parameters-In-A-Class-Python.html"><span class="doc">Using parameters in a class (Python)</span></a> for tutorials on declaring and using parameters from a node.</p>
 <p>For some types of nodes, not all of the parameters will be known ahead of time.
 In these cases, the node can be instantiated with <code class="docutils literal notranslate"><span class="pre">allow_undeclared_parameters</span></code> set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, which will allow parameters to be get and set on the node even if they haven’t been declared.</p>
@@ -423,7 +424,7 @@ When the parameter is declared, it should be declared using a <code class="docut
 The reason that there are two types of callbacks is to have a chance to intervene before the parameter change happens, and to have a chance to react after the parameter change happens.
 A node can register for both, either, or none of the callback types.
 Both types are described below.</p>
-<p>The first type is known as a «set parameter» callback, and can be installed by calling <code class="docutils literal notranslate"><span class="pre">add_on_set_parameters_callback</span></code>.
+<p>The first type is known as a «set parameter» callback, and can be set by calling <code class="docutils literal notranslate"><span class="pre">add_on_set_parameters_callback</span></code> from the node API.
 The callback should accept a list of <code class="docutils literal notranslate"><span class="pre">Parameter</span></code> objects, and return an <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/SetParametersResult</span></code>.
 This callback will be called before a parameter is declared or changed on a node.
 The main purpose of this callback is to give the user the ability to inspect the upcoming change to the parameter and explicitly reject the change.</p>
@@ -434,9 +435,9 @@ Since multiple «set parameter» callbacks can be chained, there is no way for a
 If the individual callback were to make changes to the class it is in, for instance, it may get out-of-sync with the actual parameter.
 To get a callback <em>after</em> a parameter has been successfully changed, see the next type of callback below.</p>
 </div>
-<p>The second type of callback is known as an «on parameter event» callback, and can be installed by calling <code class="docutils literal notranslate"><span class="pre">on_parameter_event</span></code>.
+<p>The second type of callback is known as an «on parameter event» callback, and can be set by calling <code class="docutils literal notranslate"><span class="pre">on_parameter_event</span></code> from one of the parameter client APIs.
 The callback should accept an <code class="docutils literal notranslate"><span class="pre">rcl_interfaces/msg/ParameterEvent</span></code> object, and return nothing.
-This callback will be called after all parameters have been declared, changed, or deleted.
+This callback will be called after all parameters in the input event have been declared, changed, or deleted.
 The main purpose of this callback is to give the user the ability to react to changes from parameters that have successfully been accepted.</p>
 </div>
 </div>
@@ -474,7 +475,7 @@ See <a class="reference internal" href="../Tutorials/Intermediate/Launch/Using-R
 <h2><a class="toc-backref" href="#id9">Manipulating parameter values at runtime</a><a class="headerlink" href="#manipulating-parameter-values-at-runtime" title="Enlazar permanentemente con este título"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> command is the general way to interact with parameters for nodes that are already running.
 <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code> uses the parameter service API as described above to perform the various operations.
-See <a class="reference internal" href="../How-To-Guides/Using-ros2-param.html"><span class="doc">the how-to guide</span></a> for details on how to use <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code>.</p>
+See <a class="reference internal" href="../How-To-Guides/Using-ros2-param.html"><span class="doc">this how-to guide</span></a> for details on how to use <code class="docutils literal notranslate"><span class="pre">ros2</span> <span class="pre">param</span></code>.</p>
 </div>
 <div class="section" id="migrating-from-ros-1">
 <h2><a class="toc-backref" href="#id10">Migrating from ROS 1</a><a class="headerlink" href="#migrating-from-ros-1" title="Enlazar permanentemente con este título"></a></h2>
@@ -484,7 +485,7 @@ See <a class="reference internal" href="../How-To-Guides/Using-ros2-param.html">
 Since there is no central <code class="docutils literal notranslate"><span class="pre">roscore</span></code> in ROS 2, that functionality no longer exists.
 The recommended approach in ROS 2 is to use per-node parameters that are closely tied to the nodes that use them.
 If a global blackboard is still needed, it is possible to create a dedicated node for this purpose.
-ROS 2 ships with one in in the <code class="docutils literal notranslate"><span class="pre">ros-rolling-demo-nodes-cpp</span></code> package called <code class="docutils literal notranslate"><span class="pre">parameter_blackboard</span></code>; it can be run with:</p>
+ROS 2 ships with one in the <code class="docutils literal notranslate"><span class="pre">ros-rolling-demo-nodes-cpp</span></code> package called <code class="docutils literal notranslate"><span class="pre">parameter_blackboard</span></code>; it can be run with:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">ros2 run demo_nodes_cpp parameter_blackboard</span>
 </pre></div>
 </div>

@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -382,7 +383,7 @@
 </div>
 <div class="section" id="overview">
 <h2><a class="toc-backref" href="#id1">Overview</a><a class="headerlink" href="#overview" title="Enlazar permanentemente con este título"></a></h2>
-<p>ROS 2 provides the integrated measurement of statistics for messages received by any
+<p>ROS 2 provides integrated measurement of statistics for messages received by any
 subscription.
 Allowing a user to collect subscription statistics enables them to characterize
 the performance of their system or aid in diagnosis of any present issues.</p>
@@ -400,7 +401,7 @@ When a new message is received by a subscription, this is a new sample for calcu
 the current measurement window.
 The average calculated is simply a
 <a class="reference external" href="https://en.wikipedia.org/wiki/Moving_average">moving average</a>.
-The maximum, minimum,and sample count are updated upon receipt of each new sample, whereas the
+The maximum, minimum, and sample count are updated upon receipt of each new sample, whereas the
 standard deviation is calculated using <a class="reference external" href="https://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Welford's_online_algorithm">Welford’s online algorithm</a>.</p>
 </div>
 <div class="section" id="types-of-statistics-calculated">
@@ -415,7 +416,7 @@ standard deviation is calculated using <a class="reference external" href="https
 <li><p>Received message age</p>
 <ul>
 <li><p>Units: milliseconds</p></li>
-<li><p>Requires a message to have a timestamp populated in the header field in order to calculate the age of the message as sent from a publisher.</p></li>
+<li><p>Requires a message to have a timestamp populated in the header field in order to calculate the age of the message as sent from a publisher</p></li>
 </ul>
 </li>
 </ul>

@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -404,17 +405,17 @@ You can get started on the <a class="reference internal" href="../Tutorials/Inte
 For a complete list of all tf2 and tf2-related tutorials check out the <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Tf2-Main.html"><span class="doc">tutorials</span></a> page.</p>
 <p>There are essentially two main tasks that any user would use tf2 for, listening for transforms and broadcasting transforms.</p>
 <p>If you want to use tf2 to transform between coordinate frames, your nodes will need to listen for transforms.
-What you will do is to receive and buffer all coordinate frames that are broadcasted in the system, and query for specific transforms between frames.
-Check out the writing a tf2 listener tutorial <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp.html"><span class="doc">(C++)</span></a> to learn more.</p>
-<p>To extend the capabilities of a robot you will need to start broadcasting transforms.
+What you will do is receive and buffer all coordinate frames that are broadcasted in the system, and query for specific transforms between frames.
+Check out the «Writing a listener» tutorial <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Listener-Cpp.html"><span class="doc">(C++)</span></a> to learn more.</p>
+<p>To extend the capabilities of a robot, you will need to start broadcasting transforms.
 Broadcasting transforms means to send out the relative pose of coordinate frames to the rest of the system.
 A system can have many broadcasters that each provide information about a different part of the robot.
-Check out the writing a tf2 broadcaster tutorial <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html"><span class="doc">(C++)</span></a> to learn more.</p>
+Check out the «Writing a broadcaster» tutorial <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Broadcaster-Cpp.html"><span class="doc">(C++)</span></a> to learn more.</p>
 <p>In addition to that, tf2 can broadcast static transforms that do not change over time.
-This mainly saves storage and lookup time, though the publishing overhead is also improved.
-You should note that static transforms are published once and assumed to be not changing and therefore no time history stored.
-If you want to define static transforms in your tf2 tree, take a look at the writing static tf2 broadcaster <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html"><span class="doc">(C++)</span></a> tutorial.</p>
-<p>You can also learn how to add fixed and dynamic frames to your tf2 tree in adding a frame <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp.html"><span class="doc">(C++)</span></a> tutorial.</p>
+This mainly saves storage and lookup time, but also reduces the publishing overhead.
+You should note that static transforms are published once and assumed to not change, so no history is stored.
+If you want to define static transforms in your tf2 tree, take a look at the «Writing a static broadcaster» <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Writing-A-Tf2-Static-Broadcaster-Cpp.html"><span class="doc">(C++)</span></a> tutorial.</p>
+<p>You can also learn how to add fixed and dynamic frames to your tf2 tree in the «Adding a frame» <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Adding-A-Frame-Cpp.html"><span class="doc">(C++)</span></a> tutorial.</p>
 <p>Once you are finished with the basic tutorials, you can move on to learn about tf2 and time.
 The tf2 and time tutorial <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Learning-About-Tf2-And-Time-Cpp.html"><span class="doc">(C++)</span></a> teaches the basic principles of tf2 and time.
 The advanced tutorial about tf2 and time <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Py.html"><span class="doc">(Python)</span></a> <a class="reference internal" href="../Tutorials/Intermediate/Tf2/Time-Travel-With-Tf2-Cpp.html"><span class="doc">(C++)</span></a> teaches the principles of time traveling with tf2.</p>

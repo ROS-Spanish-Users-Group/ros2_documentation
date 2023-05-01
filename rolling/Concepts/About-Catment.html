@@ -82,6 +82,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Release-Rolling-Ridley.html">Rolling Ridley (<code class="docutils literal notranslate"><span class="pre">rolling</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/Development.html">Development Distribution</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Releases/Release-Iron-Irwini.html">ROS 2 Iron Irwini (codename “iron”; May, 2023)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Releases/Iron-Irwini-Complete-Changelog.html">ROS 2 Iron Irwini Complete Changelog</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../Releases/End-of-Life.html">End-of-Life Distributions</a><ul>
@@ -106,7 +107,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../Tutorials.html">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools.html">Beginner: CLI tools</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Configuring-ROS2-Environment.html">Configuring environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">Utilizar <code class="docutils literal notranslate"><span class="pre">turtlesim</span></code> , <code class="docutils literal notranslate"><span class="pre">ros2</span></code> y <code class="docutils literal notranslate"><span class="pre">rqt</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Nodes/Understanding-ROS2-Nodes.html">Comprender los Nodos</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html">Comprender los Topics</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html">Understanding services</a></li>
@@ -390,19 +391,19 @@
 <p>There once was a thing called <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>.
 Then came a thing called <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, which largely replaced <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>.
 Recently introduced is a thing called <code class="docutils literal notranslate"><span class="pre">ament</span></code>, which may one day replace <code class="docutils literal notranslate"><span class="pre">catkin</span></code>.</p>
-<p>All three tools can be considered «meta-build systems.»
-They sit atop other build systems (e.g., CMake, Python setuptools) and provide extra functionality that’s intended to make those build systems easier to use, especially when managing dependencies across multiple packages and when building multiple packages in a single workspace.</p>
+<p>All three tools can be considered «meta-build systems».
+They sit atop other build systems (e.g. CMake, Python setuptools) and provide extra functionality that’s intended to make those build systems easier to use, especially when managing dependencies across multiple packages and when building multiple packages in a single workspace.</p>
 <p>Each of these meta-build systems does two things:</p>
 <ol class="arabic simple">
-<li><p>Add API to the underlying build system (e.g,. CMake) that can be used to simplify common tasks (e.g., supplying all the flags exported by depended-upon packages when building an executable).
-There are usually hooks to allow injection of extra API by packages outside of the core meta-build system.</p>
+<li><p>Adds an API to the underlying build system (e.g. CMake) that can be used to simplify common tasks (e.g. supplying all the flags exported by depended-upon packages when building an executable).
+There are usually hooks to allow injection of extra APIs by packages outside of the core meta-build system.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>: <code class="docutils literal notranslate"><span class="pre">mk/cmake.mk</span></code>, <code class="docutils literal notranslate"><span class="pre">rosbuild_init()</span></code>, <code class="docutils literal notranslate"><span class="pre">rosbuild_add_executable()</span></code>, etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">catkin</span></code>: <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_install_python()</span></code>, etc.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ament</span></code>: <code class="docutils literal notranslate"><span class="pre">ament_target_dependencies()</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_export_dependencies()</span></code>, <code class="docutils literal notranslate"><span class="pre">ament_package()</span></code>, etc.</p></li>
 </ul>
 </li>
-<li><p>Provide a tool that can be used to iterate in dependency order over a workspace full of packages, building and perhaps installing each one.</p>
+<li><p>Provides a tool that can be used to iterate in dependency order over a workspace full of packages, building and perhaps installing each one.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>: <code class="docutils literal notranslate"><span class="pre">rosmake</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">catkin</span></code>: <code class="docutils literal notranslate"><span class="pre">catkin</span> <span class="pre">build</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make</span></code>, <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code>, etc.</p></li>
@@ -411,7 +412,7 @@ There are usually hooks to allow injection of extra API by packages outside of t
 </li>
 </ol>
 <p>The common thread that ties all of these systems together is the division of the code into <strong>packages</strong>, with each package containing a manifest file (<code class="docutils literal notranslate"><span class="pre">manifest.xml</span></code> or <code class="docutils literal notranslate"><span class="pre">package.xml</span></code>).
-This manifest is required (with some exceptions) for both parts of the meta-build system (API and building tool) to function.</p>
+This manifest is required (with some exceptions) for both parts of the meta-build system (API and build tool) to function.</p>
 </div>
 <div class="section" id="postulates">
 <h2><a class="toc-backref" href="#id2">Postulates</a><a class="headerlink" href="#postulates" title="Enlazar permanentemente con este título"></a></h2>
@@ -425,19 +426,19 @@ While it’s reasonable to ask developers to make changes in exchange for gettin
 This is especially true when the old system is in widespread use.</p>
 <ol class="arabic simple">
 <li><p>Corollary: <strong>Migration to a new meta-build system should not be required without a very good reason.</strong>
-If a developer doesn’t want the functionality offered by the new system, then she shouldn’t be coerced into migrating from the old system unless there’s something irrevocably broken about the old system (e.g., <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>“s in-source build pattern and lack of an «install» step).</p></li>
+If a developer doesn’t want the functionality offered by the new system, then they shouldn’t be coerced into migrating from the old system unless there’s something irrevocably broken about the old system (e.g. <code class="docutils literal notranslate"><span class="pre">rosbuild</span></code>“s in-source build pattern and lack of an «install» step).</p></li>
 </ol>
 </li>
 <li><p><strong>Interoperability is a good thing.</strong>
 Whenever possible (not all combinations will be practical), developers should be able to mix and match meta-build systems, including mixing their different aspects (i.e., use the building tool from one system and the API from another).
-Such mixing and matching is especially important when developers want to combine a large existing code base using one meta-build system (e.g., ROS with <code class="docutils literal notranslate"><span class="pre">catkin</span></code>) with new libraries and tools offered by a code base using another meta-build system (e.g., ROS 2 with <code class="docutils literal notranslate"><span class="pre">ament</span></code>).
-Ideally that kind of combination can be done without requiring changes to the API used by either code base and without telling the developer which builder tool to use.</p>
+Such mixing and matching is especially important when developers want to combine a large existing codebase using one meta-build system (e.g. ROS with <code class="docutils literal notranslate"><span class="pre">catkin</span></code>) with new libraries and tools offered by a codebase using another meta-build system (e.g. ROS 2 with <code class="docutils literal notranslate"><span class="pre">ament</span></code>).
+Ideally, that kind of combination can be done without requiring changes to the API used by either codebase and without telling the developer which builder tool to use.</p>
 <ol class="arabic simple">
 <li><p>Corollary: <strong>Workspaces needn’t be homogeneous.</strong>
 There’s no reason that we shouldn’t be able to freely mix, say, <code class="docutils literal notranslate"><span class="pre">catkin</span></code> and <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages in one workspace, with dependencies going in both directions, so long as the builder tool in use knows how to build them both.
 The primary interface between packages (at least, CMake-controlled packages) is their CMake configuration file.
 So long as that configuration file follows the standard protocol (setting <code class="docutils literal notranslate"><span class="pre">foo_LIBRARIES</span></code>, etc.), then it shouldn’t matter who wrote the file.
-It could be auto-generated by <code class="docutils literal notranslate"><span class="pre">catkin</span></code> or <code class="docutils literal notranslate"><span class="pre">ament</span></code>, or even manually crafted by a developer who wants to use plain CMake in her package, but still have that package depended-upon by <code class="docutils literal notranslate"><span class="pre">catkin</span></code> or <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages.</p></li>
+It could be auto-generated by <code class="docutils literal notranslate"><span class="pre">catkin</span></code> or <code class="docutils literal notranslate"><span class="pre">ament</span></code>, or even manually crafted by a developer who wants to use plain CMake in their package, but still have that package depended-upon by <code class="docutils literal notranslate"><span class="pre">catkin</span></code> or <code class="docutils literal notranslate"><span class="pre">ament</span></code> packages.</p></li>
 </ol>
 </li>
 </ol>
@@ -449,22 +450,22 @@ It could be auto-generated by <code class="docutils literal notranslate"><span c
 <p>Let’s say that you want to add some existing ROS packages to your ROS 2 workspace and don’t want to migrate the ROS packages from <code class="docutils literal notranslate"><span class="pre">catkin</span></code> to <code class="docutils literal notranslate"><span class="pre">ament</span></code> (or vice versa). Here are two patches that let you do that:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ament/ament_package/compare/catkin?expand=1">ament_package</a>:
-Add support for format 1 package manifests, instead of requiring format 2.
+Adds support for format 1 package manifests, instead of requiring format 2.
 This change isn’t strictly related to <code class="docutils literal notranslate"><span class="pre">catkin</span></code> vs. <code class="docutils literal notranslate"><span class="pre">ament</span></code>, because format 2 has been around for a while and <code class="docutils literal notranslate"><span class="pre">catkin</span></code> supports it, so developers could already update their manifests to format 2.
 But there’s a ton of ROS code out there that uses format 1, so we should support it.
-This implementation could be improved, e.g., by reasoning over the various flavors of depend tags and how they differ between formats 1 and 2.</p></li>
+This implementation could be improved, e.g. by reasoning over the various flavors of depend tags and how they differ between formats 1 and 2.</p></li>
 <li><p><a class="reference external" href="https://github.com/ament/ament_tools/compare/catkin?expand=1">ament_tools</a>:
-Add a new <code class="docutils literal notranslate"><span class="pre">catkin</span></code> build type to <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
+Adds a new <code class="docutils literal notranslate"><span class="pre">catkin</span></code> build type to <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
 This implementation just treats <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages the same as plain <code class="docutils literal notranslate"><span class="pre">cmake</span></code> packages, which seems to work fine.
 It could be made more sophisticated.</p></li>
 </ul>
 <p>Example usage:</p>
 <ol class="arabic simple">
 <li><p>Get the ROS 2 code as usual, using the branches mentioned above.</p></li>
-<li><p>Add to your workspace some <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ROS packages, ensuring that all of their dependencies are satisfied (either also present in the workspace or installed elsewhere with appropriate setup shell files sourced).</p></li>
-<li><p>Build as usual (e.g., <code class="docutils literal notranslate"><span class="pre">./src/ament/ament_tools/scripts/ament.by</span> <span class="pre">build</span></code>).</p></li>
+<li><p>Add to your workspace some <code class="docutils literal notranslate"><span class="pre">catkin</span></code> ROS packages, ensuring that all of their dependencies are satisfied (either present in the workspace or installed elsewhere with appropriate setup shell files sourced).</p></li>
+<li><p>Build as usual (e.g. <code class="docutils literal notranslate"><span class="pre">colcon</span> <span class="pre">build</span></code>).</p></li>
 </ol>
-<p>Voila: your existing code isn’t suddenly broken just because there’s a new builder tool in use.</p>
+<p>Voila: your existing code isn’t suddenly broken just because there’s a new build tool in use.</p>
 <div class="section" id="variation-building-ros-packages-with-ament-build">
 <h4>Variation: Building ROS packages with <code class="docutils literal notranslate"><span class="pre">ament</span> <span class="pre">build</span></code><a class="headerlink" href="#variation-building-ros-packages-with-ament-build" title="Enlazar permanentemente con este título"></a></h4>
 <p>Let’s say that you love the new <code class="docutils literal notranslate"><span class="pre">ament</span></code> tool and want to use it to build your existing ROS packages that use <code class="docutils literal notranslate"><span class="pre">catkin</span></code> internally.
@@ -494,7 +495,7 @@ ament build
 <div class="section" id="variation-using-the-catkin-api-in-a-ros-2-package">
 <h4>Variation: Using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API in a ROS 2 package<a class="headerlink" href="#variation-using-the-catkin-api-in-a-ros-2-package" title="Enlazar permanentemente con este título"></a></h4>
 <p>Let’s say that you’re building on top of ROS 2, which internally uses the <code class="docutils literal notranslate"><span class="pre">ament</span></code> API, and you want to add a new package using the <code class="docutils literal notranslate"><span class="pre">catkin</span></code> API.</p>
-<p>To make this work, we need a Python3 installation of <code class="docutils literal notranslate"><span class="pre">catkin</span></code> (the binary debians use Python2.7).
+<p>To make this work, you need a Python3 installation of <code class="docutils literal notranslate"><span class="pre">catkin</span></code> (the binary debians use Python2.7).
 Here’s an example of doing that, installing to <code class="docutils literal notranslate"><span class="pre">$HOME/catkin</span></code>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># install catkin_pkg</span>
 git clone https://github.com/ros-infrastructure/catkin_pkg.git
@@ -525,19 +526,19 @@ To build it:</p>
 <ul class="simple">
 <li><p><strong>Caveat</strong>: Requires commenting out the use of <code class="docutils literal notranslate"><span class="pre">CATKIN_DEPENDS</span></code> inside <code class="docutils literal notranslate"><span class="pre">catkin_package()</span></code>, because somewhere somebody was getting upset that things like <code class="docutils literal notranslate"><span class="pre">rclcpp</span></code> aren’t <code class="docutils literal notranslate"><span class="pre">catkin</span></code> packages.
 That constraint needs to be relaxed somehow.</p></li>
-<li><p><strong>TODO</strong>: The same demo but with a <code class="docutils literal notranslate"><span class="pre">ament</span></code> package that depends on a <code class="docutils literal notranslate"><span class="pre">catkin</span></code> package (this is easy).</p></li>
+<li><p><strong>TODO</strong>: The same demo but with an <code class="docutils literal notranslate"><span class="pre">ament</span></code> package that depends on a <code class="docutils literal notranslate"><span class="pre">catkin</span></code> package (this is easy).</p></li>
 <li><p><strong>TODO</strong>: The same demo but with a package that has a vanilla <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> that uses neither <code class="docutils literal notranslate"><span class="pre">ament</span></code> nor <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, and provides a manually generated <code class="docutils literal notranslate"><span class="pre">fooConfig.cmake</span></code> file that exports the right stuff to make it look the same to outsiders.</p></li>
 </ul>
 </div>
 </div>
 <div class="section" id="building-ros-2-packages-with-catkin-make-isolated">
 <h3><a class="toc-backref" href="#id5">Building ROS 2 packages with <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code></a><a class="headerlink" href="#building-ros-2-packages-with-catkin-make-isolated" title="Enlazar permanentemente con este título"></a></h3>
-<p>Let’s say that you’re already familiar with ROS and <code class="docutils literal notranslate"><span class="pre">catkin</span></code> and that you’re excited to try ROS 2, but that you’re not in the mood to learn about <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
+<p>Let’s say that you’re already familiar with ROS and <code class="docutils literal notranslate"><span class="pre">catkin</span></code> and you’re excited to try ROS 2, but you’re not in the mood to learn about <code class="docutils literal notranslate"><span class="pre">ament</span></code>.
 You’d rather stick to what you know, such as using <code class="docutils literal notranslate"><span class="pre">catkin_make_isolated</span></code> to build everything.
 Here is a patch that allows you to do that:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/ros/catkin/compare/ament?expand=1">catkin</a>:
-Add support for packages that declare themselves to have a build type of <code class="docutils literal notranslate"><span class="pre">ament_*</span></code>.
+Adds support for packages that declare themselves to have a build type of <code class="docutils literal notranslate"><span class="pre">ament_*</span></code>.
 This implementation calls out to <code class="docutils literal notranslate"><span class="pre">ament</span></code> to build each such package.
 While <code class="docutils literal notranslate"><span class="pre">ament_cmake</span></code> packages can be treated as plain <code class="docutils literal notranslate"><span class="pre">cmake</span></code> packages (as we did when adding <code class="docutils literal notranslate"><span class="pre">catkin</span></code> support to <code class="docutils literal notranslate"><span class="pre">ament</span></code>), <code class="docutils literal notranslate"><span class="pre">ament_python</span></code> packages require some gnarly invocations of Python.
 Instead of trying to replicate that logic in <code class="docutils literal notranslate"><span class="pre">catkin</span></code>, it’s easier to just let <code class="docutils literal notranslate"><span class="pre">ament</span></code> handle it.
@@ -588,7 +589,7 @@ touch src/eProsima/AMENT_IGNORE
 <ul class="simple">
 <li><p><strong>Caveat</strong>: we’re ignoring the <code class="docutils literal notranslate"><span class="pre">eProsima</span></code> packages in the workspace because they lack <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> files, which means that <code class="docutils literal notranslate"><span class="pre">catkin</span></code> can’t see them.
 <code class="docutils literal notranslate"><span class="pre">ament</span></code> has some heuristics for handling such packages.
-Options: backport those heuristics to <code class="docutils literal notranslate"><span class="pre">catkin</span></code>; switch to installing non-<code class="docutils literal notranslate"><span class="pre">package.xml</span></code>-containing packages outside of the workspace; or just add a <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> to each of those packages (e.g., in our own fork).</p></li>
+Options: backport those heuristics to <code class="docutils literal notranslate"><span class="pre">catkin</span></code>; switch to installing non-<code class="docutils literal notranslate"><span class="pre">package.xml</span></code>-containing packages outside of the workspace; or just add a <code class="docutils literal notranslate"><span class="pre">package.xml</span></code> to each of those packages (e.g. in our own fork).</p></li>
 </ul>
 </div>
 <div class="section" id="combining-all-of-ros-and-ros-2-in-one-workspace-and-building-it-todo">
@@ -599,8 +600,8 @@ Options: backport those heuristics to <code class="docutils literal notranslate"
 We currently have ROS 2 versions of ROS message packages, as well as some stuff in <code class="docutils literal notranslate"><span class="pre">geometry2</span></code>.
 Either the functionality needs to be merged into one package that can support both systems, or the new versions need different names.</p></li>
 <li><p>Message generation.
-ROS and ROS 2 have different message generation steps, the output of which might or not might conflict.
-Something sort of sophisticated needs to be done to allow generation of all the right artifacts from a single message package (or, as indicated above, the new message packages need different name).</p></li>
+ROS and ROS 2 have different message generation steps, the output of which might or might not conflict.
+Something sophisticated needs to be done to allow generation of all the right artifacts from a single message package (or, as indicated above, the new message packages need different names).</p></li>
 </ul>
 </div>
 <div class="section" id="using-bloom-to-release-ament-packages-todo">
