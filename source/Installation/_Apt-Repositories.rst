@@ -11,7 +11,7 @@ Ahora agrega la clave GPG de ROS 2 con apt.
 
 .. code-block:: bash
 
-   sudo apt update && sudo apt install curl
+   sudo apt update && sudo apt install curl -y
    sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
 
 Luego añade el repositorio a tu lista de fuentes.
