@@ -99,7 +99,7 @@ Para instalar el paquete Debian únicamente con bibliotecas:
 
 Deberás aceptar un acuerdo de licencia de RTI y encontrar un archivo 'rti_license.dat' en la instalación.
 
-Agrega la siguiente línea a su archivo ``.bashrc`` apuntando a tu copia de la licencia (y ejecyta `source`).
+Agrega la siguiente línea a su archivo ``.bashrc`` apuntando a tu copia de la licencia (y ejecuta `source`).
 
 .. code-block:: bash
 

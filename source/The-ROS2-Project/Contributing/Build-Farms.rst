@@ -4,9 +4,9 @@
 
 .. _BuildFarms:
 
-===============
+===========================
 ROS Granjas de Commpilación
-===============
+===========================
 
 .. contents:: Table of Contents
    :depth: 1
@@ -23,7 +23,7 @@ Si vas a utilizar alguna de las infraestructuras provistas, considera inscribirt
 
 
 Trabajos e implementación
--------------------
+-------------------------
 
 Las granjas de compilación de ROS realizan varios trabajos diferentes.
 Para cada tipo de trabajo encontrarás una descripción detallada de lo que hacen y cómo funcionan:
@@ -36,7 +36,7 @@ Para cada tipo de trabajo encontrarás una descripción detallada de lo que hace
 * `miscellaneous jobs`_ realizar tareas de mantenimiento y generar datos informativos para visualizar el estado de la granja de compilación y los artifacts generados
 
 Creación e Implementación
-.......................
+.........................
 
 Los trabajos anteriores se crean y se implementan cuando los paquetes son bloomed_, es decir, se liberan para ROS 1 o ROS 2.
 Una vez los paquetes superan la instancia de bloomed_ y son incorporados en alguna de las distribuciones ROS (via un pull request a rosdistro_), se generarán los trabajos correspondientes.
@@ -69,7 +69,7 @@ La ejecución de los trabajos depende del tipo de trabajo:
 
 
 Preguntas frecuentes (FAQ) y resolución de problemas
----------------------------------------------------
+----------------------------------------------------
 
 #. **Recibo correos electrónicos de Jenkins por trabajos fallidos en una granja de compilación. ¿Qué debo hacer?**
 
@@ -86,16 +86,16 @@ Preguntas frecuentes (FAQ) y resolución de problemas
    Básicamente tienes dos opciones, a. es más fácil; pero puede tomar varias iteraciones, b. es más elaborado y le brinda una visión completa, así como la depuración local.
 
    a) Inspecciona el trabajo de lanzamiento que generó el problema (ver 1.) y localiza el problema de dependencia de cmake.
-    Para hacerlo, deberás ir a la sección cmake, por ejemplo, navega a la sección *build binarydeb* a través del menú de la izquierda en el caso de un trabajo de compilación de ubuntu/debian. El *Error de CMake* generalmente indicará una dependencia requerida por la configuración de cmake; pero que falta en el `manifiesto del paquete`_. Una vez que hayas solucionado la dependencia en el manifiesto, realiza una nueva versión de tu paquete y espera los comentarios de las granjas de compilación o...
-   b) Para obtener una visión completa y una depuración local más rápida, puedes `ejecutar los trabajos de lanzamiento localmente`_.
-       Esto te permite iterar el manifiesto localmente hasta que se solucionen todas las dependencias.
+      Para hacerlo, deberás ir a la sección cmake, por ejemplo, navega a la sección *build binarydeb* a través del menú de la izquierda en el caso de un trabajo de compilación de ubuntu/debian. El *Error de CMake* generalmente indicará una dependencia requerida por la configuración de cmake; pero que falta en el `package manifest`_. Una vez que hayas solucionado la dependencia en el manifiesto, realiza una nueva versión de tu paquete y espera los comentarios de las granjas de compilación o...
+   b) Para obtener una visión completa y una depuración local más rápida, puedes `run the release jobs locally`_.
+      Esto te permite iterar el manifiesto localmente hasta que se solucionen todas las dependencias.
 
 #. **¿Por qué fallan los trabajos de lanzamiento cuando los trabajos de desarrollo / mis github actions / mis compilaciones locales tienen éxito?**
 
-   Hay varias razones potenciales para esto. En primer lugar, compila los trabajos de publicación con una instalación mínima de ROS para comprobar si todas las dependencias están declaradas correctamente en el `manifiesto del paquete`_. Los trabajos de desarrollo / github actions / compilaciones locales pueden realizarse en un entorno que ya tiene las dependencias instaladas y por lo tanto, no serian evidentes los problemas de dependencia. En segundo lugar, podrías haber complilado diferentes versiones del código fuente. Mientras que los trabajos de desarrollo/ github actions / compilaciones locales generalmente compilan la última versión desde el repositorio *upstream* [2]_, `release jobs`_ compila el código fuente de la última versión, es decir, el código fuente en las respectivas ramas *upstream* del repositorio *release* [3]_.
+   Hay varias razones potenciales para esto. En primer lugar, compila los trabajos de publicación con una instalación mínima de ROS para comprobar si todas las dependencias están declaradas correctamente en el `package manifest`_. Los trabajos de desarrollo / github actions / compilaciones locales pueden realizarse en un entorno que ya tiene las dependencias instaladas y por lo tanto, no serian evidentes los problemas de dependencia. En segundo lugar, podrías haber complilado diferentes versiones del código fuente. Mientras que los trabajos de desarrollo/ github actions / compilaciones locales generalmente compilan la última versión desde el repositorio *upstream* [2]_, `release jobs`_ compila el código fuente de la última versión, es decir, el código fuente en las respectivas ramas *upstream* del repositorio *release* [3]_.
 
 Otras lecturas
----------------
+--------------
 
 Los siguientes enlaces proporcionan más detalles e información sobre las granjas de compilación:
 
