@@ -41,6 +41,14 @@ To come.
 New features in this ROS 2 release
 ----------------------------------
 
+API documentation generation for Python packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ROS 2 has had automatic API documentation for C++ packages for several releases, e.g. https://docs.ros.org/en/rolling/p/rclcpp/generated/index.html.
+Iron adds automatic API documentation for Python packages as well, e.g. https://docs.ros.org/en/rolling/p/rclpy/rclpy.html.
+
+See https://github.com/ros-infrastructure/rosdoc2/pull/28, https://github.com/ros-infrastructure/rosdoc2/pull/49, https://github.com/ros-infrastructure/rosdoc2/pull/51, and https://github.com/ros-infrastructure/rosdoc2/pull/52 for more details.
+
 Service introspection
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -51,7 +59,7 @@ All of the information is published on a hidden topic generated from the name of
 So if the service is called ``/myservice``, then the information will be published on ``/myservice/_service_event``.
 
 Note that this functionality is disabled by default; to enable it, users must call ``configure_introspection`` after creating a server client or server.
-There are examples showing how to do this in https://github.com/ros2/demos/tree/{DISTRO}/demo_nodes_cpp/src/services (C++) and https://github.com/ros2/demos/blob/{DISTRO}/demo_nodes_py/demo_nodes_py/services/introspection.py (Python).
+There are examples showing how to do this in https://github.com/ros2/demos/tree/iron/demo_nodes_cpp/src/services (C++) and https://github.com/ros2/demos/blob/iron/demo_nodes_py/demo_nodes_py/services/introspection.py (Python).
 
 See `REP 2012 <https://github.com/ros-infrastructure/rep/pull/360>`__ and the tracking bug at https://github.com/ros2/ros2/issues/1285 for more information.
 
@@ -69,9 +77,56 @@ The callbacks are called in this order:
 * The "set" parameter callback, which cannot modify the list and should only accept or reject the parameters based on their type and value (this is the existing callback).
 * The "post" set parameter callback, which can make state changes based on parameters and is only called if the previous two callbacks are successful.
 
-There are examples of this in action in https://github.com/ros2/demos/blob/{DISTRO}/demo_nodes_cpp/src/parameters/set_parameters_callback.cpp (C++) and https://github.com/ros2/demos/blob/{DISTRO}/demo_nodes_py/demo_nodes_py/parameters/set_parameters_callback.py (Python).
+There are examples of this in action in https://github.com/ros2/demos/blob/iron/demo_nodes_cpp/src/parameters/set_parameters_callback.cpp (C++) and https://github.com/ros2/demos/blob/iron/demo_nodes_py/demo_nodes_py/parameters/set_parameters_callback.py (Python).
 
 See https://github.com/ros2/rclcpp/pull/1947, https://github.com/ros2/rclpy/pull/966, and https://github.com/ros2/demos/pull/565 for more information.
+
+Improved discovery options
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Previous ROS 2 versions offered limited discovery options.
+The default behavior for DDS based RMW implementations was to discover any node reachable via multicast.
+It could be limited to the same machine by setting the environment variable ``ROS_LOCALHOST_ONLY``, but any additional configuration required configuring the middleware directly, usually via middleware specific XML files and environment variables.
+ROS Iron retains the same default discovery behavior, but deprecates ``ROS_LOCALHOST_ONLY`` in favor of more granular options.
+
+* ``ROS_AUTOMATIC_DISCOVERY_RANGE`` controls how far ROS nodes will try to discover each other. Valid options are:
+
+  * ``SUBNET`` - The default, and for DDS-based middlewares it will discover any node reachable via multicast.
+  * ``LOCALHOST`` - Will only try to discover other nodes on the same machine.
+  * ``OFF`` - Will not attempt to discover any other nodes automatically, even on the same machine.
+  * ``SYSTEM_DEFAULT`` - Will not change any discovery settings.  This is useful when you already have custom settings for your middleware and don't want ROS to change them.
+
+* ``ROS_STATIC_PEERS`` - A semicolon (``;``) separated list of addresses that ROS should try to discover nodes on.  This allows the user to connect to nodes on specifc machines (as long as their discovery range is not set to ``OFF``).
+
+For example, you might have several robots with ``ROS_AUTOMATIC_DISCOVERY_RANGE`` set to ``LOCALHOST`` so they don't communicate with each other.
+When you want to connect RViz to one of them, you add it's address to ``ROS_STATIC_PEERS`` in your terminal.
+Now you can use ROS 2 CLI and visualization tools to interact with the robot.
+
+See https://github.com/ros2/ros2/issues/1359 for more information about this feature.
+
+Matched events
+^^^^^^^^^^^^^^
+
+In addition to QoS events, matched events can be generated when any publisher and subscription establishes or drops the connection between them.
+Users can provide each publisher and subscription with callback functions that are triggered by matched events and handle them in a way they see fit, similar to how messages received on a topic are handled.
+
+* publisher: this event happens when it finds a subscription which matches the topic and has compatible QoS or a connected subscription is disconnected.
+* subscription: this event happens when it finds a publisher which matches the topic and has compatible QoS or a connected publisher is disconnected.
+
+See the tracking issue at https://github.com/ros2/rmw/issues/330 for more information.
+
+* C++ Demo of Matched Events: https://github.com/ros2/demos/blob/iron/demo_nodes_cpp/src/events/matched_event_detect.cpp
+* Python Demo of Matched Events: https://github.com/ros2/demos/blob/iron/demo_nodes_py/demo_nodes_py/events/matched_event_detect.py
+
+External configuration services of loggers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+It is now possible to configure node logger levels remotely via a service.
+When the ``enable_logger_service`` option is enabled during node creation, the ``set_logger_levels`` and ``get_logger_levels`` services will be available.
+
+Be advised that the ``enable_logger_service`` option is disabled by default, so the user needs to enable this option on node creation.
+
+See https://github.com/ros2/ros2/issues/1355 for more information.
 
 ``launch``
 ^^^^^^^^^^
@@ -215,6 +270,32 @@ The message info structure contains various pieces of information like the seque
 
 See https://github.com/ros2/rclpy/pull/922 for more information.
 
+Optional argument that hides assertions for messages class
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+All message classes now include a new optional argument that allows the hiding of assertions for each field type from the message.
+By default, assertions are hidden, which provides a performance improvement during runtime.
+In order to enable the assertions for development/debugging purposes, you are given two choices:
+
+1. Define the environment variable ``ROS_PYTHON_CHECK_FIELDS`` to ``'1'`` (this would affect all the messages in your project):
+
+.. code-block:: Python
+
+  import os
+  from std_msgs.msg import String
+
+  os.environ['ROS_PYTHON_CHECK_FIELDS'] = '1'
+  new_message=String()
+
+2. Select the specific behavior for a single message by explicitly defining the new argument in the constructor:
+
+.. code-block:: Python
+
+  from std_msgs.msg import String
+
+  new_message=String(check_fields=True)
+
+See https://github.com/ros2/rosidl_python/pull/194 for more information.
+
 ``ros2param``
 ^^^^^^^^^^^^^
 
@@ -224,6 +305,13 @@ Option to timeout when waiting for a node with ``ros2 param``
 It is now possible to have the various ``ros2 param`` commands timeout by passing ``--timeout`` to the command.
 
 See https://github.com/ros2/ros2cli/pull/802 for more information.
+
+Deprecated options were removed
+""""""""""""""""""""""""""""""""
+
+``--output-dir`` and ``--print`` options with ``dump`` command have been removed.
+
+See https://github.com/ros2/ros2cli/pull/824 for more information.
 
 ``ros2topic``
 ^^^^^^^^^^^^^
@@ -251,6 +339,13 @@ See https://github.com/ros2/ros2cli/pull/800 for more information.
 The command ``ros2 topic echo`` now accepts a ``--timeout`` option, which controls the maximum amount of time that the command will wait for a publication to happen.
 
 See https://github.com/ros2/ros2cli/pull/792 for more information.
+
+Deprecated option was removed
+"""""""""""""""""""""""""""""
+
+``--lost-messages`` option with ``echo`` command has been removed.
+
+See https://github.com/ros2/ros2cli/pull/824 for more information.
 
 Changes since the Humble release
 --------------------------------
@@ -448,6 +543,19 @@ Specifying a QoS of KEEP_LAST with a depth of 0 is a nonsensical arrangement, si
 
 See https://github.com/ros2/rclpy/pull/1048 for more information.
 
+Time and Duration no longer raise exception when compared to another type
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+It is now possible to compare ``rclpy.time.Time`` and ``rclpy.duration.Duration`` to other types without getting exceptions.
+If the types are not comparable, the comparison returns ``False``.
+Note that this is a behavior change from previous releases.
+
+.. code-block:: Python
+
+  print(None in [rclpy.time.Time(), rclpy.duration.Duration()])  # Prints "False" instead of raising TypeError
+
+See https://github.com/ros2/rclpy/pull/1007 for more information.
+
 ``rcutils``
 ^^^^^^^^^^^
 
@@ -517,6 +625,83 @@ This release also allows playing back data from either the ``sqlite3`` file form
 
 See https://github.com/ros2/rosbag2/pull/1160 for more information.
 
+Store message definitions in bag files with SQLite3 plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Now we support saving message definitions to the ``sqlite3`` database file in the same format
+as we are saving it to the ``mcap`` file.
+This opens an opportunity for third-party tools to have
+the ability to deserialize rosbag2 files without having the correct version of all the original
+.msg files on the machine that is decoding the bag file recorded with ``sqlite3`` plugin.
+
+See https://github.com/ros2/rosbag2/issues/782 and https://github.com/ros2/rosbag2/pull/1293 for
+more information.
+
+
+New playback and recording controls
+"""""""""""""""""""""""""""""""""""
+
+Several pull requests have been added to enhance the user's control over playback of bags.
+Pull request `960 <https://github.com/ros2/rosbag2/pull/960>`_ adds the ability to play bag for
+a specified number of seconds.
+And pull request `1005 <https://github.com/ros2/rosbag2/pull/1005>`_ allows to play bag until specified timestamp.
+Another pull request `1007 <https://github.com/ros2/rosbag2/pull/1007>`_ adds the ability to
+stop playback remotely via service call.
+Stop will unpause player if it was in pause mode, stop playback and force exit from play() method if it was in progress.
+
+Managing recording via service calls
+""""""""""""""""""""""""""""""""""""
+
+There are new options to control the recording process from remote nodes.
+The pull request `1131 <https://github.com/ros2/rosbag2/pull/1131>`_ adds the ability to pause and
+resume recording via service calls.
+Another pull request `1115 <https://github.com/ros2/rosbag2/pull/1115>`_ adds the ability to split
+bags during recording by sending service call.
+
+Filtering topics via regular expression during playback
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Users sometimes need to replay only a subset of topics from recorded bags and the following two pull request
+adds such capability.
+Pull request `1034 <https://github.com/ros2/rosbag2/pull/1034>`_ adds a new option
+``--topics-regex`` that allows filtering topics via regular expressions.
+The ``--topics-regex`` option accepts multiple regular expressions separated by space.
+And pull request `1046 <https://github.com/ros2/rosbag2/pull/1046>`_ adds the ability to exclude some
+certain topics from being replayed by providing regular expression in a new ``--exclude``
+(and ``-x``) option.
+
+Allow plugins to register their own CLI verb arguments
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+Pull request `1209 <https://github.com/ros2/rosbag2/pull/1209>`_ adds the ability for ``rosbag2`` plugins to
+register an optional Python entrypoint providing plugin-specific CLI argument values.
+As a result the command line option ``--storage-preset-profile`` for ``ros2 bag record`` verb will have
+different valid options depending on the underlying storage plugin.
+
+Other changes
+"""""""""""""
+
+The pull request `1038 <https://github.com/ros2/rosbag2/pull/1038>`_ adds the ability to record
+any key/value pair in 'custom' field in metadata.yaml file.
+It is useful when users need to save some hardware specific id or coordinates where the recording was captured.
+And pull request `1180 <https://github.com/ros2/rosbag2/pull/1180>`_ adds an option to change the underlying
+node name for the recorder via providing the new command line ``--node-name`` option.
+This option might be used for creating remote distributed recording with multiple rosbag2 recorder instances.
+It provides the ability to send service calls for managing the recording process to the dedicated
+rosbag2 recorder instances.
+
+``rosidl_python``
+^^^^^^^^^^^^^^^^^
+
+Modification of content of ``__slots__`` attribute
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+So far, the attribute ``__slots__`` from the python message classes, have been used as the member that contains the field names of the message.
+In Iron, this attribute no longer contains only the field names from the message structure, but the field names for all the class members.
+Therefore, users shouldn't rely on this attribute to retrieve the field names information, instead, users should retrieve it using the method ``get_field_and_field_types()``.
+
+See https://github.com/ros2/rosidl_python/pull/194 for more information.
+
 ``rviz``
 ^^^^^^^^
 
@@ -543,6 +728,30 @@ A change was made to the STL loader such that it accepts binary STL files from S
 This technically violates the STL specification, but is common enough that a special case is added to handle these files.
 
 See https://github.com/ros2/rviz/pull/917 for more information.
+
+``tracetools``
+^^^^^^^^^^^^^^
+
+Tracing instrumentation is now included by default on Linux
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+The ROS 2 core has had tracing instrumentation for a while now.
+However, it was compiled out by default.
+To get the instrumentation, the LTTng tracer had to be manually installed before rebuilding ROS 2 from source.
+In Iron, the tracing instrumentation and tracepoints are included by default; the LTTng tracer is therefore now a ROS 2 dependency.
+
+Note that this only applies to Linux.
+
+See https://github.com/ros2/ros2_tracing/pull/31 and https://github.com/ros2/ros2/issues/1177 for more information.
+See :doc:`this how-to guide to remove the instrumentation (or add the instrumentation with Humble and older) <../How-To-Guides/Building-ROS-2-with-Tracing-Instrumentation>`.
+
+New tracepoints for ``rclcpp`` intra-process are added
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+New tracepoints have been added to support ``rclcpp`` intra-process communication.
+This allows the evaluation of the time between the message publishing and the callback start in intra-process communication.
+
+See https://github.com/ros2/ros2_tracing/pull/30 and https://github.com/ros2/rclcpp/pull/2091 for more information.
 
 Known Issues
 ------------

@@ -6,7 +6,7 @@ Instalar Chocolatey
 
 Chocolatey es un administrador de paquetes para Windows, instálalo siguiendo sus instrucciones de instalación:
 
-https://chocolatey.org/
+https://chocolatey.org/install
 
 Usarás Chocolatey para instalar otras herramientas de desarrollo.
 
@@ -32,7 +32,7 @@ Instalar OpenSSL
 ^^^^^^^^^^^^^^^^
 
 Descarga el instalador OpenSSL de *Win64 OpenSSL v1.1.1n* desde `esta página <https://slproweb.com/products/Win32OpenSSL.html>`__.
-Desplázate hasta la parte inferior de la página y descarga *Win64 OpenSSL v1.1.1n*.
+Desplázate hasta la parte inferior de la página y descarga *Win64 OpenSSL v1.1.1t*.
 No descargues las versiones Win32 o Light, o los instaladores v3.X.Y.
 
 Ejecuta el instalador con los parámetros predeterminados, ya que los siguientes comandos asumen que usaste el directorio de instalación predeterminado.

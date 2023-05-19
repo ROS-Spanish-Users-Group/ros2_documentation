@@ -28,7 +28,7 @@ Primero, clona Fast DDS y rmw_fastrtps en el directorio src del espacio de traba
 .. code-block:: bash
 
    cd ros2_ws/src
-   git clone https://github.com/ros2/rmw_fastrtps ros2/rmw_fastrtps
+   git clone https://github.com/ros2/rmw_fastrtps ros2/rmw_fastrtps -b {REPOS_FILE_BRANCH}
    git clone https://github.com/eProsima/Fast-DDS eProsima/fastrtps
 
 Luego, instala los paquetes necesarios para Fast DDS.
