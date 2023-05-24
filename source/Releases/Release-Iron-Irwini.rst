@@ -1,9 +1,14 @@
-.. _upcoming-release:
+.. _latest_release:
 
 .. _iron-release:
 
-ROS 2 Iron Irwini (codename 'iron'; May, 2023)
-==============================================
+Iron Irwini (``iron``)
+======================
+
+.. toctree::
+   :hidden:
+
+   Iron-Irwini-Complete-Changelog.rst
 
 .. contents:: Table of Contents
    :depth: 2
@@ -11,6 +16,7 @@ ROS 2 Iron Irwini (codename 'iron'; May, 2023)
 
 *Iron Irwini* is the ninth release of ROS 2.
 What follows is highlights of the important changes and features in Iron Irwini since the last release.
+For a list of all of the changes since Humble, see the :doc:`long form changelog <Iron-Irwini-Complete-Changelog>`.
 
 Supported Platforms
 -------------------
@@ -36,7 +42,7 @@ For more information about RMW implementations, compiler / interpreter versions,
 Installation
 ------------
 
-To come.
+`Install Iron Irwini <../../iron/Installation.html>`__
 
 New features in this ROS 2 release
 ----------------------------------
@@ -231,6 +237,32 @@ This works, but can get a bit unwieldy when many node interfaces are needed.
 To make this a bit better, there is now a new ``NodeInterfaces`` class that can be constructed to contain the interfaces, and then be used by other code.
 
 There are examples on how to use this in https://github.com/ros2/rclcpp/pull/2041.
+
+Introduction of a new executor type: the Events Executor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+The ``EventsExecutor`` from iRobot has been merged into the main ``rclcpp`` codebase.
+This alternative executor implementation uses event-driven callbacks from the middleware implementations to fire callbacks at the ``rclcpp`` layer.
+In addition to the push-based model, the ``EventsExecutor`` also moves timer management into a separate thread, which can allow for more accurate results and lower overhead, especially with many timers.
+
+The ``EventsExecutor`` has a substantial set of documentation and use-in-practice that make it a strong candidate for inclusion in the ``rclcpp`` codebase.
+For information about the initial implementation proposal as well as performance benchmarks, see https://discourse.ros.org/t/ros2-middleware-change-proposal/15863.
+For more information about the design, see the design PR: https://github.com/ros2/design/pull/305.
+
+Since the API is the same, trying the ``EventsExecutor`` is as straightforward as replacing your current Executor implementation (eg. ``SingleThreadedExecutor``):
+
+.. code-block:: C++
+
+    #include <rclcpp/experimental/executors/events_executor/events_executor.hpp>
+    using rclcpp::experimental::executors::EventsExecutor;
+
+    EventsExecutor executor;
+    executor.add_node(node);
+    executor.spin();
+
+**Note** The ``EventsExecutor`` and ``TimersManager`` are currently in the ``experimental`` namespace.
+While it has been used as a standalone implementation for some time https://github.com/irobot-ros/events-executor, it was decided to use the ``experimental`` namespace for at least one release to give latitude in changing the API within the release.
+Use caution as it will not be subject to the same API/ABI guarantees that the non-experimental code has.
 
 ``rclpy``
 ^^^^^^^^^
@@ -756,7 +788,14 @@ See https://github.com/ros2/ros2_tracing/pull/30 and https://github.com/ros2/rcl
 Known Issues
 ------------
 
-To come.
+* ``rmw_connextdds`` does not work with Windows Binary release packages.
+  RTI is not longer distributing ``RTI ConnextDDS 6.0.1`` which was used by the packaging jobs to create the binaries for Windows.
+  Instead they now distribute ``RTI ConnextDDS 6.1.0`` which is ABI incompatible with the generated binaries.
+  The solution is to rely on source builds of ROS 2 and ``rmw_connextdds`` on Windows.
+
+* ``sros2`` on Windows requires users to downgrade the ``cryptography`` python module to ``cryptography==38.0.4`` as discussed `here <https://github.com/ros2/sros2/issues/285>`_.
+
+* ``ros1_bridge`` does not work with ROS Noetic packages from `upstream Ubuntu <https://packages.ubuntu.com/jammy/ros-core-dev>`_.  The suggested workaround is to build ROS Noetic from sources, then build the ``ros1_bridge`` using that.
 
 Release Timeline
 ----------------
